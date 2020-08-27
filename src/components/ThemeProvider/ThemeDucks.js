@@ -1,14 +1,12 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { createMuiTheme } from '@material-ui/core/styles';
 
 export const themeModule = 'theme';
-
 const SET_THEME = `${themeModule}/SET_THEME`;
 const initialState = {};
 
 export default createReducer(initialState, {
   [SET_THEME]: (state, { payload }) => {
-    state = payload;
+    return { ...state, ...payload };
   },
 });
 
@@ -16,7 +14,7 @@ export const createTheme = (isDark) => {
   window.localStorage.setItem('themeType', isDark ? 'dark' : 'light');
   return {
     type: SET_THEME,
-    payload: createMuiTheme({
+    payload: {
       isDark: isDark,
       palette: {
         type: isDark ? 'dark' : 'light',
@@ -35,6 +33,6 @@ export const createTheme = (isDark) => {
           secondary: isDark ? 'rgba(255, 255, 255, 0.6)' : 'rgba(0, 0, 0, 0.54)',
         },
       },
-    }),
+    },
   };
 };

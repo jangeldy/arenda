@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { createMuiTheme } from '@material-ui/core/styles';
 
 export const Color = {
-  isDark: theme.isDark,
+/*  isDark: theme.isDark,
   primary: theme.palette.primary.main,
   secondary: theme.palette.secondary.main,
   textPrimary: theme.palette.text.primary,
@@ -14,7 +13,7 @@ export const Color = {
   bgColorPaper: theme.palette.background.paper,
   border: theme.palette.border.default,
   borderRadius: '4px',
-  headerHeight: window.globalMessage ? 100 : 64
+  headerHeight: window.globalMessage ? 100 : 64*/
 };
 
 export const ThemeWrapper = styled.main`

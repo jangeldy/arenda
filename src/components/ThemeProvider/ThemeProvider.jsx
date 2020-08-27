@@ -3,9 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles';
 import { ThemeWrapper } from './ThemeStyle';
 import { themeModule, createTheme } from './ThemeDucks';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 export default function ThemeProvider({ children }) {
-  const theme = useSelector((state) => state[themeModule]);
+  const themeConfig = useSelector((state) => state[themeModule]);
+  const theme = createMuiTheme(themeConfig);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,7 +17,7 @@ export default function ThemeProvider({ children }) {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <ThemeWrapper>{children}</ThemeWrapper>
+      <ThemeWrapper theme={theme}>{children}</ThemeWrapper>
     </MuiThemeProvider>
   );
 }
