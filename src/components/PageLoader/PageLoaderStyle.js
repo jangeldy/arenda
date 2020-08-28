@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { Color } from '../ThemeProvider/ThemeStyle';
 
 export const CssBox = styled.div`
   #cube-loader {
     z-index: 1000;
-    background-color: ${props =>
-      props.opacity ? Color.bgColor + props.opacity : Color.bgColor};
+    background-color: ${(props) =>
+      props.opacity
+        ? props.theme.palette.background.default + props.opacity
+        : props.theme.palette.background.default};
     align-items: center;
     display: flex;
     top: 0;
@@ -13,7 +14,7 @@ export const CssBox = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    position: ${props => props.position};
+    position: ${(props) => props.position};
 
     & .caption {
       margin: 0 auto;
@@ -39,7 +40,7 @@ export const CssBox = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: ${Color.primary};
+        background-color: ${(props) => props.theme.palette.primary.main};
         animation: cube-loader 2.76s infinite linear both;
         transform-origin: 100% 100%;
       }

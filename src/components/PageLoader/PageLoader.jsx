@@ -1,9 +1,16 @@
 import React from 'react';
 import { CssBox } from './PageLoaderStyle';
+import { useTheme } from '@material-ui/core';
 
 export default function PageLoader({ className, position, opacity }) {
+  const theme = useTheme();
   return (
-    <CssBox position={position || 'fixed'} className={className} opacity={opacity}>
+    <CssBox
+      position={position || 'fixed'}
+      className={className}
+      theme={theme}
+      opacity={opacity}
+    >
       <div id="cube-loader">
         <div className="caption">
           <div className="cube-loader">

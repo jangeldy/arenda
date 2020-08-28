@@ -3,21 +3,19 @@ import { Route, Switch } from 'react-router-dom';
 import NotificationContainer from 'react-notifications-component';
 import ProtectedRoute from './ProtectedRoute';
 import Page404 from '../pages/Page404/Page404';
-import routerProps, { headerPaths } from '../_helpers/routerProps';
+import routerProps from '../_helpers/routerProps';
 import Header from '../components/Header/Header';
-import { Content, Color } from '../components/ThemeProvider/ThemeStyle';
+import { Content } from '../components/ThemeProvider/ThemeStyle';
 
-export default function Root({ checkLogin, ...props }) {
+export default function Root() {
   return (
     <>
       <NotificationContainer />
-      <div style={{ height: Color.headerHeight }}>
-        <Route exact path={headerPaths} component={Header} />
-      </div>
+      <Header />
       <Content>
         <Switch>
-          <ProtectedRoute exact {...props} {...routerProps.homePage} />
-          <ProtectedRoute exact {...props} {...routerProps.loginPage} />
+          <Route exact {...routerProps.homePage} />
+          <Route exact {...routerProps.loginPage} />
           <Route component={Page404} />
         </Switch>
       </Content>

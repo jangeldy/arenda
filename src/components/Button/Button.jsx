@@ -1,51 +1,53 @@
 import React from 'react';
 import MuiButton from '@material-ui/core/Button';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  position: relative;
-  display: inline-block;
-  ${props => (props.fullWidth ? 'width: 100%;' : '')}
-  [class^=MuiCircularProgress-root] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -12px;
-    margin-left: -12px;
-  }
-`;
+export default function Button({
+  startIcon,
+  endIcon,
+  inherit,
+  secondary,
+  primary,
+  contained,
+  outlined,
+  text,
+  disabled,
+  children,
+  large,
+  medium,
+  small,
+  className,
+  ...rest
+}) {
+  let variant;
+  let color;
+  let size;
 
-function Button({ text, icon, loading, disabled, style, ...rest }) {
-  if (loading) {
-    return (
-      <Wrapper fullWidth={rest.fullWidth}>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          style={disabled || loading ? undefined : style}
-          disabled={disabled || loading}
-          {...rest}
-        >
-          {icon}
-          {text}
-        </MuiButton>
-        {loading && <CircularProgress size={24} />}
-      </Wrapper>
-    );
-  }
+  // color
+  if (primary) color = 'primary';
+  if (secondary) color = 'secondary';
+  if (inherit) color = 'secondary';
+
+  // variant
+  if (contained) variant = 'contained';
+  if (outlined) variant = 'outlined';
+  if (text) variant = 'text';
+
+  // variant
+  if (large) size = 'large';
+  if (medium) size = 'medium';
+  if (small) size = 'small';
+
   return (
     <MuiButton
-      variant="contained"
-      color="primary"
-      disabled={disabled || loading}
-      style={disabled || loading ? undefined : style}
+      className={className}
+      startIcon={startIcon}
+      endIcon={endIcon}
+      variant={variant}
+      size={size}
+      color={color}
+      disabled={disabled}
       {...rest}
-    >
-      {icon}
-      {text}
-    </MuiButton>
+      children={children}
+    />
   );
 }
-
-export default Button;

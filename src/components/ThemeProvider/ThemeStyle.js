@@ -1,72 +1,66 @@
 import styled from 'styled-components';
 
-export const Color = {
-/*  isDark: theme.isDark,
-  primary: theme.palette.primary.main,
-  secondary: theme.palette.secondary.main,
-  textPrimary: theme.palette.text.primary,
-  textSecondary: theme.palette.text.secondary,
-  textSuccess: '#559754',
-  bgColorSuccess: '#559754',
-
-  bgColor: theme.palette.background.default,
-  bgColorPaper: theme.palette.background.paper,
-  border: theme.palette.border.default,
-  borderRadius: '4px',
-  headerHeight: window.globalMessage ? 100 : 64*/
-};
-
 export const ThemeWrapper = styled.main`
-  background-color: ${Color.bgColor};
-  color: ${Color.textPrimary};
+  background-color: ${(props) => props.theme.palette.background.default};
+  color: ${(props) => props.theme.palette.text.primary.main};
+  min-height: 100vh;
+  
+  .web-site-width {
+    max-width: 1500px;  
+    width: 100%;
+  }
 
   .text-primary {
-    color: ${Color.textPrimary};
+    color: ${(props) => props.theme.palette.text.primary.main};
   }
   .text-secondary {
-    color: ${Color.textSecondary};
+    color: ${(props) => props.theme.palette.text.secondary.main};
   }
+
+  // color
   .color-primary {
-    color: ${Color.primary};
+    color: ${(props) => props.theme.palette.primary.main};
   }
   .color-secondary {
-    color: ${Color.secondary};
+    color: ${(props) => props.theme.palette.secondary.main};
   }
-  .text-success {
-    color: ${Color.textSuccess};
+  .color-success {
+    color: ${(props) => props.theme.palette.success.main};
   }
+  .color-error {
+    color: ${(props) => props.theme.palette.error.main};
+  }
+
+  // background
   .bg-color {
-    background-color: ${Color.bgColor};
+    background-color: ${(props) => props.theme.palette.background.default};
   }
   .bg-primary {
-    background-color: ${Color.primary};
+    background-color: ${(props) => props.theme.palette.primary.main};
   }
   .bg-secondary {
-    background-color: ${Color.secondary};
+    background-color: ${(props) => props.theme.palette.secondary.main};
   }
-  .border-primary {
-    border: 1px solid ${Color.primary};
-  }
-  .border-secondary {
-    border: 1px solid ${Color.secondary};
-  }
+
+  // border
   .border {
-    border: 1px solid ${Color.border};
+    border: 1px solid ${(props) => props.theme.palette.grey[700]};
   }
   .border-top {
-    border-top: 1px solid ${Color.border};
+    border-top: 1px solid ${(props) => props.theme.palette.grey[700]};
   }
   .border-radius {
-    border-radius: ${Color.borderRadius};
+    border-radius: ${(props) => props.theme.shape.borderRadius};
   }
-  .card {
-    border-radius: ${Color.borderRadius};
-    border: 1px solid ${Color.border};
+  .border-primary {
+    border: 1px solid ${(props) => props.theme.palette.primary};
+  }
+  .border-secondary {
+    border: 1px solid ${(props) => props.theme.palette.secondary};
   }
 `;
 
 export const Content = styled.main`
   flex-grow: 1;
   padding: 9px 40px 40px;
-  min-height: calc(100vh - ${Color.headerHeight}px);
 `;
