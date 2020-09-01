@@ -3,16 +3,20 @@ export default function (isDark) {
     isDark: isDark,
     palette: {
       type: isDark ? 'dark' : 'light',
-      primary: { main: '#5682A3' },
-      secondary: { main: '#e2726f' },
+      primary: { main: '#18a24b' },
       background: {
-        paper: isDark ? '#252525' : '#fff',
-        default: isDark ? '#333333' : '#E1E1E1',
+        paper: isDark ? '#424242' : '#fff',
+        default: isDark ? '#303030' : '#EEEEEE',
       },
-      text: {
-        disabled: isDark ? 'rgba(255, 255, 255, 0.50)' : 'rgba(0, 0, 0, 0.50)',
-        primary: isDark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.87)',
-        secondary: isDark ? 'rgba(255, 255, 255, 0.6)' : 'rgba(0, 0, 0, 0.54)',
+    },
+    props: {
+      MuiCard: {
+        variant: 'outlined'
+      },
+      MuiAppBar: {
+        position: 'static',
+        color: 'default',
+        elevation: 1,
       },
     },
     overrides: {
@@ -23,8 +27,15 @@ export default function (isDark) {
       },
       MuiButton: {
         root: {
+          padding: '6px 26px',
           textTransform: 'inherit',
         },
+        outlined: {
+          padding: '5px 26px',
+        },
+        textSizeSmall: {
+          padding: '4px 14px',
+        }
       },
       MuiButtonBase: {
         root: {

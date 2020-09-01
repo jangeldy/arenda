@@ -2,19 +2,22 @@ import styled from 'styled-components';
 
 export const ThemeWrapper = styled.main`
   background-color: ${(props) => props.theme.palette.background.default};
-  color: ${(props) => props.theme.palette.text.primary.main};
+  color: ${(props) => props.theme.palette.text.primary};
   min-height: 100vh;
-  
+
   .web-site-width {
-    max-width: 1500px;  
+    max-width: 1500px;
     width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
   }
 
   .text-primary {
-    color: ${(props) => props.theme.palette.text.primary.main};
+    color: ${(props) => props.theme.palette.text.primary};
   }
   .text-secondary {
-    color: ${(props) => props.theme.palette.text.secondary.main};
+    color: ${(props) => props.theme.palette.text.secondary};
   }
 
   // color
@@ -44,13 +47,13 @@ export const ThemeWrapper = styled.main`
 
   // border
   .border {
-    border: 1px solid ${(props) => props.theme.palette.grey[700]};
+    border: 1px solid ${(props) => props.theme.palette.grey[300]};
   }
   .border-top {
     border-top: 1px solid ${(props) => props.theme.palette.grey[700]};
   }
   .border-radius {
-    border-radius: ${(props) => props.theme.shape.borderRadius};
+    border-radius: ${(props) => props.theme.shape.borderRadius}px;
   }
   .border-primary {
     border: 1px solid ${(props) => props.theme.palette.primary};
@@ -58,9 +61,9 @@ export const ThemeWrapper = styled.main`
   .border-secondary {
     border: 1px solid ${(props) => props.theme.palette.secondary};
   }
-`;
 
-export const Content = styled.main`
-  flex-grow: 1;
-  padding: 9px 40px 40px;
+  // shadow
+  .shadow {
+    box-shadow: 0 1px 0 0 #d3d9de, 0 0 0 1px #edeef0;
+  }
 `;
