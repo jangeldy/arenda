@@ -1,5 +1,6 @@
 import React from 'react';
 import MuiButton from '@material-ui/core/Button';
+import { useTheme } from '@material-ui/core';
 
 export default function Button({
   startIcon,
@@ -7,6 +8,7 @@ export default function Button({
   inherit,
   secondary,
   primary,
+  success,
   contained,
   outlined,
   text,
@@ -37,6 +39,8 @@ export default function Button({
   if (medium) size = 'medium';
   if (small) size = 'small';
 
+  const theme = useTheme();
+
   return (
     <MuiButton
       className={className}
@@ -45,6 +49,14 @@ export default function Button({
       variant={variant}
       size={size}
       color={color}
+      style={
+        success
+          ? {
+              backgroundColor: theme.palette.success.main,
+              color: '#FFFFFF',
+            }
+          : undefined
+      }
       disabled={disabled}
       {...rest}
       children={children}

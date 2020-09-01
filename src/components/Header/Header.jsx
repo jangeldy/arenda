@@ -13,14 +13,15 @@ export default function Header() {
     <>
       <AppBar position="fixed" elevation={1} color="default">
         <Toolbar style={{ padding: 0 }}>
-          <div className="web-site-width flex items-center">
-            <Logo to={paths.homePage} children={'Lodger'} />
-            <CenterBlock />
-            <div>
-              <span>Нур-Султан</span>
-              <Button className="ml2" primary contained children="Сдать квартиру" />
-              <Button className="ml2" children="Войти" />
+          <div className="web-site-width flex items-center px3">
+            <div className="flex items-center">
+              <Logo to={paths.homePage} children={'Lodger'} />
+              <Button className="ml4" small>Нур-Султан</Button>
             </div>
+            <CenterBlock>
+              <Button className="ml2" success contained children="Сдать квартиру" />
+              <Button className="ml2" outlined children="Войти" />
+            </CenterBlock>
           </div>
         </Toolbar>
       </AppBar>
