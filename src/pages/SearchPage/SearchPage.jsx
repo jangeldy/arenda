@@ -15,7 +15,7 @@ function SearchPage() {
         <Typography variant="h6">{t('search_localization', localization)}</Typography>
         <Sorting />
       </div>
-      <div className="flex pt3">
+      <div className="flex pt2">
         <Filter />
         <div style={{ flexGrow: 1 }}>adverts</div>
       </div>

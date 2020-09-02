@@ -23,7 +23,7 @@ export default function Header() {
                 small
                 children={localization.name}
               />
-              <Button className="ml2" success contained children="Сдать квартиру" />
+              <Button className="ml2" primary contained children="Сдать квартиру" />
               <Button className="ml2" outlined children="Войти" />
             </div>
           </div>

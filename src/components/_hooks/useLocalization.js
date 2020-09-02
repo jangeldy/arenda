@@ -1,7 +1,7 @@
 import useLanguage from '../Header/useLanguage';
 
 export default function useLocalization() {
-  const { lang } = useLanguage();
+  useLanguage();
   return {
     name: 'Нур-Султан',
     longitude: '',
