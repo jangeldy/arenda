@@ -27,6 +27,7 @@ addTranslation({
     filter_closedArea: 'Закрытая территория',
 
 
+    filter_features: 'Особенности',
     filter_canSmoke: 'Можно курить',
     filter_forEvents: 'Подходит для мероприятий',
     filter_animalsAllowed: 'Можно с животными',

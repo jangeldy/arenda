@@ -49,7 +49,7 @@ function ThumbComponent(props) {
 export default function (props) {
   return (
     <div style={{ padding: '0 12px'}}>
-      <SampleSlider {...props} ThumbComponent={ThumbComponent} />
+      <SampleSlider step={100} {...props} ThumbComponent={ThumbComponent} />
     </div>
   );
 }

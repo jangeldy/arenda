@@ -14,6 +14,9 @@ export default function (isDark) {
       },
     },
     props: {
+      MuiCheckbox: {
+        size: 'small',
+      },
       MuiCard: {
         variant: 'outlined',
       },
@@ -24,6 +27,18 @@ export default function (isDark) {
       },
     },
     overrides: {
+      MuiFormControlLabel: {
+        root: {
+          marginRight: 0,
+        },
+      },
+      MuiCheckbox: {
+        root: {
+          padding: 0,
+          marginRight: 7,
+          marginLeft: 9,
+        },
+      },
       MuiToolbar: {
         root: {
           justifyContent: 'center',
@@ -53,7 +68,29 @@ export default function (isDark) {
           height: 'inherit',
           fontSize: '14px',
         },
-      }
+      },
+      MuiTypography: {
+        overline: {
+          fontSize: '11px',
+        },
+      },
+      MuiAccordionSummary: {
+        root: {
+          minHeight: 40,
+          '&$expanded': {
+            minHeight: '40px !important',
+          }
+        },
+        content: {
+          margin: 0,
+          '&$expanded': {
+            margin: '0 !important',
+          }
+        },
+        expandIcon: {
+          padding: 8,
+        },
+      },
     },
   };
 }
