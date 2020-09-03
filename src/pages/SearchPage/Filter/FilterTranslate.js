@@ -13,6 +13,7 @@ addTranslation({
     filter_area: 'Площадь в м2',
     filter_floor: 'Этаж',
 
+    filter_more: 'Дополнительно',
     filter_facilities: 'Удобства',
     filter_internet: 'Интернет',
     filter_washer: 'Стиральная машина',

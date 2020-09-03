@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Slider from '@material-ui/core/Slider';
+import MuiSlider from '@material-ui/core/Slider';
 
 const SampleSlider = withStyles({
   root: {
@@ -34,7 +34,7 @@ const SampleSlider = withStyles({
     opacity: 1,
     height: 3,
   },
-})(Slider);
+})(MuiSlider);
 
 function ThumbComponent(props) {
   return (
@@ -46,9 +46,9 @@ function ThumbComponent(props) {
   );
 }
 
-export default function (props) {
+export default function Slider(props) {
   return (
-    <div style={{ padding: '0 12px'}}>
+    <div style={{ padding: '0 12px' }}>
       <SampleSlider step={100} {...props} ThumbComponent={ThumbComponent} />
     </div>
   );

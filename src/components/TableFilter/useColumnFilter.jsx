@@ -12,10 +12,11 @@ function useColumnFilter(columnName) {
   const paramColumnFilter = filter[columnName];
   const [columnFilter, setColumnFilter] = useState(paramColumnFilter);
 
-  const changeFilter = value => {
-    if (value !== columnFilter) {
+  const changeFilter = (value) => {
+    if (JSON.stringify(value) !== JSON.stringify(columnFilter)) {
       const newFilter = { ...filter, [columnName]: value, pageNumber: 1 };
       if (!value) delete newFilter[columnName];
+      if (value instanceof Array && value.length === 0) delete newFilter[columnName];
       params.set(filterName, JSON.stringify(newFilter));
       push(`${pathname}?${params.toString()}`);
     }
@@ -23,13 +24,15 @@ function useColumnFilter(columnName) {
 
   useEffect(() => {
     if (paramColumnFilter !== columnFilter) {
-      setColumnFilter(paramColumnFilter);
+      if (JSON.stringify(paramColumnFilter) !== JSON.stringify(columnFilter)) {
+        setColumnFilter(paramColumnFilter);
+      }
     }
   }, [columnFilter, paramColumnFilter]);
 
   return {
-    value: columnFilter || null,
-    setFilter: changeFilter
+    value: columnFilter,
+    setFilter: changeFilter,
   };
 }
 

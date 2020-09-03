@@ -1,7 +1,6 @@
 const paths = {
   homePage: '/',
   searchPage: '/search',
-  searchInMapPage: '/searchInMap',
   loginPage: '/login',
 };
 
