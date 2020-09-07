@@ -8,7 +8,7 @@ export default function RoomOrFlat() {
   const { t } = useTranslation();
   const isRoom = useColumnFilter('isRoom');
   const rooms = useColumnFilter('rooms');
-  const roomsValue = rooms.value || ['1', '2'];
+  const value = rooms.value || [];
 
   return (
     <>
@@ -27,30 +27,22 @@ export default function RoomOrFlat() {
       <div className="mt2">
         <Text text={t('filter_roomCount')} />
         <ButtonGroup fullWidth variant="contained" disableElevation>
-          <Room room="1" rooms={roomsValue} setRooms={rooms.setFilter} />
-          <Room room="2" rooms={roomsValue} setRooms={rooms.setFilter} />
-          <Room room="3" rooms={roomsValue} setRooms={rooms.setFilter} />
-          <Room room="4+" rooms={roomsValue} setRooms={rooms.setFilter} />
+          {['1', '2', '3', '4+'].map((code) => (
+            <Button
+              key={code}
+              color={value.includes(code) ? 'primary' : 'default'}
+              children={code}
+              onClick={() => {
+                if (value.includes(code)) {
+                  rooms.setFilter(value.filter((item) => item !== code));
+                } else {
+                  rooms.setFilter([...value, code]);
+                }
+              }}
+            />
+          ))}
         </ButtonGroup>
       </div>
     </>
-  );
-}
-
-function Room({ room, rooms, setRooms, ...rest }) {
-  const onClick = () => {
-    if (rooms.includes(room)) {
-      setRooms(rooms.filter((item) => item !== room));
-    } else {
-      setRooms([...rooms, room]);
-    }
-  };
-  return (
-    <Button
-      {...rest}
-      onClick={onClick}
-      color={rooms.includes(room) ? 'primary' : 'default'}
-      children={room}
-    />
   );
 }

@@ -13,6 +13,9 @@ export default function (isDark) {
         default: isDark ? '#303030' : '#EEEEEE',
       },
     },
+    shape: {
+      borderRadius: 8,
+    },
     props: {
       MuiCheckbox: {
         size: 'small',
@@ -46,14 +49,7 @@ export default function (isDark) {
       },
       MuiButton: {
         root: {
-          padding: '6px 26px',
           textTransform: 'inherit',
-        },
-        outlined: {
-          padding: '5px 26px',
-        },
-        textSizeSmall: {
-          padding: '4px 14px',
         },
       },
       MuiButtonBase: {
@@ -79,13 +75,13 @@ export default function (isDark) {
           minHeight: 40,
           '&$expanded': {
             minHeight: '40px !important',
-          }
+          },
         },
         content: {
           margin: 0,
           '&$expanded': {
             margin: '0 !important',
-          }
+          },
         },
         expandIcon: {
           padding: 8,

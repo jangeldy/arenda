@@ -15,7 +15,7 @@ export default function Header() {
       <AppBar>
         <Toolbar style={{ padding: 0 }}>
           <div className="web-site-width flex items-center">
-            <Logo to={paths.homePage} children={'Lodger'} />
+            <Logo to={paths.homePage} children={'zhai'} />
             <div style={{ flexGrow: 1, textAlign: 'right' }}>
               <Button
                 className="ml4"

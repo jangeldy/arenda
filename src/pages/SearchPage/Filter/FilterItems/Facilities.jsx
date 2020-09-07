@@ -3,6 +3,7 @@ import Text from '../../../../components/Text';
 import { Checkbox as MuiCheckbox, FormControlLabel } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import useColumnFilter from '../../../../components/TableFilter/useColumnFilter';
+import CheckIcon from '@material-ui/icons/Check';
 
 export default function Facilities() {
   const { t } = useTranslation();

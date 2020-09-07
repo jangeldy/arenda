@@ -15,19 +15,19 @@ export default function ListOrMap() {
 
   return (
     <Card className="flex mb2">
-      <ButtonGroup fullWidth variant="text">
+      <ButtonGroup fullWidth variant="outlined">
         <Button
           color={!isMap ? 'primary' : 'default'}
           startIcon={<ListIcon fontSize="small" />}
           children={t('filter_list')}
-          style={!isMap ? styleActive : style}
+          // style={!isMap ? styleActive : style}
           onClick={() => setFilter()}
         />
         <Button
           color={isMap ? 'primary' : 'default'}
           startIcon={<MapIcon fontSize="small" />}
           children={t('filter_map')}
-          style={isMap ? styleActive : style}
+          // style={isMap ? styleActive : style}
           onClick={() => setFilter('map')}
         />
       </ButtonGroup>
