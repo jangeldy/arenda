@@ -5,10 +5,19 @@ import './SearchTranslate';
 import { useTranslation } from 'react-i18next';
 import Sorting from './Sorting/Sorting';
 import Filter from './Filter/Filter';
+import AdvertItem from '../../components/AdvertItem/AdvertItem';
+import { AdvertContainer } from './SearchStyle';
 
 function SearchPage() {
   const { t } = useTranslation();
   const localization = useLocalization();
+  const data = [];
+
+  for (let i=0; i<100; i++) {
+    data.push({
+      img: i,
+    })
+  }
   return (
     <>
       <div className="flex justify-between">
@@ -17,7 +26,11 @@ function SearchPage() {
       </div>
       <div className="flex pt2">
         <Filter />
-        <div style={{ flexGrow: 1 }}>adverts</div>
+        <AdvertContainer>
+          {data.map(item => (
+            <AdvertItem />
+          ))}
+        </AdvertContainer>
       </div>
     </>
   );
