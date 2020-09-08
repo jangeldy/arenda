@@ -14,9 +14,9 @@ const SampleSlider = withStyles({
     border: '1px solid currentColor',
     marginTop: -12,
     marginLeft: -13,
-    boxShadow: '#ebebeb 0 2px 2px',
-    '&:focus, &:hover, &$active': {
-      boxShadow: '#ccc 0 2px 3px 1px',
+    boxShadow: '#00000050 0 2px 2px',
+    '&:hover, &$active': {
+      boxShadow: '#00000070 0 2px 3px 1px',
     },
     '& .bar': {
       height: 9,
@@ -26,6 +26,7 @@ const SampleSlider = withStyles({
       marginRight: 1,
     },
   },
+  active: {},
   track: {
     height: 3,
   },

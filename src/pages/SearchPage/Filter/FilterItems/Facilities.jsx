@@ -1,9 +1,14 @@
 import React from 'react';
-import Text from '../../../../components/Text';
-import { Checkbox as MuiCheckbox, FormControlLabel } from '@material-ui/core';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Checkbox as MuiCheckbox,
+  FormControlLabel,
+} from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import useColumnFilter from '../../../../components/TableFilter/useColumnFilter';
-import CheckIcon from '@material-ui/icons/Check';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 export default function Facilities() {
   const { t } = useTranslation();
@@ -25,9 +30,12 @@ export default function Facilities() {
   );
 
   return (
-    <div className="mt1">
-      <Text text={t('filter_facilities')} />
-      <div>
+    <Accordion elevation={0}>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        children={t('filter_facilities')}
+      />
+      <AccordionDetails>
         <CheckBox name="internet" />
         <CheckBox name="washer" />
         <CheckBox name="refrigerator" />
@@ -39,7 +47,7 @@ export default function Facilities() {
         <CheckBox name="conditioning" />
         <CheckBox name="balcony" />
         <CheckBox name="closedArea" />
-      </div>
-    </div>
+      </AccordionDetails>
+    </Accordion>
   );
 }

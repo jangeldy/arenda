@@ -1,8 +1,14 @@
 import React from 'react';
-import Text from '../../../../components/Text';
 import { useTranslation } from 'react-i18next';
 import useColumnFilter from '../../../../components/TableFilter/useColumnFilter';
-import { Checkbox as MuiCheckbox, FormControlLabel } from '@material-ui/core';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Checkbox as MuiCheckbox,
+  FormControlLabel,
+} from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 export default function Features() {
   const { t } = useTranslation();
@@ -24,14 +30,16 @@ export default function Features() {
   );
 
   return (
-    <div className="mt1">
-      <Text text={t('filter_features')} />
-      <div>
+    <Accordion elevation={0}>
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        {t('filter_features')}
+      </AccordionSummary>
+      <AccordionDetails>
         <CheckBox name="canSmoke" />
         <CheckBox name="forEvents" />
         <CheckBox name="animalsAllowed" />
         <CheckBox name="forChildren" />
-      </div>
-    </div>
+      </AccordionDetails>
+    </Accordion>
   );
 }

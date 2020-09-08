@@ -2,8 +2,8 @@ import { addTranslation } from '../../../_helpers/Translate';
 
 addTranslation({
   ru: {
-    filter_list: 'Списком',
-    filter_map: 'На карте',
+    filter_list: 'Показать списком',
+    filter_map: 'Показать на карте',
     filter_flat: 'Квартира',
     filter_room: 'Комната',
     filter_roomCount: 'Количество комнат',
@@ -13,7 +13,7 @@ addTranslation({
     filter_area: 'Площадь в м2',
     filter_floor: 'Этаж',
 
-    filter_more: 'Дополнительно',
+    filter_areaAndFloor: 'Этаж и площадь',
     filter_facilities: 'Удобства',
     filter_internet: 'Интернет',
     filter_washer: 'Стиральная машина',

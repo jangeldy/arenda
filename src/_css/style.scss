@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200;300;400;500;600&family=Raleway:wght@200;300;400;500;600&display=swap');
+
 * {
   box-sizing: border-box;
-  //font-family: -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif;
-  //font-family: "Segoe UI", "Chinese Quote", Tahoma, SansSerif, sans-serif;
-  font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif !important;
+  font-weight: 500;
 }
 
 html,
@@ -10,11 +10,17 @@ html,
   height: 100%;
 }
 
+.number-font {
+  font-family: 'Bitter', sans-serif !important;
+}
+
 body {
   height: 100%;
   margin: 0;
   padding: 0;
   font-size: 14px;
+  font-family: 'Raleway', sans-serif !important;
+  letter-spacing: 0 !important;
 }
 
 a {

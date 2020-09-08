@@ -6,7 +6,6 @@ function Text({ text, mr, ml }) {
     <Typography
       style={{ marginRight: mr, marginLeft: ml }}
       variant="overline"
-      color="textSecondary"
       children={text}
     />
   );

@@ -12,7 +12,7 @@ export default function RoomOrFlat() {
 
   return (
     <>
-      <ButtonGroup fullWidth variant="contained" disableElevation>
+      <ButtonGroup fullWidth variant="contained">
         <Button
           onClick={() => isRoom.setFilter()}
           color={!isRoom.value ? 'primary' : 'default'}
@@ -26,12 +26,12 @@ export default function RoomOrFlat() {
       </ButtonGroup>
       <div className="mt2">
         <Text text={t('filter_roomCount')} />
-        <ButtonGroup fullWidth variant="contained" disableElevation>
+        <ButtonGroup fullWidth variant="contained">
           {['1', '2', '3', '4+'].map((code) => (
             <Button
               key={code}
               color={value.includes(code) ? 'primary' : 'default'}
-              children={code}
+              children={<span className="number-font">{code}</span>}
               onClick={() => {
                 if (value.includes(code)) {
                   rooms.setFilter(value.filter((item) => item !== code));

@@ -13,10 +13,16 @@ export default function (isDark) {
         default: isDark ? '#303030' : '#EEEEEE',
       },
     },
+    typography: {
+      fontFamily: "'Raleway', sans-serif",
+    },
     shape: {
       borderRadius: 8,
     },
     props: {
+      MuiButtonGroup: {
+        disableElevation: true,
+      },
       MuiCheckbox: {
         size: 'small',
       },
@@ -28,8 +34,17 @@ export default function (isDark) {
         color: 'default',
         elevation: 1,
       },
+      MuiTextField: {
+        variant: 'outlined',
+        size: 'small',
+      },
     },
     overrides: {
+      MuiAppBar: {
+        root: {
+          boxShadow: 'rgba(0, 0, 0, 0.18) 0px 1px 2px !important',
+        },
+      },
       MuiFormControlLabel: {
         root: {
           marginRight: 0,
@@ -49,7 +64,14 @@ export default function (isDark) {
       },
       MuiButton: {
         root: {
+          padding: '6px 26px',
           textTransform: 'inherit',
+        },
+        outlined: {
+          padding: '5px 26px',
+        },
+        textSizeSmall: {
+          padding: '4px 14px',
         },
       },
       MuiButtonBase: {
@@ -58,9 +80,7 @@ export default function (isDark) {
         },
       },
       MuiOutlinedInput: {
-        input: {
-          paddingBottom: 8,
-          paddingTop: 8,
+        inputMarginDense: {
           height: 'inherit',
           fontSize: '14px',
         },
@@ -68,6 +88,23 @@ export default function (isDark) {
       MuiTypography: {
         overline: {
           fontSize: '11px',
+        },
+      },
+      MuiAccordion: {
+        root: {
+          borderTop: `1px solid ${isDark ? '#ffffff' : '#000000'}24`,
+          '&$expanded': {
+            margin: 0,
+          },
+          '&::before': {
+            display: 'none',
+          },
+        },
+      },
+      MuiAccordionDetails: {
+        root: {
+          display: 'block',
+          paddingTop: 0,
         },
       },
       MuiAccordionSummary: {
