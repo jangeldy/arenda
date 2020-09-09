@@ -7,7 +7,7 @@ import { useTheme } from '@material-ui/core';
 const Item = styled.div`
   opacity: ${(props) => (props.active ? 1 : 0.6)};
   background: ${(props) => (props.active ? props.palette.background.paper : 'none')};
-  border: 1px solid ${(props) => (props.active ? props.palette.primary.main : 'none')};
+  border: 1px solid ${(props) => (props.active ? props.palette.divider : 'none')};
   border-radius: 16px;
   line-height: 27px;
   height: 30px;

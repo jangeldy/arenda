@@ -6,6 +6,27 @@ export const Wrapper = styled(Card)`
   height: 100%;
   position: relative;
 
+  img {
+    object-fit: cover;
+    vertical-align: bottom;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  //image-slider
+  .image-slider {
+    background-size: cover;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    top: 0;
+  }
+
   // arrows
   .arrow-buttons {
     position: absolute;

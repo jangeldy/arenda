@@ -13,10 +13,10 @@ function SearchPage() {
   const localization = useLocalization();
   const data = [];
 
-  for (let i=0; i<50; i++) {
+  for (let i = 0; i < 50; i++) {
     data.push({
       img: i,
-    })
+    });
   }
   return (
     <>
@@ -27,8 +27,8 @@ function SearchPage() {
       <div className="flex pt2">
         <Filter />
         <AdvertContainer>
-          {data.map(item => (
-            <AdvertItem />
+          {data.map((item, index) => (
+            <AdvertItem key={index} />
           ))}
         </AdvertContainer>
       </div>

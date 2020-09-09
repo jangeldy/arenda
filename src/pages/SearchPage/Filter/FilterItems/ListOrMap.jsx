@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Card, useTheme } from '@material-ui/core';
+import { Button, Card } from '@material-ui/core';
 import ListIcon from '@material-ui/icons/CalendarViewDayOutlined';
 import MapIcon from '@material-ui/icons/MapOutlined';
 import useColumnFilter from '../../../../components/TableFilter/useColumnFilter';
