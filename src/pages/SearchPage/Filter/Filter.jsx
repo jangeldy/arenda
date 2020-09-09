@@ -12,16 +12,18 @@ import './FilterTranslate';
 export default function Filter() {
   return (
     <Wrapper>
-      <ListOrMap />
-      <Card>
-        <div className="p2 mb1">
-          <RoomOrFlat />
-          <PriceFromTo />
-        </div>
-        <AreaAndFloor />
-        <Facilities />
-        <Features />
-      </Card>
+      <div className="sticky">
+        <ListOrMap />
+        <Card>
+          <div className="p2 mb1">
+            <RoomOrFlat />
+            <PriceFromTo />
+          </div>
+          <AreaAndFloor />
+          <Facilities />
+          <Features />
+        </Card>
+      </div>
     </Wrapper>
   );
 }

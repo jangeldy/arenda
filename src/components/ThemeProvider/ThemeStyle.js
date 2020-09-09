@@ -6,7 +6,7 @@ export const ThemeWrapper = styled.main`
   min-height: 100vh;
 
   .web-site-width {
-    max-width: 1500px;
+    max-width: 1660px;
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;

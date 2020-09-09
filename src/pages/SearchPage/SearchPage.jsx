@@ -13,7 +13,7 @@ function SearchPage() {
   const localization = useLocalization();
   const data = [];
 
-  for (let i=0; i<100; i++) {
+  for (let i=0; i<50; i++) {
     data.push({
       img: i,
     })

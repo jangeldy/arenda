@@ -17,7 +17,7 @@ export default function (isDark) {
       fontFamily: "'Raleway', sans-serif",
     },
     shape: {
-      borderRadius: 8,
+      borderRadius: 10,
     },
     props: {
       MuiButtonGroup: {

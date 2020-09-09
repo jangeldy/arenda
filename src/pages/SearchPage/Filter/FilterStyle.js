@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 320px;
-  position: sticky;
-  top: 0;
+  width: 300px;
+
+  .sticky {
+    position: sticky;
+    top: 20px;
+  }
 `;

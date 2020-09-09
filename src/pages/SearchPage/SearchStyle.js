@@ -5,4 +5,5 @@ export const AdvertContainer = styled.div`
   flex-wrap: wrap;
   flex-grow: 1;
   margin-left: 20px;
+  margin-top: -10px;
 `;
