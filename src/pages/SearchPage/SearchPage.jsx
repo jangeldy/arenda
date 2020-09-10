@@ -7,17 +7,27 @@ import Sorting from './Sorting/Sorting';
 import Filter from './Filter/Filter';
 import AdvertItem from '../../components/AdvertItem/AdvertItem';
 import { AdvertContainer } from './SearchStyle';
+import testData from './TestData';
 
 function SearchPage() {
   const { t } = useTranslation();
   const localization = useLocalization();
-  const data = [];
+  const data = testData.map((item) => ({
+    id: item.id,
+    title: item.title,
+    latitude: item.lat,
+    longitude: item.lng,
+    rooms: item.rooms,
+    price: item.price,
+    area: item.space,
+    images: item.thumb_image_urls,
+    favorite: item.favorite,
+    owned: item.owned,
+    address: item.address,
+    views: 45,
+    rentType: 'month',
+  }));
 
-  for (let i = 0; i < 50; i++) {
-    data.push({
-      img: i,
-    });
-  }
   return (
     <>
       <div className="flex justify-between">
@@ -28,7 +38,7 @@ function SearchPage() {
         <Filter />
         <AdvertContainer>
           {data.map((item, index) => (
-            <AdvertItem key={index} />
+            <AdvertItem key={index} {...item} />
           ))}
         </AdvertContainer>
       </div>

@@ -2,9 +2,17 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 25%;
-  flex-grow: 1;
-  padding: 9px;
+  padding: 8px 8px 12px;
   min-width: 260px;
+  position: relative;
+  font-size: 15px;
+
+  @media screen and (max-width: 1415px) {
+    width: 33.3333333333%;
+  }
+  @media screen and (max-width: 1155px) {
+    width: 50%;
+  }
 
   .c1 {
     contain: content !important;
@@ -29,5 +37,17 @@ export const Wrapper = styled.div`
     right: 0 !important;
     height: 100% !important;
     width: 100% !important;
+  }
+  
+  .price {
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 5px;
+  }
+  
+  .address, .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;

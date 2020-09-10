@@ -5,6 +5,9 @@ export const Wrapper = styled(Card)`
   width: 100%;
   height: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 
   img {
     object-fit: cover;
@@ -14,21 +17,18 @@ export const Wrapper = styled(Card)`
     width: 100%;
   }
 
-  //image-slider
-  .image-slider {
-    background-size: cover;
-    border-radius: 0;
-    height: 100%;
-    width: 100%;
-    display: block;
-    background-position: 50% 50% !important;
-    background-repeat: no-repeat !important;
-    position: absolute;
-    top: 0;
+  .slide-right {
+    animation: slideInRight;
+    animation-duration: 0.6s;
+  }
+  .slide-left {
+    animation: slideInLeft;
+    animation-duration: 0.6s;
   }
 
   // arrows
   .arrow-buttons {
+    pointer-events: none;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -37,6 +37,7 @@ export const Wrapper = styled(Card)`
 
   .right-arrow,
   .left-arrow {
+    pointer-events: auto;
     background-color: white;
     opacity: 0;
     transition: opacity 0.3s;

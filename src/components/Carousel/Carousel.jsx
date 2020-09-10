@@ -1,41 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Wrapper } from './CarouselStyle';
 import Button from '@material-ui/core/Button';
 import ArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeftOutlined';
 import ArrowRightIcon from '@material-ui/icons/KeyboardArrowRightOutlined';
+import Swipe from 'react-swipeable-views';
 
 function Carousel({ images }) {
   const [imgIndex, setImgIndex] = useState(0);
-  const [animate, setAnimate] = useState('');
-
-  useEffect(() => {
-    setTimeout(()=>{
-      setAnimate('animate__animated animate__slideInRight animate__delay-1s')
-    },2000)
-  },[]);
+  const size = images.length - 1;
 
   return (
     <Wrapper>
-      <img src={images[imgIndex]} alt="slider" />
-      <div
-        className={`image-slider ${animate}` }
-        style={{ backgroundImage: `url("${images[imgIndex]}")` }}
+      <Swipe
+        enableMouseEvents
+        resistance
+        index={imgIndex}
+        onChangeIndex={setImgIndex}
+        children={images.map((src, index) => (
+          <img key={index} src={src} alt="slide" />
+        ))}
       />
       {images.length > 1 && (
         <>
           <div className="arrow-buttons">
             <Button
-              onClick={() =>
-                setImgIndex(imgIndex === 0 ? images.length - 1 : imgIndex - 1)
-              }
+              onClick={() => setImgIndex(imgIndex === 0 ? size : imgIndex - 1)}
               className="left-arrow"
               variant="contained"
               children={<ArrowLeftIcon />}
             />
             <Button
-              onClick={() =>
-                setImgIndex(imgIndex === images.length - 1 ? 0 : imgIndex + 1)
-              }
+              onClick={() => setImgIndex(imgIndex === size ? 0 : imgIndex + 1)}
               className="right-arrow"
               variant="contained"
               children={<ArrowRightIcon />}
@@ -47,10 +42,7 @@ function Carousel({ images }) {
                 <div
                   className="dots"
                   style={{
-                    transform: `translateX(-${calcTranslate(
-                      imgIndex,
-                      images.length - 1
-                    )}px)`,
+                    transform: `translateX(-${calcTranslate(imgIndex, size)}px)`,
                   }}
                 >
                   {images.map((img, index) => (
@@ -58,11 +50,7 @@ function Carousel({ images }) {
                       key={index}
                       className="dot"
                       style={{
-                        transform: `scale(${calcScale(
-                          index,
-                          imgIndex,
-                          images.length - 1
-                        )})`,
+                        transform: `scale(${calcScale(index, imgIndex, size)})`,
                         opacity: index === imgIndex ? 1 : 0.6,
                       }}
                     />
