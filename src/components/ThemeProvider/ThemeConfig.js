@@ -1,6 +1,6 @@
 export default function (isDark) {
   const primary = {
-    main: '#3d8d91',
+    main: isDark ? '#e4e4e4' : '#444444',
   };
 
   return {
@@ -8,27 +8,14 @@ export default function (isDark) {
     palette: {
       type: isDark ? 'dark' : 'light',
       primary: primary,
-      background: {
-        paper: isDark ? '#424242' : '#fff',
-        default: isDark ? '#303030' : '#EEEEEE',
-      },
+      divider: 'rgba(0,0,0,0.3)',
     },
-    typography: {
-      fontFamily: "'Raleway', sans-serif",
-    },
-    shape: {
-      borderRadius: 10,
-    },
+    typography: { fontFamily: "'Raleway', sans-serif" },
+    shape: { borderRadius: 8 },
     props: {
-      MuiButtonGroup: {
-        disableElevation: true,
-      },
-      MuiCheckbox: {
-        size: 'small',
-      },
-      MuiCard: {
-        variant: 'outlined',
-      },
+      MuiButtonGroup: { disableElevation: true },
+      MuiCheckbox: { size: 'small' },
+      MuiCard: { variant: 'outlined' },
       MuiAppBar: {
         position: 'static',
         color: 'default',
@@ -38,8 +25,32 @@ export default function (isDark) {
         variant: 'outlined',
         size: 'small',
       },
+      MuiToggleButtonGroup: {
+        size: 'small',
+      },
     },
     overrides: {
+      MuiToggleButton: {
+        root: {
+          width: '100%',
+          border: `1px solid rgba(${isDark ? '255, 255, 255,' : '0, 0, 0,'} 0.3)`,
+          color: isDark ? '#ffffff' : '#000000',
+          '&$selected': {
+            backgroundColor: primary.main,
+            color: isDark ? '#000000' : '#ffffff',
+            '&:hover': {
+              backgroundColor: primary.main,
+            },
+          },
+        },
+      },
+      MuiPagination: { ul: { justifyContent: 'center' } },
+      MuiPaginationItem: {
+        root: {
+          fontFamily: "'Maven Pro', sans-serif",
+          fontWeight: 'bold',
+        },
+      },
       MuiAppBar: {
         root: {
           boxShadow: 'rgba(0, 0, 0, 0.18) 0px 1px 2px !important',
@@ -69,6 +80,9 @@ export default function (isDark) {
         },
         outlined: {
           padding: '5px 26px',
+        },
+        contained: {
+          backgroundColor: isDark ? '#808080' : '#ffffff',
         },
         textSizeSmall: {
           padding: '4px 14px',

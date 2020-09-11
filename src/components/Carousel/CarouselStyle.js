@@ -9,10 +9,9 @@ export const Wrapper = styled(Card)`
   align-items: center;
   overflow: hidden;
 
-  img {
-    object-fit: cover;
-    vertical-align: bottom;
-    border-radius: 0;
+  .slide {
+    background-position: center;
+    background-size: cover;
     height: 100%;
     width: 100%;
   }

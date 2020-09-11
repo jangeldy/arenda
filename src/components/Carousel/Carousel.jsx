@@ -12,12 +12,14 @@ function Carousel({ images }) {
   return (
     <Wrapper>
       <Swipe
+        style={{ width: '100%', height: '100%' }}
+        containerStyle={{ width: '100%', height: '100%' }}
         enableMouseEvents
         resistance
         index={imgIndex}
         onChangeIndex={setImgIndex}
         children={images.map((src, index) => (
-          <img key={index} src={src} alt="slide" />
+          <div key={index} className="slide" style={{ backgroundImage: `url(${src})` }} />
         ))}
       />
       {images.length > 1 && (

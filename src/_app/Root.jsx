@@ -4,6 +4,7 @@ import NoticeModule from 'react-notifications-component';
 import Page404 from '../pages/Page404/Page404';
 import routerProps from '../_helpers/routerProps';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer';
 
 export default function Root() {
   return (
@@ -18,6 +19,7 @@ export default function Root() {
           <Route component={Page404} />
         </Switch>
       </div>
+      <Footer />
     </>
   );
 }

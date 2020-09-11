@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   min-width: 260px;
   position: relative;
   font-size: 15px;
+  margin-bottom: 16px;
 
   @media screen and (max-width: 1415px) {
     width: 33.3333333333%;
@@ -40,9 +41,12 @@ export const Wrapper = styled.div`
   }
   
   .price {
-    font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
     margin-right: 5px;
+  }
+  
+  sup {
+    font-size: 10px;
   }
   
   .address, .title {

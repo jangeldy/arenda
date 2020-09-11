@@ -11,7 +11,7 @@ export default {
   },
   homePage: {
     path: paths.homePage,
-    component: HomePage,
+    component: SearchPage,
   },
   searchPage: {
     path: paths.searchPage,

@@ -6,7 +6,8 @@ addTranslation({
     header_profile: 'Профиль',
     header_changePass: 'Смена пароля',
     header_logout: 'Выйти',
-    header_darkMode: 'Ночной режим'
+    header_darkMode: 'Ночной режим',
+    header_rentApartment: 'Сдать квартиру'
   },
   kk: {
     header_login: 'Кіру',

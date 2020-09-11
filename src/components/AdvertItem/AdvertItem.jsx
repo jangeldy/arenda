@@ -3,7 +3,8 @@ import Carousel from '../Carousel/Carousel';
 import { Wrapper } from './AdvertItemStyle';
 import { useTranslation } from 'react-i18next';
 import IconButton from '@material-ui/core/IconButton';
-import Favorite from '@material-ui/icons/FavoriteBorder';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import Favorite from '@material-ui/icons/Favorite';
 
 function AdvertItem({
   id,
@@ -34,12 +35,19 @@ function AdvertItem({
         </div>
       </div>
       <div>
-        <span className="price number-font">{price} ₸</span>
+        <span className="price number-font">{price}</span>
+        <span className="bold"> ₸ </span>
         <span>{t(`rentType_${rentType}`)}.</span>
         <IconButton
           size="small"
           className="right"
-          children={<Favorite fontSize="small" />}
+          children={
+            favorite ? (
+              <Favorite fontSize="small" color="secondary" />
+            ) : (
+              <FavoriteBorder fontSize="small" />
+            )
+          }
         />
       </div>
       <div className="address">
