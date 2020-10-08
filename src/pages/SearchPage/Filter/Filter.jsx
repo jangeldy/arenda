@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Wrapper } from './FilterStyle';
 import Card from '@material-ui/core/Card';
 import ListOrMap from './FilterItems/ListOrMap';
@@ -10,20 +10,32 @@ import Features from './FilterItems/Features';
 import './FilterTranslate';
 
 export default function Filter() {
+  // const [scrolled, setScrolled] = useState(false);
+
+  /*
+  <ListOrMap />
+      <Card className="p3">
+        <div className="flex">
+          <RoomOrFlat />
+          <AreaAndFloor />
+        </div>
+        <div className="flex">
+          <PriceFromTo />
+        </div>
+
+        <Facilities />
+        <Features />
+      </Card>
+  */
+
   return (
     <Wrapper>
-      <div className="sticky">
-        <ListOrMap />
-        <Card>
-          <div className="p2 mb1">
-            <RoomOrFlat />
-            <PriceFromTo />
-          </div>
-          <AreaAndFloor />
-          <Facilities />
-          <Features />
-        </Card>
-      </div>
+      <Card className="p2">
+        <div className="flex">
+          <RoomOrFlat />
+          <PriceFromTo />
+        </div>
+      </Card>
     </Wrapper>
   );
 }

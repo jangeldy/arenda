@@ -37,7 +37,7 @@ function SearchPage() {
         <div className="fw-6 fs-25">{t('search_localization', localization)}</div>
         <Sorting />
       </div>
-      <div className="flex pt2 mb3">
+      <div className="pt2 mb3">
         <Filter />
         <AdvertContainer>
           <div className="flex flex-wrap mb3">
