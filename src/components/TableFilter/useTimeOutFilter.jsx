@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useColumnFilter from './useColumnFilter';
 
 let timer = {};
 function useTimeOutFilter(name) {
+  const { search } = useLocation();
+  const params = new URLSearchParams(search);
+
   const filterPrice = useColumnFilter(name);
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(filterPrice.value);
 
   const onChange = (event) => {
     let newValue = event;
@@ -15,7 +18,7 @@ function useTimeOutFilter(name) {
     clearTimeout(timer[name]);
     timer[name] = setTimeout(function () {
       filterPrice.setFilter(newValue);
-    }, 500);
+    }, 1500);
   };
   return { value, onChange };
 }

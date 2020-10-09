@@ -1,18 +1,21 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 25%;
+  width: 20%;
   padding: 8px 8px 12px;
   min-width: 260px;
   position: relative;
   font-size: 15px;
   margin-bottom: 16px;
 
-  @media screen and (max-width: 1415px) {
-    width: 33.3333333333%;
+  @media screen and (max-width: 1440px) {
+    width: 25%;
   }
-  @media screen and (max-width: 1155px) {
+  @media screen and (max-width: 1130px) {
     width: 50%;
+  }
+  @media screen and (max-width: 743px) {
+    width: 100%;
   }
 
   .c1 {

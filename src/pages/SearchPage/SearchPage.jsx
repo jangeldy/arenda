@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import Sorting from './Sorting/Sorting';
 import Filter from './Filter/Filter';
 import AdvertItem from '../../components/AdvertItem/AdvertItem';
-import { AdvertContainer } from './SearchStyle';
 import testData from './TestData';
 import Pagination from '../../components/Pagination';
 
@@ -34,26 +33,28 @@ function SearchPage() {
         Более <span className="number-font fw-5">300</span> вариантов жилья
       </div>
       <div className="flex justify-between items-center mb1">
-        <div className="fw-6 fs-25">{t('search_localization', localization)}</div>
+        <div className="fw-8 fs-25">{t('search_localization', localization)}</div>
         <Sorting />
       </div>
-      <div className="pt2 mb3">
-        <Filter />
-        <AdvertContainer>
-          <div className="flex flex-wrap mb3">
-            {data.map((item, index) => (
-              <AdvertItem key={index} {...item} />
-            ))}
-          </div>
-          <div>
-            <Pagination />
-            <div className="center mt2">
-              <span className="number-font">1 – 20 </span>
-              <span>из Варианты жилья:</span>
-              <span className="number-font"> 300+</span>
-            </div>
-          </div>
-        </AdvertContainer>
+
+      {/* ФИЛЬТР ПОИСКА*/}
+      <Filter />
+
+      {/* ОБЪЯВЛЕНИЯ */}
+      <div className="flex flex-wrap mb3" style={{ marginLeft: -8, marginRight: -8 }}>
+        {data.map((item, index) => (
+          <AdvertItem key={index} {...item} />
+        ))}
+      </div>
+
+      {/* ПАГИНАЦИЯ */}
+      <div>
+        <Pagination />
+        <div className="center mt2">
+          <span className="number-font">1 – 20 </span>
+          <span>из Варианты жилья:</span>
+          <span className="number-font"> 300+</span>
+        </div>
       </div>
     </>
   );

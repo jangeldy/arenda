@@ -8,9 +8,12 @@ export const ThemeWrapper = styled.main`
   .web-site-width {
     max-width: 1660px;
     width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 30px;
     margin: auto;
+
+    @media screen and (max-width: 743px) {
+      padding: 30px 10px;
+    }
   }
 
   .text-primary {

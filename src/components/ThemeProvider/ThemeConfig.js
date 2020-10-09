@@ -13,6 +13,7 @@ export default function (isDark) {
     typography: { fontFamily: "'Raleway', sans-serif" },
     shape: { borderRadius: 8 },
     props: {
+      MuiButton: { disableFocusRipple: true },
       MuiButtonGroup: { disableElevation: true },
       MuiCheckbox: { size: 'small' },
       MuiCard: { variant: 'outlined' },
@@ -30,6 +31,17 @@ export default function (isDark) {
       },
     },
     overrides: {
+      MuiPopover: {
+        paper: {
+          border: '0.5px solid rgba(118, 118, 118, 0.28)',
+          boxShadow: 'rgba(0, 0, 0, 0.15) 0px 10px 37px',
+        },
+      },
+      MuiPaper: {
+        root: {
+          color: isDark ? '#fff' : '#000',
+        },
+      },
       MuiToggleButton: {
         root: {
           width: '100%',
@@ -42,6 +54,10 @@ export default function (isDark) {
               backgroundColor: primary.main,
             },
           },
+        },
+        sizeSmall: {
+          paddingTop: 6,
+          paddingBottom: 6,
         },
       },
       MuiPagination: { ul: { justifyContent: 'center' } },
@@ -79,6 +95,7 @@ export default function (isDark) {
           textTransform: 'inherit',
         },
         outlined: {
+          border: `1px solid rgba(${isDark ? '255, 255, 255,' : '0, 0, 0,'} 0.3)`,
           padding: '5px 26px',
         },
         contained: {
