@@ -11,7 +11,7 @@ export default function Root() {
     <>
       <NoticeModule />
       <Header />
-      <div className="web-site-width">
+      <div className="web-site-width pt2">
         <Switch>
           <Route exact {...routerProps.homePage} />
           <Route exact {...routerProps.loginPage} />

@@ -6,13 +6,15 @@ export const ThemeWrapper = styled.main`
   min-height: 100vh;
 
   .web-site-width {
-    max-width: 1660px;
+    max-width: 1760px;
     width: 100%;
-    padding: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
     margin: auto;
 
     @media screen and (max-width: 743px) {
-      padding: 30px 10px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 

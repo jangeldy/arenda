@@ -26,7 +26,9 @@ const SampleSlider = withStyles({
       marginRight: 1,
     },
   },
+  active: {},
   track: {
+    opacity: 0.6,
     height: 3,
   },
   rail: {

@@ -28,12 +28,12 @@ function SearchPage() {
   }));
 
   return (
-    <>
+    <div className="py3">
       <div className="mb1">
         Более <span className="number-font fw-5">300</span> вариантов жилья
       </div>
       <div className="flex justify-between items-center mb1">
-        <div className="fw-8 fs-25">{t('search_localization', localization)}</div>
+        <div className="fw-8 fs-30">{t('search_localization', localization)}</div>
         <Sorting />
       </div>
 
@@ -56,7 +56,7 @@ function SearchPage() {
           <span className="number-font"> 300+</span>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

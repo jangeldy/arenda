@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import Slider from '../../../../components/Slider';
-import { TextField, Popover, Button, Typography } from '@material-ui/core';
-import Text from '../../../../components/Text';
+import Slider from '../../../components/Slider';
+import {
+  TextField,
+  Popover,
+  Button,
+  Typography,
+  Divider,
+  InputAdornment,
+} from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
+import PriceChart from './PriceChart';
 
 export default function Price() {
   const { t } = useTranslation();
-  const [priceFrom, setPriceFrom] = useState();
-  const [priceTo, setPriceTo] = useState();
+  const [priceFrom, setPriceFrom] = useState(0);
+  const [priceTo, setPriceTo] = useState(500000);
   const [anchorEl, setAnchorEl] = useState();
 
   return (
@@ -29,19 +36,28 @@ export default function Price() {
           <Typography>
             Средняя цена за ночь: <span className="number-font">₸ 150 000</span>
           </Typography>
-
-          <Slider
-            value={[priceFrom, priceTo]}
-            onChange={(event, newPrice) => {
-              setPriceFrom(newPrice[0]);
-              setPriceTo(newPrice[0]);
-            }}
-            max={300000}
-          />
+          <div className="mt3">
+            <PriceChart priceFrom={priceFrom} priceTo={priceTo} />
+            <Slider
+              value={[priceFrom, priceTo]}
+              onChange={(event, newPrice) => {
+                setPriceFrom(newPrice[0]);
+                setPriceTo(newPrice[1]);
+              }}
+              max={500000}
+            />
+          </div>
           <div className="flex mt2 items-center">
             <TextField
               label={t('filter_from')}
               inputProps={{ className: 'number-font' }}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <span className="color-primary">₸</span>
+                  </InputAdornment>
+                ),
+              }}
               value={priceFrom}
               onBlur={() => {
                 if (priceFrom > priceTo) {
@@ -53,19 +69,33 @@ export default function Price() {
             <TextField
               label={t('filter_to')}
               inputProps={{ className: 'number-font' }}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <span className="color-primary">₸</span>
+                  </InputAdornment>
+                ),
+              }}
               style={{ marginLeft: 10 }}
-              value={priceTo}
+              value={priceTo === 500000 ? '500000+' : priceTo}
               onBlur={() => {
                 if (priceTo < priceFrom) {
                   setPriceFrom(priceTo);
                 }
                 if (parseInt(priceTo) > 300000) {
-                  setPriceTo(priceTo);
+                  setPriceTo(300000);
                 }
               }}
               onChange={(event, value) => setPriceTo(value)}
             />
           </div>
+        </div>
+        <Divider />
+        <div className="p2 flex justify-between">
+          <Button>Очистить</Button>
+          <Button variant="contained" color="primary">
+            Сохранить
+          </Button>
         </div>
       </Popover>
     </div>

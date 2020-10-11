@@ -7,8 +7,9 @@ import Input from '@material-ui/core/InputBase/InputBase';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup/ToggleButtonGroup';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import { useTranslation } from 'react-i18next';
-import Price from './FilterItems/Price';
+import Price from './Price';
 import { Button } from '@material-ui/core';
+import OtherFilters from './OtherFilters';
 
 export default function Filter() {
   const { search } = useLocation();
@@ -16,8 +17,6 @@ export default function Filter() {
   const { t } = useTranslation();
   const [property, setProperty] = useState();
   const [rooms, setRooms] = useState([]);
-  const [priceFrom, setPriceFrom] = useState();
-  const [priceTo, setPriceTo] = useState();
 
   /*
   <ListOrMap />
@@ -63,9 +62,7 @@ export default function Filter() {
 
         <Price />
 
-        <Button variant="outlined" style={{ marginLeft: 10 }}>
-          {t('filter_other')}
-        </Button>
+        <OtherFilters />
       </div>
     </div>
   );

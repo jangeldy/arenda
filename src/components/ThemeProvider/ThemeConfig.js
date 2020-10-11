@@ -8,7 +8,7 @@ export default function (isDark) {
     palette: {
       type: isDark ? 'dark' : 'light',
       primary: primary,
-      divider: 'rgba(0,0,0,0.3)',
+      secondary: { main: '#008295' },
     },
     typography: { fontFamily: "'Raleway', sans-serif" },
     shape: { borderRadius: 8 },
@@ -45,6 +45,8 @@ export default function (isDark) {
       MuiToggleButton: {
         root: {
           width: '100%',
+          fontWeight: 600,
+          textTransform: 'inherit',
           border: `1px solid rgba(${isDark ? '255, 255, 255,' : '0, 0, 0,'} 0.3)`,
           color: isDark ? '#ffffff' : '#000000',
           '&$selected': {
@@ -91,6 +93,7 @@ export default function (isDark) {
       },
       MuiButton: {
         root: {
+          fontWeight: 600,
           padding: '6px 26px',
           textTransform: 'inherit',
         },
@@ -114,6 +117,11 @@ export default function (isDark) {
         inputMarginDense: {
           height: 'inherit',
           fontSize: '14px',
+        },
+      },
+      MuiInputBase: {
+        input: {
+          color: isDark ? '#fff' : '#000',
         },
       },
       MuiTypography: {
