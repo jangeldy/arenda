@@ -23,15 +23,9 @@ function AdvertItem({
   const { t } = useTranslation();
   return (
     <Wrapper>
-      <div className="mb1">
-        <div className="c1 border-radius">
-          <div className="relative">
-            <div className="c2">
-              <div className="c3">
-                <Carousel images={images} />
-              </div>
-            </div>
-          </div>
+      <div className="c2 mb1">
+        <div className="c3">
+          <Carousel images={images} />
         </div>
       </div>
       <div>

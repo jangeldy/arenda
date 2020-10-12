@@ -4,13 +4,15 @@ import Button from '@material-ui/core/Button';
 import ArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeftOutlined';
 import ArrowRightIcon from '@material-ui/icons/KeyboardArrowRightOutlined';
 import Swipe from 'react-swipeable-views';
+import { useTheme } from '@material-ui/core';
 
 function Carousel({ images }) {
+  const theme = useTheme();
   const [imgIndex, setImgIndex] = useState(0);
   const size = images.length - 1;
 
   return (
-    <Wrapper>
+    <Wrapper borderColor={theme.palette.divider}>
       <Swipe
         style={{ width: '100%', height: '100%' }}
         containerStyle={{ width: '100%', height: '100%' }}
@@ -63,6 +65,7 @@ function Carousel({ images }) {
           </div>
         </>
       )}
+      <div className="br" />
     </Wrapper>
   );
 }

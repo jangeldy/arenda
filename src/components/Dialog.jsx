@@ -29,7 +29,7 @@ const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
     <MuiDialogTitle disableTypography className={classes.root} {...other}>
-      <Typography variant="h6">{children}</Typography>
+      <span className="fs-18 fw-6">{children}</span>
       {onClose ? (
         <IconButton className={classes.closeButton} onClick={onClose}>
           <CloseIcon color="primary" fontSize="small" />
@@ -52,13 +52,14 @@ const DialogActions = withStyles((theme) => ({
   },
 }))(MuiDialogActions);
 
-export default function Dialog({ title, content, actions, open, handleClose }) {
+export default function Dialog({ title, content, actions, open, handleClose, ...rest }) {
   return (
     <MuiDialog
       onClose={handleClose}
       open={open}
       TransitionComponent={Transition}
       keepMounted
+      {...rest}
     >
       <DialogTitle onClose={handleClose}>{title}</DialogTitle>
       <DialogContent dividers>{content}</DialogContent>

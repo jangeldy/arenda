@@ -1,13 +1,24 @@
 import styled from 'styled-components';
-import Card from '@material-ui/core/Card';
 
-export const Wrapper = styled(Card)`
+export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
+  border-radius: 13px;
+
+  .br {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 13px;
+    border: 1px solid ${(props) => props.borderColor};
+    pointer-events: none;
+  }
 
   .slide {
     background-position: center;

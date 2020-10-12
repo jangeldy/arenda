@@ -13,8 +13,8 @@ export const ThemeWrapper = styled.main`
     margin: auto;
 
     @media screen and (max-width: 743px) {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 24px;
+      padding-right: 24px;
     }
   }
 

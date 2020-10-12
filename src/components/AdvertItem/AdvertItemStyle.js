@@ -15,18 +15,12 @@ export const Wrapper = styled.div`
     width: 50%;
   }
   @media screen and (max-width: 743px) {
+    font-size: 17px;
     width: 100%;
-  }
-
-  .c1 {
-    contain: content !important;
-    position: relative !important;
-    overflow: hidden !important;
   }
 
   .c2 {
     padding-top: 66.6667%;
-    background: rgb(216, 216, 216);
     contain: strict !important;
     position: relative !important;
     width: 100% !important;
@@ -42,17 +36,18 @@ export const Wrapper = styled.div`
     height: 100% !important;
     width: 100% !important;
   }
-  
+
   .price {
     font-weight: 800;
     margin-right: 5px;
   }
-  
+
   sup {
     font-size: 10px;
   }
-  
-  .address, .title {
+
+  .address,
+  .title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -60,8 +60,10 @@ export default function Filter() {
           </ToggleButtonGroup>
         </div>
 
+        {/* PRICE */}
         <Price />
 
+        {/* OTHER FILTERS */}
         <OtherFilters />
       </div>
     </div>
