@@ -15,7 +15,6 @@ export default function (isDark) {
     props: {
       MuiButton: { disableFocusRipple: true },
       MuiButtonGroup: { disableElevation: true },
-      MuiCheckbox: { size: 'small' },
       MuiCard: { variant: 'outlined' },
       MuiAppBar: {
         position: 'static',

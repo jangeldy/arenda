@@ -1,38 +1,15 @@
 import React, { useState } from 'react';
-import { Wrapper } from './FilterStyle';
-import Card from '@material-ui/core/Card';
-import { useLocation } from 'react-router-dom';
 import './FilterTranslate';
-import Input from '@material-ui/core/InputBase/InputBase';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup/ToggleButtonGroup';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import { useTranslation } from 'react-i18next';
 import Price from './Price';
-import { Button } from '@material-ui/core';
 import OtherFilters from './OtherFilters';
 
 export default function Filter() {
-  const { search } = useLocation();
-  const params = new URLSearchParams(search);
   const { t } = useTranslation();
   const [property, setProperty] = useState();
   const [rooms, setRooms] = useState([]);
-
-  /*
-  <ListOrMap />
-      <Card className="p3">
-        <div className="flex">
-          <RoomOrFlat />
-          <AreaAndFloor />
-        </div>
-        <div className="flex">
-          <PriceFromTo />
-        </div>
-
-        <Facilities />
-        <Features />
-      </Card>
-  */
 
   return (
     <div className="mb3 mt3">

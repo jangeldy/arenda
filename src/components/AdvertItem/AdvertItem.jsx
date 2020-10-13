@@ -28,11 +28,8 @@ function AdvertItem({
           <Carousel images={images} />
         </div>
       </div>
-      <div>
-        <span className="price number-font">{price}</span>
-        <span className="bold"> ₸ </span>
-        <span>{t(`rentType_${rentType}`)}.</span>
-        <IconButton
+
+      {/*<IconButton
           size="small"
           className="right"
           children={
@@ -42,8 +39,7 @@ function AdvertItem({
               <FavoriteBorder fontSize="small" />
             )
           }
-        />
-      </div>
+        />*/}
       <div className="address">
         <span className="number-font mr1">
           {t(`roomType_short_${rooms}`)} {area} м<sup>2</sup>
@@ -51,6 +47,11 @@ function AdvertItem({
         <span>{address}</span>
       </div>
       <div className="title">{title}</div>
+      <div>
+        <span className="price number-font">{price}</span>
+        <span className="bold"> ₸ </span>
+        <span>{t(`rentType_${rentType}`)}.</span>
+      </div>
     </Wrapper>
   );
 }

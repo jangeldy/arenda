@@ -11,10 +11,10 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 1440px) {
     width: 25%;
   }
-  @media screen and (max-width: 1130px) {
+  @media screen and (max-width: 1200px) {
     width: 50%;
   }
-  @media screen and (max-width: 743px) {
+  @media screen and (max-width: 865px) {
     font-size: 17px;
     width: 100%;
   }
