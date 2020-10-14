@@ -19,9 +19,12 @@ export default function Price() {
 
   return (
     <div style={{ marginLeft: 10 }}>
-      <Button variant="outlined" onClick={(event) => setAnchorEl(event.currentTarget)}>
-        {t('filter_price')}
-      </Button>
+      <Button
+        variant="outlined"
+        size="large"
+        onClick={(event) => setAnchorEl(event.currentTarget)}
+        children={t('filter_price')}
+      />
       <Popover
         open={!!anchorEl}
         anchorEl={anchorEl}

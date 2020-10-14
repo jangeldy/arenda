@@ -21,15 +21,18 @@ export default function (isDark) {
         color: 'default',
         elevation: 1,
       },
+      MuiOutlinedInput: {
+        margin: 'dense',
+      },
       MuiTextField: {
         variant: 'outlined',
         size: 'small',
       },
-      MuiToggleButtonGroup: {
-        size: 'small',
-      },
     },
     overrides: {
+      MuiMenuItem: {
+        root: { fontSize: '15px' },
+      },
       MuiPopover: {
         paper: {
           border: '0.5px solid rgba(118, 118, 118, 0.28)',
@@ -55,10 +58,8 @@ export default function (isDark) {
               backgroundColor: primary.main,
             },
           },
-        },
-        sizeSmall: {
-          paddingTop: 6,
-          paddingBottom: 6,
+          paddingTop: 7,
+          paddingBottom: 7,
         },
       },
       MuiPagination: { ul: { justifyContent: 'center' } },
@@ -95,10 +96,15 @@ export default function (isDark) {
           fontWeight: 600,
           padding: '6px 26px',
           textTransform: 'inherit',
+          whiteSpace: 'nowrap',
         },
         outlined: {
           border: `1px solid rgba(${isDark ? '255, 255, 255,' : '0, 0, 0,'} 0.3)`,
           padding: '5px 26px',
+        },
+        outlinedSizeLarge: {
+          paddingTop: 6,
+          paddingBottom: 6,
         },
         contained: {
           backgroundColor: isDark ? '#808080' : '#ffffff',
@@ -113,6 +119,9 @@ export default function (isDark) {
         },
       },
       MuiOutlinedInput: {
+        notchedOutline: {
+          borderColor: `rgba(${isDark ? '255, 255, 255,' : '0, 0, 0,'} 0.3)`,
+        },
         inputMarginDense: {
           height: 'inherit',
           fontSize: '14px',

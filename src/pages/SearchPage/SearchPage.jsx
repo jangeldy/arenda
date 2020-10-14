@@ -32,13 +32,11 @@ function SearchPage() {
       <div className="mb1">
         Более <span className="number-font fw-5">300</span> вариантов жилья
       </div>
-      <div className="flex justify-between items-center mb1">
-        <div className="fw-8 fs-30">{t('search_localization', localization)}</div>
-        <Sorting />
-      </div>
+      <div className="fw-8 fs-30">{t('search_localization', localization)}</div>
 
       {/* ФИЛЬТР ПОИСКА*/}
       <Filter />
+      <Sorting />
 
       {/* ОБЪЯВЛЕНИЯ */}
       <div className="flex flex-wrap mb3" style={{ marginLeft: -8, marginRight: -8 }}>
