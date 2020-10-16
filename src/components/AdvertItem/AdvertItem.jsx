@@ -2,9 +2,8 @@ import React from 'react';
 import Carousel from '../Carousel/Carousel';
 import { Wrapper } from './AdvertItemStyle';
 import { useTranslation } from 'react-i18next';
-import IconButton from '@material-ui/core/IconButton';
-import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
-import Favorite from '@material-ui/icons/Favorite';
+import { ReactComponent as FavoriteIcon } from './favorite.svg';
+import { ReactComponent as FavoriteRedIcon } from './favoriteRed.svg';
 
 function AdvertItem({
   id,
@@ -28,18 +27,9 @@ function AdvertItem({
           <Carousel images={images} />
         </div>
       </div>
-
-      {/*<IconButton
-          size="small"
-          className="right"
-          children={
-            favorite ? (
-              <Favorite fontSize="small" color="secondary" />
-            ) : (
-              <FavoriteBorder fontSize="small" />
-            )
-          }
-        />*/}
+      <div className="favorite-icon">
+        {favorite ? <FavoriteRedIcon /> : <FavoriteIcon />}
+      </div>
       <div className="address">
         <span className="number-font mr1">
           {t(`roomType_short_${rooms}`)} {area} м<sup>2</sup>

@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-radius: 13px;
+  border-radius: 8px;
 
   .br {
     position: absolute;
@@ -15,9 +15,16 @@ export const Wrapper = styled.div`
     bottom: 0;
     right: 0;
     left: 0;
-    border-radius: 13px;
+    border-radius: 8px;
     border: 1px solid ${(props) => props.borderColor};
     pointer-events: none;
+  }
+
+  @media screen and (max-width: 743px) {
+    border-radius: 12px;
+    .br {
+      border-radius: 12px;
+    }
   }
 
   .slide {

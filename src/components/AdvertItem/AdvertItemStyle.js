@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 20%;
-  padding: 8px 8px 12px;
+  padding: 9px 9px 16px;
   min-width: 260px;
   position: relative;
   font-size: 15px;
@@ -17,6 +17,12 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 743px) {
     font-size: 17px;
     width: 100%;
+  }
+  
+  .favorite-icon {
+    position: absolute;
+    top: 17px;
+    right: 17px;
   }
 
   .c2 {

@@ -11,7 +11,7 @@ export default [
     path: '/dvushka-ulitsa-mikluho-maklaya-4770087',
     space: '56',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_4xbodf34s_8b3b202e.jpg',
+      'https://a0.muscache.com/im/pictures/225cfe43-ebc8-4133-afcd-b6cb86a49efc.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_7oc663wdq9_5a41ff30.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_1ymr3hm2ds_60b914fa.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_8u9ydvuuwx_39f622ad.jpg',
@@ -59,7 +59,7 @@ export default [
     path: '/dvushka-na-metro-begovaya-4770069',
     space: '68',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_5hyfvs5bec_9b972114.jpg',
+      'https://a0.muscache.com/im/pictures/dac0173a-ec92-4899-b63f-4b3f35622146.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_4vbqbr9ro_e7e6aa81.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_7i9okc4uxd_ea3d64c3.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_4qakxrcgu4_f63fe3d2.jpg',
@@ -102,7 +102,7 @@ export default [
     path: '/2-h-komnatnaya-kvartira-okolo-metro-pechatniki-4769560',
     space: '42',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_8p9ppeclgw_d0001bc8.jpg',
+      'https://a0.muscache.com/im/pictures/caff9e16-8aa0-4c77-aed0-85fc8c3685b1.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_2zxkef02wb_cfa8d096.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_7x3ihymv1l_1b8e902a.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_2ozkxf6pvs_ae4eafba.jpg',
@@ -153,7 +153,7 @@ export default [
     path: '/odnushka-na-metro-otradnoe-4769667',
     space: '30',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_9i6t53hcmb_79b8226a.jpg',
+      'https://a0.muscache.com/im/pictures/908bd76c-d937-4e9c-a7b9-f82b23dd9274.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_9rjdlhczqr_3c2758ae.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_4vvsgz01hl_02e2e806.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_5cdpcusoyy_997ad345.jpg',
@@ -196,7 +196,7 @@ export default [
     path: '/1-komnatnaya-kvartira-okolo-metro-krasnoselskaya-4769670',
     space: '38',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_7izcabsrfr_205155fa.jpg',
+      'https://a0.muscache.com/im/pictures/6f33532c-d1b3-4fd3-96cd-c7fa4a0005de.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_ryk4k9ruy_985a78f5.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_7kvl7fjvvn_76383e60.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_56gle2gnsb_7d6d5ead.jpg',
@@ -241,7 +241,7 @@ export default [
     path: '/1k-kvartira-okolo-metro-tehnopark-4769960',
     space: '40',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_39w2q7p1dl_961e45cc.jpg',
+      'https://a0.muscache.com/im/pictures/05a2e59e-5e05-4910-befb-df385b080ca8.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_3ezwlb5i1b_21383c08.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_7deyjg3xrk_daf7f018.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_9l31uvdlfa_a423c167.jpg',
@@ -280,7 +280,7 @@ export default [
     path: '/2-k-kvartira-100-m-3-17-et-1421410',
     space: '87',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2018/07/20/thumb_4xb4zmd0yf_3a6c87f9.jpg',
+      'https://a0.muscache.com/im/pictures/2033a473-2fcf-4841-9eee-0d0b64747a9d.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2018/07/20/thumb_5smhk64qp3_db297803.jpg',
       'https://static.thelocals.ru/images/thumb/2019/06/20/thumb_4max32mu6c_0ef45cb5.jpg',
       'https://static.thelocals.ru/images/thumb/2018/07/20/thumb_8yz5narwt2_8361fc2e.jpg',
@@ -340,7 +340,7 @@ export default [
     path: '/2k-kvartira-okolo-metro-kahovskaya-4769683',
     space: '45',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_6o5ff69dn0_7c4b9f5b.jpg',
+      'https://a0.muscache.com/im/pictures/406071c2-af94-4056-9052-ebd47547e18a.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_4om8lzjasc_9ef082eb.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_933ck60nv3_16b195e6.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_5vt2gf27dn_8587c563.jpg',
@@ -381,7 +381,7 @@ export default [
     path: '/dvushka-okolo-metro-kozhuhovskaya-4769695',
     space: '48',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_5pcujl5f9b_4a627526.jpg',
+      'https://a0.muscache.com/im/pictures/96f5b053-76ae-4531-8d3e-f715253da310.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_5th9xll1if_f2e02828.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_o79asnf34_2ae88c4b.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_748hlu0bfd_92e7c9e9.jpg',
@@ -421,7 +421,7 @@ export default [
     path: '/dvushka-ulitsa-moldagulovoy-4769441',
     space: '43',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_82ywyv61xk_8f95708e.jpg',
+      'https://a0.muscache.com/im/pictures/7a130cdb-f5ba-43ff-be60-39e5c6a54fad.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_8nab2fhbw4_77cf5ef4.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_8puj1xo6n7_fee7f222.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_8anwpusv1y_e334bcb5.jpg',
@@ -458,7 +458,7 @@ export default [
     path: '/odnushka-ulitsa-rokotova-4769439',
     space: '33',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_8l34y5phn8_f9d299f1.jpg',
+      'https://a0.muscache.com/im/pictures/34835b61-72fe-4b73-8107-77f85b52350c.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_6klcbcmoz6_7177f619.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_7efokpw8t9_a634b443.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_5s6udwwm0x_05abcc9b.jpg',
@@ -502,7 +502,7 @@ export default [
     path: '/1k-kvartira-okolo-metro-sviblovo-4769087',
     space: '32',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_nz1d8945t_041f8123.jpg',
+      'https://a0.muscache.com/im/pictures/0b7e6350-82e7-4c02-aefc-5afa25fc7341.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_8l0tqbudee_72cc5c98.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_8u85vh4ib4_d7579924.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_97yop7v9lw_8c3952cd.jpg',
@@ -545,7 +545,7 @@ export default [
     path: '/2k-kvartira-ulitsa-petra-romanova-4769297',
     space: '46',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_bczm8fcyl_e9fd2b4d.jpg',
+      'https://a0.muscache.com/im/pictures/49022795-1baf-4551-be78-eed1d60aec5e.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_9c7fjk82md_5b2546a1.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_2jcfjc793o_06859578.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_1ysv1gl9oz_ddfe900e.jpg',
@@ -592,7 +592,7 @@ export default [
     path: '/2-h-komnatnaya-kvartira-na-metro-ryazanskiy-prospekt-4769227',
     space: '43',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_8a1gpgyuz_e4b38b0e.jpg',
+      'https://a0.muscache.com/im/pictures/874c2cc0-dcfa-4aa6-83c2-0febd3e147c6.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_99hn8lgmi0_24b3b2d6.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_12wlr230ai_0e63a082.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_geumz83xt_98f02782.jpg',
@@ -636,7 +636,7 @@ export default [
     path: '/2-h-komnatnaya-kvartira-moskva-4769207',
     space: '67',
     thumb_image_urls: [
-      'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_6juy8qg6ys_54a57d19.jpg',
+      'https://a0.muscache.com/im/pictures/fda0acbe-f470-47e9-bd12-0837e1a71676.jpg?im_w=720',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_7x73da6slu_e8cae6c8.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_2kftm0sjfy_f6bdf871.jpg',
       'https://static.thelocals.ru/images/thumb/2020/09/09/thumb_38ib12bnbb_47381ac0.jpg',

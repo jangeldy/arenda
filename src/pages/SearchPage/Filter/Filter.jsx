@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './FilterTranslate';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup/ToggleButtonGroup';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import ToggleButton from '@material-ui/lab/ToggleButton';
+import Button from '@material-ui/core/Button';
+import MapIcon from '@material-ui/icons/MapOutlined';
 import { useTranslation } from 'react-i18next';
 import Price from './Price';
 import OtherFilters from './OtherFilters';
@@ -12,7 +14,7 @@ export default function Filter() {
   const [rooms, setRooms] = useState([]);
 
   return (
-    <div className="mb3 mt3">
+    <div className="mb3 mt3 flex justify-between">
       <div className="flex">
         <div className="flex">
           <ToggleButtonGroup
@@ -43,6 +45,7 @@ export default function Filter() {
         {/* OTHER FILTERS */}
         <OtherFilters />
       </div>
+      <Button startIcon={<MapIcon />}>Показать на карте</Button>
     </div>
   );
 }

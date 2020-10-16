@@ -9,21 +9,16 @@ function Sorting() {
   const { t } = useTranslation();
   const [sorting, setSorting] = useState('date');
   return (
-    <div className="flex justify-between items-center">
-      <div className="fs-16">
-        Более <span className="number-font fw-5">300</span> вариантов жилья
-      </div>
-      <Select
-        value={sorting}
-        onChange={(e) => setSorting(e.target.value)}
-        SelectDisplayProps={{ style: { paddingLeft: 10, borderRadius: 12 } }}
-        input={<InputBase />}
-      >
-        <MenuItem value="date">{t('sorting_byDateAdded')}</MenuItem>
-        <MenuItem value="price">{t('sorting_byPrice')}</MenuItem>
-        <MenuItem value="area">{t('sorting_byArea')}</MenuItem>
-      </Select>
-    </div>
+    <Select
+      value={sorting}
+      onChange={(e) => setSorting(e.target.value)}
+      SelectDisplayProps={{ style: { paddingLeft: 10, borderRadius: 12 } }}
+      input={<InputBase />}
+    >
+      <MenuItem value="date">{t('sorting_byDateAdded')}</MenuItem>
+      <MenuItem value="price">{t('sorting_byPrice')}</MenuItem>
+      <MenuItem value="area">{t('sorting_byArea')}</MenuItem>
+    </Select>
   );
 }
 

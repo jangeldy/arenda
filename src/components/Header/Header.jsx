@@ -11,13 +11,13 @@ import { useTranslation } from 'react-i18next';
 export default function Header() {
   const { t } = useTranslation();
   const localization = useLocalization();
-  const { palette } = useTheme();
+  const { isDark } = useTheme();
 
   return (
-    <AppBar style={{ backgroundColor: palette.background.paper }}>
+    <AppBar style={{ backgroundColor: isDark ? '#262626' : '#ffffff' }}>
       <Toolbar style={{ padding: 0 }}>
         <div className="web-site-width flex items-center">
-          <Logo to={paths.homePage} children="zhai" />
+          <Logo className="color-secondary" to={paths.homePage} children="zhai" />
           <div style={{ flexGrow: 1, textAlign: 'right' }}>
             <Button
               className="ml4"

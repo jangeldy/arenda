@@ -4,7 +4,7 @@ import NoticeModule from 'react-notifications-component';
 import Page404 from '../pages/Page404/Page404';
 import routerProps from '../_helpers/routerProps';
 import Header from '../components/Header/Header';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 
 export default function Root() {
   return (

@@ -160,7 +160,7 @@ function OtherFilters() {
             <h2 children={t('filter_features')} />
             <div className="flex flex-wrap">
               {Dictionary.features.map((item) => (
-                <Item {...item} />
+                <Item key={item.code} {...item} />
               ))}
             </div>
 
@@ -169,7 +169,7 @@ function OtherFilters() {
             <h2 children={t('filter_facilities')} />
             <div className="flex flex-wrap">
               {Dictionary.facilities.map((item) => (
-                <Item {...item} />
+                <Item key={item.code} {...item} />
               ))}
             </div>
 
@@ -178,7 +178,7 @@ function OtherFilters() {
             <h2 children={t('filter_houseRules')} />
             <div className="flex flex-wrap">
               {Dictionary.houseRules.map((item) => (
-                <Item {...item} />
+                <Item key={item.code} {...item} />
               ))}
             </div>
           </div>

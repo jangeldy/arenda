@@ -8,7 +8,11 @@ export default function (isDark) {
     palette: {
       type: isDark ? 'dark' : 'light',
       primary: primary,
-      secondary: { main: '#008295' },
+      secondary: { main: '#00a194' },
+      background: {
+        default: isDark ? '#191919' : '#FAFAFA',
+        paper: isDark ? '#333333' : '#FFFFFF',
+      },
     },
     typography: { fontFamily: "'Raleway', sans-serif" },
     shape: { borderRadius: 8 },
