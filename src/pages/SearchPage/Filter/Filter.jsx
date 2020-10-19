@@ -14,7 +14,7 @@ export default function Filter() {
   const [rooms, setRooms] = useState([]);
 
   return (
-    <div className="mb3 mt3 flex justify-between">
+    <div className="mb2 mt2 flex justify-between">
       <div className="flex">
         <div className="flex">
           <ToggleButtonGroup

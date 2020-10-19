@@ -14,7 +14,7 @@ export default function (isDark) {
         paper: isDark ? '#333333' : '#FFFFFF',
       },
     },
-    typography: { fontFamily: "'Raleway', sans-serif" },
+    typography: { fontFamily: "'Raleway', sans-serif", htmlFontSize: 18 },
     shape: { borderRadius: 8 },
     props: {
       MuiButton: { disableFocusRipple: true },

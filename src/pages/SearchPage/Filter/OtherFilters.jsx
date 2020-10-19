@@ -5,7 +5,7 @@ import {
   Checkbox as MuiCheckbox,
   FormControlLabel,
   Divider,
-  TextField,
+  TextField
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import Row from '../../../components/Row';
@@ -53,6 +53,7 @@ function OtherFilters() {
         title={t('filter_other')}
         fullWidth
         maxWidth="md"
+        PaperProps={{ style: { maxWidth: 780 } }}
         content={
           <div className="px3 pb2 fs-16">
             {/*** КВАРТИРА ***/}
