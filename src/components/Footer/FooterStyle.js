@@ -7,11 +7,13 @@ export const Wrapper = styled.footer`
   font-weight: 500;
 
   .social-icons {
+    a {
+      margin-right: 25px;
+    }
     svg {
       cursor: pointer;
       fill: ${(props) => (props.isDark ? '#cccccc' : '#333333')};
       width: 18px;
-      margin-right: 25px;
 
       :hover {
         fill: ${(props) => (props.isDark ? '#999999' : '#666666')};

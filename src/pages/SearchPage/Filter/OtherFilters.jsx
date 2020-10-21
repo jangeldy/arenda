@@ -40,10 +40,10 @@ function OtherFilters() {
   );
 
   return (
-    <>
+    <div>
       <Button
         variant="outlined"
-        style={{ marginLeft: 10 }}
+        style={{ marginTop: 10 }}
         children={t('filter_other')}
         onClick={() => setOpen(true)}
       />
@@ -193,7 +193,7 @@ function OtherFilters() {
           </div>
         }
       />
-    </>
+    </div>
   );
 }
 

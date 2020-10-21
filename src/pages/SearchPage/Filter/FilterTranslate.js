@@ -11,6 +11,10 @@ addTranslation({
     filter_from: 'от',
     filter_to: 'до',
 
+    filter_termMonth: 'Помесячно',
+    filter_termDay: 'Посуточно',
+    filter_termHour: 'Почасово',
+
     filter_apartment: 'Квартира',
     filter_area: 'Площадь в м2',
     filter_floor: 'Этаж',

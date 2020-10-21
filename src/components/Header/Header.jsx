@@ -17,7 +17,7 @@ export default function Header() {
     <AppBar style={{ backgroundColor: isDark ? '#262626' : '#ffffff' }}>
       <Toolbar style={{ padding: 0 }}>
         <div className="web-site-width flex items-center">
-          <Logo className="color-secondary" to={paths.homePage} children="zhai" />
+          <Logo className="color-secondary" to={paths.homePage} children="zhai.kz" />
           <div style={{ flexGrow: 1, textAlign: 'right' }}>
             <Button
               className="ml4"

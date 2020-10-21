@@ -62,8 +62,7 @@ export default function (isDark) {
               backgroundColor: primary.main,
             },
           },
-          paddingTop: 7,
-          paddingBottom: 7,
+          padding: '5px 20px',
         },
       },
       MuiPagination: { ul: { justifyContent: 'center' } },
@@ -98,13 +97,13 @@ export default function (isDark) {
       MuiButton: {
         root: {
           fontWeight: 600,
-          padding: '6px 26px',
+          padding: '6px 20px',
           textTransform: 'inherit',
           whiteSpace: 'nowrap',
         },
         outlined: {
           border: `1px solid rgba(${isDark ? '255, 255, 255,' : '0, 0, 0,'} 0.3)`,
-          padding: '5px 26px',
+          padding: '5px 20px',
         },
         outlinedSizeLarge: {
           paddingTop: 6,

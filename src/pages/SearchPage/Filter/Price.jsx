@@ -18,10 +18,9 @@ export default function Price() {
   const [anchorEl, setAnchorEl] = useState();
 
   return (
-    <div style={{ marginLeft: 10 }}>
+    <div style={{ marginRight: 10, marginTop: 10 }}>
       <Button
         variant="outlined"
-        size="large"
         onClick={(event) => setAnchorEl(event.currentTarget)}
         children={t('filter_price')}
       />

@@ -29,10 +29,18 @@ function Footer() {
             <div className="item">Рекламодателям</div>
           </div>
           <div className="social-icons py3">
-            <FacebookIcon />
-            <VkIcon />
-            <TwitterIcon />
-            <InstagramIcon />
+            <a href="https://www.facebook.com/zhaikz-100659748509478/" target="_blank">
+              <FacebookIcon />
+            </a>
+            <a href="https://vk.com/public199568857" target="_blank">
+              <VkIcon />
+            </a>
+            <a href="https://twitter.com/zhai93616755" target="_blank">
+              <TwitterIcon />
+            </a>
+            <a href="https://instagram.com/zhai.kz?igshid=1nmm59bu8bwhc" target="_blank">
+              <InstagramIcon />
+            </a>
           </div>
         </div>
         <Divider />
