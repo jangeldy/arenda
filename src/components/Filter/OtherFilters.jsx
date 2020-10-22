@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dialog from '../../../components/Dialog';
+import Dialog from '../Dialog';
 import {
   Button,
   Checkbox as MuiCheckbox,
@@ -8,8 +8,8 @@ import {
   TextField
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
-import Row from '../../../components/Row';
-import { Dictionary } from '../../../_helpers/constants';
+import Row from '../Row';
+import { Dictionary } from '../../_helpers/constants';
 
 function OtherFilters() {
   const { t } = useTranslation();

@@ -112,6 +112,9 @@ export default function (isDark) {
         contained: {
           backgroundColor: isDark ? '#808080' : '#ffffff',
         },
+        text: {
+          padding: '5px 20px',
+        },
         textSizeSmall: {
           padding: '4px 14px',
         },

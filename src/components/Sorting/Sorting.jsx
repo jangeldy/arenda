@@ -11,11 +11,11 @@ function Sorting() {
   const { t } = useTranslation();
   const [sorting, setSorting] = useState('date');
   return (
-    <div className="flex justify-between mt2">
+    <div className="flex justify-between mt2 mb1" style={{ marginRight: -16, marginLeft: -8 }}>
       <Select
         value={sorting}
         onChange={(e) => setSorting(e.target.value)}
-        SelectDisplayProps={{ style: { paddingLeft: 5, borderRadius: 12 } }}
+        SelectDisplayProps={{ style: { paddingLeft: 10, borderRadius: 8 } }}
         input={<InputBase />}
       >
         <MenuItem value="date">{t('sorting_byDateAdded')}</MenuItem>
