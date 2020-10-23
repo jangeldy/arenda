@@ -2,11 +2,17 @@ import React from 'react';
 import useLocalization from '../../components/_hooks/useLocalization';
 import './SearchTranslate';
 import { useTranslation } from 'react-i18next';
-import Sorting from '../../components/Sorting/Sorting';
-import Filter from '../../components/Filter/Filter';
+import Sorting from './Sorting/Sorting';
+import Filter from './Filter/Filter';
 import AdvertItem from '../../components/AdvertItem/AdvertItem';
 import testData from './TestData';
 import Pagination from '../../components/Pagination';
+import HeaderMobile from '../../components/Header/HeaderMobile';
+import { ReactComponent as FilterIcon } from './filterIcon.svg';
+import { ReactComponent as FilterDarkIcon } from './filterIconDark.svg';
+import IconButton from '@material-ui/core/IconButton';
+import { useTheme } from '@material-ui/core';
+import FilterMobile from './FilterMobile/FilterMobile';
 
 function SearchPage() {
   const { t } = useTranslation();
@@ -28,33 +34,40 @@ function SearchPage() {
   }));
 
   return (
-    <div className="py3">
-      <div className="mb1">
-        Более <span className="number-font fw-5">300</span> вариантов жилья
-      </div>
-      <div className="fw-8 fs-30">{t('search_localization', localization)}</div>
+    <>
+      <HeaderMobile>
+        <div className="fw-6">Нур-Султан</div>
+        <div style={{ flexGrow: 1, textAlign: 'right' }}>
+          <FilterMobile />
+        </div>
+      </HeaderMobile>
 
-      {/* ФИЛЬТР ПОИСКА*/}
-      <Filter />
-      <Sorting />
+      <div className="web-site-width py3 pt2">
+        <div className="mb1">Более 300 вариантов жилья</div>
+        <div className="desktop fw-8 fs-30">{t('search_localization', localization)}</div>
+        <div className="mobile fw-8 fs-26 mb3">{t('search_localizationMob')}</div>
 
-      {/* ОБЪЯВЛЕНИЯ */}
-      <div className="flex flex-wrap mb3" style={{ marginLeft: -8, marginRight: -8 }}>
-        {data.map((item, index) => (
-          <AdvertItem key={index} {...item} />
-        ))}
-      </div>
+        {/* ФИЛЬТР ПОИСКА*/}
+        <div className="desktop">
+          <Filter />
+          <Sorting />
+        </div>
 
-      {/* ПАГИНАЦИЯ */}
-      <div>
-        <Pagination />
-        <div className="center mt2">
-          <span className="number-font">1 – 20 </span>
-          <span>из Варианты жилья:</span>
-          <span className="number-font"> 300+</span>
+        {/* ОБЪЯВЛЕНИЯ */}
+        <div className="flex flex-wrap mb3" style={{ marginLeft: -8, marginRight: -8 }}>
+          {data.map((item, index) => (
+            <AdvertItem key={index} {...item} />
+          ))}
+        </div>
+
+        {/* ПАГИНАЦИЯ */}
+        <div>
+          <Pagination />
+          <div className="center mt2">1 – 20 из Варианты жилья: 300+</div>
         </div>
       </div>
-    </div>
+
+    </>
   );
 }
 

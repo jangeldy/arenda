@@ -1,4 +1,4 @@
-import { addTranslation } from '../../_helpers/Translate';
+import { addTranslation } from '../../../_helpers/Translate';
 
 addTranslation({
   ru: {
@@ -8,6 +8,7 @@ addTranslation({
     filter_room: 'Комната',
     filter_price: 'Цена',
     filter_other: 'Другие фильтры',
+    filter_filters: 'Фильтры',
     filter_from: 'от',
     filter_to: 'до',
 

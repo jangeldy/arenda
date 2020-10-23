@@ -1,4 +1,4 @@
-import { addTranslation } from '../../_helpers/Translate';
+import { addTranslation } from '../../../_helpers/Translate';
 
 addTranslation({
   ru: {

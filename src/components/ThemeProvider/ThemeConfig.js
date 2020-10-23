@@ -2,19 +2,24 @@ export default function (isDark) {
   const primary = {
     main: isDark ? '#e4e4e4' : '#444444',
   };
+  const secondary = { main: '#00a194', dark: '#00877a' };
 
   return {
     isDark: isDark,
     palette: {
       type: isDark ? 'dark' : 'light',
       primary: primary,
-      secondary: { main: '#00a194' },
+      secondary: secondary,
       background: {
         default: isDark ? '#191919' : '#FAFAFA',
         paper: isDark ? '#333333' : '#FFFFFF',
       },
     },
-    typography: { fontFamily: "'Raleway', sans-serif", htmlFontSize: 18 },
+    typography: {
+      fontFamily:
+        "'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
+      htmlFontSize: 16,
+    },
     shape: { borderRadius: 8 },
     props: {
       MuiButton: { disableFocusRipple: true },
@@ -23,7 +28,7 @@ export default function (isDark) {
       MuiAppBar: {
         position: 'static',
         color: 'default',
-        elevation: 1,
+        elevation: 0,
       },
       MuiOutlinedInput: {
         margin: 'dense',
@@ -34,6 +39,13 @@ export default function (isDark) {
       },
     },
     overrides: {
+      MuiBottomNavigationAction: {
+        root: {
+          '&$selected': {
+            color: secondary.dark,
+          },
+        },
+      },
       MuiMenuItem: {
         root: { fontSize: '15px' },
       },
@@ -51,7 +63,6 @@ export default function (isDark) {
       MuiToggleButton: {
         root: {
           width: '100%',
-          fontWeight: 600,
           textTransform: 'inherit',
           border: `1px solid rgba(${isDark ? '255, 255, 255,' : '0, 0, 0,'} 0.3)`,
           color: isDark ? '#ffffff' : '#000000',
@@ -74,7 +85,7 @@ export default function (isDark) {
       },
       MuiAppBar: {
         root: {
-          boxShadow: 'rgba(0, 0, 0, 0.18) 0px 1px 2px !important',
+          backgroundColor: isDark ? '#262626' : '#ffffff',
         },
       },
       MuiFormControlLabel: {
@@ -96,7 +107,6 @@ export default function (isDark) {
       },
       MuiButton: {
         root: {
-          fontWeight: 600,
           padding: '6px 20px',
           textTransform: 'inherit',
           whiteSpace: 'nowrap',

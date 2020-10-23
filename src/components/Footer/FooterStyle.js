@@ -5,6 +5,7 @@ export const Wrapper = styled.footer`
   border-top: 1px solid ${(props) => props.bgColor};
   margin-top: 30px;
   font-weight: 500;
+  min-height: 65px;
 
   .social-icons {
     a {
@@ -37,7 +38,7 @@ export const Wrapper = styled.footer`
     }
   }
 
-  .app-store {
+  .store {
     img {
       opacity: 0.8;
       cursor: pointer;
@@ -47,15 +48,15 @@ export const Wrapper = styled.footer`
     }
   }
 
-  @media screen and (max-width: 743px) {
-    .footer-items {
-      display: block;
-      .item-point {
-        display: none;
-      }
-    }
-    .app-store {
-      display: none;
+  .navigation {
+    border-top: 1px solid ${(props) => props.bgColor};
+    height: 65px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    svg {
+      font-size: 26px;
     }
   }
 `;

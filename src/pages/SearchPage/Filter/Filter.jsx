@@ -31,10 +31,10 @@ export default function Filter() {
         value={rooms}
         onChange={(ev, value) => setRooms(value)}
       >
-        <ToggleButton value="1" children={<span className="number-font">1</span>} />
-        <ToggleButton value="2" children={<span className="number-font">2</span>} />
-        <ToggleButton value="3" children={<span className="number-font">3</span>} />
-        <ToggleButton value="4+" children={<span className="number-font">4+</span>} />
+        <ToggleButton value="1" children="1" />
+        <ToggleButton value="2" children="2" />
+        <ToggleButton value="3" children="3" />
+        <ToggleButton value="4+" children="4+" />
       </ToggleButtonGroup>
 
       {/* СРОК АРЕНДЫ */}

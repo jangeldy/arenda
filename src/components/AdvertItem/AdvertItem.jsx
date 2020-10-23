@@ -31,15 +31,14 @@ function AdvertItem({
         {favorite ? <FavoriteRedIcon /> : <FavoriteIcon />}
       </div>
       <div className="address">
-        <span className="number-font mr1">
+        <span className="mr1">
           {t(`roomType_short_${rooms}`)} {area} м<sup>2</sup>
         </span>
         <span>{address}</span>
       </div>
       <div className="title">{title}</div>
       <div>
-        <span className="price number-font">{price}</span>
-        <span className="bold"> ₸ </span>
+        <span className="price">{price} ₸ </span>
         <span>{t(`rentType_${rentType}`)}.</span>
       </div>
     </Wrapper>

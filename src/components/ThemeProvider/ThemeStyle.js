@@ -5,19 +5,6 @@ export const ThemeWrapper = styled.main`
   color: ${(props) => props.theme.palette.text.primary};
   min-height: 100vh;
 
-  .web-site-width {
-    max-width: 1760px;
-    width: 100%;
-    padding-left: 80px;
-    padding-right: 80px;
-    margin: auto;
-
-    @media screen and (max-width: 825px) {
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-  }
-
   .text-primary {
     color: ${(props) => props.theme.palette.text.primary};
   }

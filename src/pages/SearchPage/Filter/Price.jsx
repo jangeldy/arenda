@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Slider from '../Slider';
+import Slider from '../../../components/Slider';
 import {
   TextField,
   Popover,
@@ -36,7 +36,7 @@ export default function Price() {
       >
         <div style={{ padding: 20 }}>
           <Typography>
-            Средняя цена за ночь: <span className="number-font">₸ 150 000</span>
+            Средняя цена за ночь: ₸ 150 000
           </Typography>
           <div className="mt3">
             <PriceChart priceFrom={priceFrom} priceTo={priceTo} />
@@ -52,7 +52,6 @@ export default function Price() {
           <div className="flex mt2 items-center">
             <TextField
               label={t('filter_from')}
-              inputProps={{ className: 'number-font' }}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -70,7 +69,6 @@ export default function Price() {
             />
             <TextField
               label={t('filter_to')}
-              inputProps={{ className: 'number-font' }}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
