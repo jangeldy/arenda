@@ -67,10 +67,11 @@ export default function (isDark) {
           border: `1px solid rgba(${isDark ? '255, 255, 255,' : '0, 0, 0,'} 0.3)`,
           color: isDark ? '#ffffff' : '#000000',
           '&$selected': {
-            backgroundColor: primary.main,
-            color: isDark ? '#000000' : '#ffffff',
+            backgroundColor: isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
+            fontWeight: 600,
+            color: isDark ? '#ffffff' : '#000000',
             '&:hover': {
-              backgroundColor: primary.main,
+              // backgroundColor: primary.main,
             },
           },
           padding: '5px 20px',

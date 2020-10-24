@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ThemeWrapper = styled.main`
   background-color: ${(props) => props.theme.palette.background.default};
-  color: ${(props) => props.theme.palette.text.primary};
+  color: ${(props) => props.theme.isDark ? '#eeeeee' : '#000000'};
   min-height: 100vh;
 
   .text-primary {

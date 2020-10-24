@@ -5,7 +5,7 @@ import {
   Checkbox as MuiCheckbox,
   FormControlLabel,
   Divider,
-  TextField
+  TextField,
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import Row from '../../../components/Row';
@@ -40,10 +40,10 @@ function OtherFilters() {
   );
 
   return (
-    <div>
+    <div style={{ flexGrow: 2, margin: 5 }}>
       <Button
+        fullWidth
         variant="outlined"
-        style={{ marginTop: 10 }}
         children={t('filter_other')}
         onClick={() => setOpen(true)}
       />

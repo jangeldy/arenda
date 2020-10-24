@@ -18,8 +18,9 @@ export default function Price() {
   const [anchorEl, setAnchorEl] = useState();
 
   return (
-    <div style={{ marginRight: 10, marginTop: 10 }}>
+    <div style={{ flexGrow: 2, margin: 5 }}>
       <Button
+        fullWidth
         variant="outlined"
         onClick={(event) => setAnchorEl(event.currentTarget)}
         children={t('filter_price')}
@@ -35,9 +36,7 @@ export default function Price() {
         }}
       >
         <div style={{ padding: 20 }}>
-          <Typography>
-            Средняя цена за ночь: ₸ 150 000
-          </Typography>
+          <Typography>Средняя цена за ночь: ₸ 150 000</Typography>
           <div className="mt3">
             <PriceChart priceFrom={priceFrom} priceTo={priceTo} />
             <Slider

@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
     border-radius: 8px;
     border: 1px solid ${(props) => props.borderColor};
     pointer-events: none;
+    overflow: hidden;
   }
 
   @media screen and (max-width: 743px) {
