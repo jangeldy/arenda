@@ -11,12 +11,15 @@ export default function Root() {
     <>
       <NoticeModule />
       <HeaderDesktop />
-      <Switch>
-        <Route exact {...routerProps.homePage} />
-        <Route exact {...routerProps.loginPage} />
-        <Route exact {...routerProps.searchPage} />
-        <Route component={Page404} />
-      </Switch>
+      <div id="content">
+        <Switch>
+          <Route exact {...routerProps.homePage} />
+          <Route exact {...routerProps.loginPage} />
+          <Route exact {...routerProps.searchPage} />
+          <Route exact {...routerProps.advertPage} />
+          <Route component={Page404} />
+        </Switch>
+      </div>
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import { Wrapper } from './AdvertItemStyle';
 import { useTranslation } from 'react-i18next';
 import { ReactComponent as FavoriteIcon } from './favorite.svg';
 import { ReactComponent as FavoriteRedIcon } from './favoriteRed.svg';
+import paths from '../../_helpers/paths';
 
 function AdvertItem({
   id,
@@ -21,7 +22,7 @@ function AdvertItem({
 }) {
   const { t } = useTranslation();
   return (
-    <Wrapper>
+    <Wrapper to={paths.advertPage.replace(':id', id)}>
       <div className="c2 mb1">
         <div className="c3">
           <Carousel images={images} />

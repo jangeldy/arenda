@@ -318,6 +318,10 @@ input:-ms-input-placeholder {
   display: none !important;
 }
 
+#content {
+  min-height: calc(100vh - 300px);
+}
+
 .grow1 {
   flex-grow: 1;
 }
@@ -333,5 +337,8 @@ input:-ms-input-placeholder {
   }
   .mobile {
     display: inherit !important;
+  }
+  #content {
+    min-height: calc(100vh - 200px);
   }
 }

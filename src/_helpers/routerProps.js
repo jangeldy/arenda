@@ -1,6 +1,7 @@
 import paths from './paths';
 import LoginPage from '../pages/LoginPage/LoginPage';
 import SearchPage from '../pages/SearchPage/SearchPage';
+import AdvertPage from '../pages/AdvertPage/AdvertPage';
 
 export default {
   loginPage: {
@@ -15,5 +16,9 @@ export default {
   searchPage: {
     path: paths.searchPage,
     component: SearchPage,
+  },
+  advertPage: {
+    path: paths.advertPage,
+    component: AdvertPage,
   },
 };

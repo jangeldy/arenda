@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Link)`
   width: 20%;
   padding: 9px 9px 16px;
   min-width: 260px;

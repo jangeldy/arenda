@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.footer`
-  background-color: ${(props) => (props.isDark ? '#282828' : '#efefef')};
-  border-top: 1px solid ${(props) => props.bgColor};
-  margin-top: 30px;
-  font-weight: 500;
-  min-height: 65px;
+  .desktop {
+    font-weight: 500;
+    margin-top: 30px;
+    background-color: ${(props) => (props.isDark ? '#282828' : '#efefef')};
+    border-top: 1px solid ${(props) => props.bgColor};
+    min-height: 65px;
+  }
 
   .social-icons {
     a {
