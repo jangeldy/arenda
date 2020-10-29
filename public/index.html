@@ -2,7 +2,6 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -16,6 +15,20 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link rel="manifest" href="manifest.json" />
+    <script src="scripts/pwacompat.min.js"></script>
+    <link rel="icon" type="image/png" href="icons/icon-128.png" sizes="128x128" />
+    <script type="module">
+      // detect iOS Safari
+      if ('standalone' in navigator && !navigator.standalone) {
+        import('https://unpkg.com/pwacompat');
+      }
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('./sw.js')
+      }
+
+    </script>
+
     <title>Аренда квартир в Казахстане</title>
   </head>
 

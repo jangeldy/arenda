@@ -1,0 +1,28 @@
+{
+  "name": "Аренда жилья в Казахстане",
+  "short_name": "zhai.kz",
+  "display": "standalone",
+  "theme_color": "#002F34",
+  "background_color": "#002F34",
+  "description": "Аренда жилья в Казахстане",
+  "start_url": "./?utm_source=web_app_manifest&utm_medium=web_app_manifest",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-32.png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "icons/icon-256.png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512"
+    }
+  ]
+}
