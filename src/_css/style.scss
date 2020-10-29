@@ -178,18 +178,6 @@ input:-ms-input-placeholder {
 /**
   Для Подсказки
  */
-.web-site-width {
-  max-width: 1760px;
-  width: 100%;
-  padding-left: 80px;
-  padding-right: 80px;
-  margin: auto;
-
-  @media screen and (max-width: 825px) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
 .text-primary {
 }
 .text-secondary {
@@ -318,8 +306,19 @@ input:-ms-input-placeholder {
   display: none !important;
 }
 
-#content {
+.content {
   min-height: calc(100vh - 300px);
+}
+
+
+.pd-width {
+  padding-left: 80px;
+  padding-right: 80px;
+
+  @media screen and (max-width: 825px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .grow1 {
@@ -338,7 +337,7 @@ input:-ms-input-placeholder {
   .mobile {
     display: inherit !important;
   }
-  #content {
+  .content {
     min-height: calc(100vh - 200px);
   }
 }

@@ -7,6 +7,7 @@ import { AppBar, Toolbar, useTheme } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import useLocalization from '../_hooks/useLocalization';
 import './HeaderTranslate';
+import LogoIcon from './logo2.png';
 
 function HeaderDesktop() {
   const { t } = useTranslation();
@@ -14,30 +15,30 @@ function HeaderDesktop() {
   const localization = useLocalization();
 
   return (
-    <div className="desktop">
-      <AppBar style={{ borderBottom: `1px solid ${palette.divider}`}}>
-        <Toolbar style={{ padding: 0 }}>
-          <div className="web-site-width flex items-center">
-            <Logo className="color-secondary" to={paths.homePage} children="zhai.kz" />
-            <div style={{ flexGrow: 1, textAlign: 'right' }}>
-              <Button
-                className="ml4"
-                startIcon={<LocationIcon color="secondary" />}
-                size="small"
-                children={localization.name}
-              />
-              <Button
-                className="ml2"
-                color="secondary"
-                variant="contained"
-                children={t('header_rentApartment')}
-              />
-              <Button className="ml2" variant="outlined" children="Войти" />
-            </div>
+    <AppBar style={{ borderBottom: `1px solid ${palette.divider}` }}>
+      <Toolbar style={{ padding: 0 }}>
+        <div className="flex items-center fullWidth">
+          <Logo className="color-secondary" to={paths.homePage}>
+            <img src={LogoIcon} alt="zhai.kz" />
+          </Logo>
+          <div style={{ flexGrow: 1, textAlign: 'right' }}>
+            <Button
+              className="ml4"
+              startIcon={<LocationIcon color="secondary" />}
+              size="small"
+              children={localization.name}
+            />
+            <Button
+              className="ml2"
+              color="secondary"
+              variant="contained"
+              children={t('header_rentApartment')}
+            />
+            <Button className="ml2" variant="outlined" children="Войти" />
           </div>
-        </Toolbar>
-      </AppBar>
-    </div>
+        </div>
+      </Toolbar>
+    </AppBar>
   );
 }
 

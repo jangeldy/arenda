@@ -7,7 +7,6 @@ export default {
   loginPage: {
     path: paths.loginPage,
     component: LoginPage,
-    withoutHeader: true,
   },
   homePage: {
     path: paths.homePage,

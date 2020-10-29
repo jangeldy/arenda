@@ -13,10 +13,9 @@ export default function Root() {
       <HeaderDesktop />
       <div id="content">
         <Switch>
-          <Route exact {...routerProps.homePage} />
-          <Route exact {...routerProps.loginPage} />
-          <Route exact {...routerProps.searchPage} />
-          <Route exact {...routerProps.advertPage} />
+          {Object.values(routerProps).map((page) => (
+            <Route key={page.path} exact {...page} />
+          ))}
           <Route component={Page404} />
         </Switch>
       </div>
