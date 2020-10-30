@@ -13,6 +13,9 @@ export const Wrapper = styled.footer`
     a {
       margin-right: 25px;
     }
+    a:last-child {
+      margin-right: 0;
+    }
     svg {
       cursor: pointer;
       fill: ${(props) => (props.isDark ? '#cccccc' : '#333333')};
@@ -20,9 +23,6 @@ export const Wrapper = styled.footer`
 
       :hover {
         fill: ${(props) => (props.isDark ? '#999999' : '#666666')};
-      }
-      :last-child {
-        margin-right: 0;
       }
     }
   }
