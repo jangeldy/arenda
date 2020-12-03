@@ -7,7 +7,7 @@ import { AppBar, Toolbar, useTheme } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import useLocalization from '../_hooks/useLocalization';
 import './HeaderTranslate';
-import LogoIcon from './logo2.png';
+import { ReactComponent as LogoIcon } from './logoZhai.svg';
 
 function HeaderDesktop() {
   const { t } = useTranslation();
@@ -19,7 +19,7 @@ function HeaderDesktop() {
       <Toolbar style={{ padding: 0 }}>
         <div className="flex items-center fullWidth">
           <Logo className="color-secondary" to={paths.homePage}>
-            <img src={LogoIcon} alt="zhai.kz" />
+            <LogoIcon style={{ height: 28, fill: palette.secondary.main }} />
           </Logo>
           <div style={{ flexGrow: 1, textAlign: 'right' }}>
             <Button

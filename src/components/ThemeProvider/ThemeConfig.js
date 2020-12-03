@@ -2,7 +2,7 @@ export default function (isDark) {
   const primary = {
     main: isDark ? '#e4e4e4' : '#444444',
   };
-  const secondary = { main: '#00a194', dark: '#00877a' };
+  const secondary = { main: '#008c81', dark: '#00877a' };
 
   return {
     isDark: isDark,
