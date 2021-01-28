@@ -2,7 +2,7 @@ import React from 'react';
 import Select from '@material-ui/core/Select/Select';
 import InputBase from '@material-ui/core/InputBase/InputBase';
 import MenuItem from '@material-ui/core/MenuItem';
-import FilterMobile from './FilterMobile/FilterMobile';
+import FilterMobile from '../../components/Header/SearchFilter/FilterMobile/FilterMobile';
 
 export default function SearchPageHeader({ isMobile }) {
   const style = {

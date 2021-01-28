@@ -3,7 +3,7 @@ import useLocalization from '../../components/_hooks/useLocalization';
 import './SearchTranslate';
 import { useTranslation } from 'react-i18next';
 import Sorting from './Sorting/Sorting';
-import FilterDesktop from './FilterDesktop/FilterDesktop';
+import FilterDesktop from '../../components/Header/SearchFilter/FilterDesktop/FilterDesktop';
 import AdvertItem from '../../components/AdvertItem/AdvertItem';
 import testData from './TestData';
 import Pagination from '../../components/Pagination';

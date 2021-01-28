@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dialog from '../../../components/Dialog';
+import Dialog from '../../../Dialog';
 import {
   Button,
   Checkbox as MuiCheckbox,
@@ -9,10 +9,10 @@ import {
   useTheme,
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
-import Row from '../../../components/Row';
-import { Dictionary } from '../../../_helpers/constants';
-import { ReactComponent as FilterDarkIcon } from '../filterIconDark.svg';
-import { ReactComponent as FilterIcon } from '../filterIcon.svg';
+import Row from '../../../Row';
+import { Dictionary } from '../../../../_helpers/constants';
+import { ReactComponent as FilterDarkIcon } from '../../../../pages/SearchPage/filterIconDark.svg';
+import { ReactComponent as FilterIcon } from '../../../../pages/SearchPage/filterIcon.svg';
 import { CheckBox, CheckBoxOutlineBlank } from '@material-ui/icons';
 import Price from './Price';
 import RoomCount from './RoomCount';
