@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-	 viewBox="0 0 400 120" style="enable-background:new 0 0 400 120;" xml:space="preserve">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="0 0 400 120" xml:space="preserve" fill="#FFFFFF">
 <g>
 	<g>
 		<path d="M12.52,103.73V91.1l33.96-38.13l1.07,3.81H12.99V43.32h51.59v12.15L30.15,94.2l-0.71-3.93h36.34v13.46H12.52z"/>

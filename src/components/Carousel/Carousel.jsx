@@ -4,15 +4,13 @@ import Button from '@material-ui/core/Button';
 import ArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeftOutlined';
 import ArrowRightIcon from '@material-ui/icons/KeyboardArrowRightOutlined';
 import Swipe from 'react-swipeable-views';
-import { useTheme } from '@material-ui/core';
 
 function Carousel({ images }) {
-  const theme = useTheme();
   const [imgIndex, setImgIndex] = useState(0);
   const size = images.length - 1;
 
   return (
-    <Wrapper borderColor={theme.palette.divider}>
+    <Wrapper>
       <Swipe
         style={{ width: '100%', height: '100%' }}
         containerStyle={{ width: '100%', height: '100%' }}
@@ -28,13 +26,21 @@ function Carousel({ images }) {
         <>
           <div className="arrow-buttons">
             <Button
-              onClick={() => setImgIndex(imgIndex === 0 ? size : imgIndex - 1)}
+              onClick={(event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                setImgIndex(imgIndex === 0 ? size : imgIndex - 1);
+              }}
               className="left-arrow"
               variant="contained"
               children={<ArrowLeftIcon />}
             />
             <Button
-              onClick={() => setImgIndex(imgIndex === size ? 0 : imgIndex + 1)}
+              onClick={(event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                setImgIndex(imgIndex === size ? 0 : imgIndex + 1);
+              }}
               className="right-arrow"
               variant="contained"
               children={<ArrowRightIcon />}

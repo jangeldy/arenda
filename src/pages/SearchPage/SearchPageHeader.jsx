@@ -1,5 +1,4 @@
 import React from 'react';
-import HeaderMobile from '../../components/Header/HeaderMobile';
 import Select from '@material-ui/core/Select/Select';
 import InputBase from '@material-ui/core/InputBase/InputBase';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -15,7 +14,7 @@ export default function SearchPageHeader({ isMobile }) {
   };
   if (isMobile) {
     return (
-      <HeaderMobile>
+      <>
         <div className="fw-6">
           <Select defaultValue="nst" SelectDisplayProps={{ style }} input={<InputBase />}>
             <MenuItem value="nst">Нур-Султан</MenuItem>
@@ -28,7 +27,7 @@ export default function SearchPageHeader({ isMobile }) {
         <div style={{ flexGrow: 1, textAlign: 'right' }}>
           <FilterMobile />
         </div>
-      </HeaderMobile>
+      </>
     );
   }
   return null;

@@ -2,9 +2,12 @@ import React from 'react';
 import Carousel from '../Carousel/Carousel';
 import { Wrapper } from './AdvertItemStyle';
 import { useTranslation } from 'react-i18next';
-import { ReactComponent as FavoriteIcon } from './favorite.svg';
-import { ReactComponent as FavoriteRedIcon } from './favoriteRed.svg';
 import paths from '../../_helpers/paths';
+import Card from '@material-ui/core/Card';
+import IconButton from '@material-ui/core/IconButton';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteOutlinedIcon from '@material-ui/icons/FavoriteBorder';
+import { useTheme } from '@material-ui/core';
 
 function AdvertItem({
   id,
@@ -21,27 +24,34 @@ function AdvertItem({
   views,
 }) {
   const { t } = useTranslation();
+  const { palette } = useTheme();
   return (
     <Wrapper to={paths.advertPage.replace(':id', id)}>
-      <div className="c2 mb1">
-        <div className="c3">
-          <Carousel images={images} />
+      <Card variant="outlined" style={{ backgroundColor: palette.background.default }}>
+        <div className="c2 mb1">
+          <div className="c3">
+            <Carousel images={images} />
+          </div>
         </div>
-      </div>
-      <div className="favorite-icon">
-        {favorite ? <FavoriteRedIcon /> : <FavoriteIcon />}
-      </div>
-      <div className="address">
-        <span className="mr1">
-          {t(`roomType_short_${rooms}`)} {area} м<sup>2</sup>
-        </span>
-        <span>{address}</span>
-      </div>
-      <div className="title">{title}</div>
-      <div>
-        <span className="price">{price} ₸ </span>
-        <span>{t(`rentType_${rentType}`)}.</span>
-      </div>
+        <div className="px2 pb2 pt1">
+          <div className="flex justify-between items-center">
+            <div>
+              <span className="price">{price} ₸ </span>
+              <span>{t(`rentType_${rentType}`)}.</span>
+            </div>
+            <IconButton size="small">
+              {favorite ? <FavoriteIcon style={{ color: '#f50057'}} /> : <FavoriteOutlinedIcon />}
+            </IconButton>
+          </div>
+          <div className="address">
+            <span className="mr1">
+              {t(`roomType_short_${rooms}`)} {area} м<sup>2</sup>
+            </span>
+            <span>{address}</span>
+          </div>
+          <div className="title">{title}</div>
+        </div>
+      </Card>
     </Wrapper>
   );
 }

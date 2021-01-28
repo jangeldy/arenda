@@ -1,23 +1,25 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles';
 import { ThemeWrapper } from './ThemeStyle';
-import { themeModule, createTheme } from './ThemeDucks';
+import { themeState, createTheme } from './ThemeState';
 import { createMuiTheme } from '@material-ui/core/styles';
+import { useRecoilState } from 'recoil';
+import { ThemeProvider as StyledProvider } from 'styled-components';
 
 export default function ThemeProvider({ children }) {
-  const themeConfig = useSelector((state) => state[themeModule]);
-  const theme = createMuiTheme(themeConfig);
-  const dispatch = useDispatch();
+  const [config, setConfig] = useRecoilState(themeState);
+  const theme = createMuiTheme(config);
 
   useEffect(() => {
     const themeType = window.localStorage.getItem('themeType');
-    dispatch(createTheme(themeType === 'dark'));
-  }, [dispatch]);
+    setConfig(createTheme(themeType === 'dark'));
+  }, [setConfig]);
 
   return (
     <MuiThemeProvider theme={theme}>
-      <ThemeWrapper theme={theme}>{children}</ThemeWrapper>
+      <ThemeWrapper theme={theme}>
+        <StyledProvider theme={theme}>{children}</StyledProvider>
+      </ThemeWrapper>
     </MuiThemeProvider>
   );
 }

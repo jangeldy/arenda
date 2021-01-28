@@ -9,11 +9,15 @@ import testData from './TestData';
 import Pagination from '../../components/Pagination';
 import SearchPageHeader from './SearchPageHeader';
 import { useMediaType } from '../../components/_hooks/useMediaType';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import TextField from '@material-ui/core/TextField';
+import useWidthStyle from '../../components/_hooks/useWidthStyle';
 
 function SearchPage() {
   const { t } = useTranslation();
   const { isMobile } = useMediaType();
   const localization = useLocalization();
+  const widthStyle = useWidthStyle();
   const data = testData.map((item) => ({
     id: item.id,
     title: item.title,
@@ -31,33 +35,28 @@ function SearchPage() {
   }));
 
   return (
-    <>
-      <SearchPageHeader isMobile={isMobile} />
-
-      <div className="content pd-width pb3 pt1">
-        <div className={!isMobile && 'mb1 mt3'}>Более 300 вариантов жилья</div>
-        <div className={isMobile ? 'fw-8 fs-18 mb1' : 'fw-8 fs-30 mb1'}>
-          {t('search_localization', localization)}
-        </div>
-
-        {/* ФИЛЬТР ПОИСКА*/}
-        <FilterDesktop />
-        <Sorting />
-
-        {/* ОБЪЯВЛЕНИЯ */}
-        <div className="flex flex-wrap mb3" style={{ marginLeft: -8, marginRight: -8 }}>
-          {data.map((item, index) => (
-            <AdvertItem key={index} {...item} />
-          ))}
-        </div>
-
-        {/* ПАГИНАЦИЯ */}
-        <div>
-          <Pagination />
-          <div className="center mt2">1 – 20 из Варианты жилья: 300+</div>
-        </div>
+    <div className="content pb3 pt1" style={widthStyle}>
+      <div className={!isMobile && 'mb1 mt3'}>Более 300 вариантов жилья</div>
+      <div className={isMobile ? 'fw-8 fs-18 mb1' : 'fw-8 fs-30 mb1'}>
+        {t('search_localization', localization)}
       </div>
-    </>
+
+      {/* ФИЛЬТР ПОИСКА*/}
+      <Sorting />
+
+      {/* ОБЪЯВЛЕНИЯ */}
+      <div className="flex flex-wrap mb3" style={{ marginLeft: -8, marginRight: -8 }}>
+        {data.map((item, index) => (
+          <AdvertItem key={index} {...item} />
+        ))}
+      </div>
+
+      {/* ПАГИНАЦИЯ */}
+      <div className="mt4">
+        <Pagination />
+        <div className="center mt2">1 – 20 из Варианты жилья: 300+</div>
+      </div>
+    </div>
   );
 }
 

@@ -6,7 +6,7 @@ import 'moment/locale/ru';
 import { useTranslation } from 'react-i18next';
 
 
-export default function DatePickerProvider({ children }) {
+export default function PickerProvider({ children }) {
   const { i18n } = useTranslation();
   return (
     <MuiPickersUtilsProvider utils={MomentUtils} locale={i18n.language}>

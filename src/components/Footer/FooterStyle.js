@@ -4,8 +4,8 @@ export const Wrapper = styled.footer`
   .desktop {
     font-weight: 500;
     margin-top: 30px;
-    background-color: ${(props) => (props.isDark ? '#282828' : '#efefef')};
-    border-top: 1px solid ${(props) => props.bgColor};
+    background-color: ${(props) => (props.theme.isDark ? '#282828' : '#e3e3e3')};
+    border-top: 1px solid ${(props) => props.theme.palette.divider};
     min-height: 65px;
   }
 
@@ -18,11 +18,11 @@ export const Wrapper = styled.footer`
     }
     svg {
       cursor: pointer;
-      fill: ${(props) => (props.isDark ? '#cccccc' : '#333333')};
+      fill: ${(props) => (props.theme.isDark ? '#cccccc' : '#333333')};
       width: 18px;
 
       :hover {
-        fill: ${(props) => (props.isDark ? '#999999' : '#666666')};
+        fill: ${(props) => (props.theme.isDark ? '#999999' : '#666666')};
       }
     }
   }
@@ -51,7 +51,7 @@ export const Wrapper = styled.footer`
   }
 
   .navigation {
-    border-top: 1px solid ${(props) => props.bgColor};
+    border-top: 1px solid ${(props) => props.theme.palette.divider};
     height: 65px;
     position: fixed;
     bottom: 0;

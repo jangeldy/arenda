@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
 @font-face {
   font-family: 'Circular';
   font-weight: 400;
@@ -308,17 +309,6 @@ input:-ms-input-placeholder {
 
 .content {
   min-height: calc(100vh - 300px);
-}
-
-
-.pd-width {
-  padding-left: 80px;
-  padding-right: 80px;
-
-  @media screen and (max-width: 825px) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
 }
 
 .grow1 {

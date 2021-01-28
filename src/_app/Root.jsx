@@ -3,14 +3,14 @@ import { Route, Switch } from 'react-router-dom';
 import NoticeModule from 'react-notifications-component';
 import Page404 from '../pages/Page404/Page404';
 import routerProps from '../_helpers/routerProps';
-import HeaderDesktop from '../components/Header/HeaderDesktop';
+import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
 export default function Root() {
   return (
     <>
       <NoticeModule />
-      <HeaderDesktop />
+      <Header />
       <div id="content">
         <Switch>
           {Object.values(routerProps).map((page) => (
