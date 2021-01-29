@@ -6,20 +6,35 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
+import { useTranslation } from 'react-i18next';
+import Checkbox from '@material-ui/core/Checkbox';
+import ListItemText from '@material-ui/core/ListItemText';
 
-export default function Select({ label }) {
+export default function Select({ placeholder, multiple, options = [] }) {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
+  const { i18n } = useTranslation();
+  const [value, setValue] = useState(multiple ? [] : '');
+  const valueOption = multiple
+    ? options.filter((item) => value.includes(item.code)) || []
+    : options.find((item) => item.code === value) || {};
+  const label = multiple
+    ? valueOption.map((item) => item[`${i18n.language}_name`]).join(', ')
+    : valueOption[`${i18n.language}_name`];
 
-  const handleClose = (event) => {
-    if (!(anchorRef.current && anchorRef.current.contains(event.target))) {
+  const onChange = (newValue) => {
+    if (multiple) {
+      const checked = !value.some((code) => code === newValue);
+      setValue(checked ? [...value, newValue] : value.filter((code) => code !== newValue));
+    } else {
+      setValue(newValue);
       setOpen(false);
     }
   };
 
   return (
     <div>
-      <Button ref={anchorRef} onClick={() => setOpen(!open)} children={label} fullWidth />
+      <Button ref={anchorRef} onClick={() => setOpen(!open)} children={label || placeholder} fullWidth />
       <Popper
         open={open}
         anchorEl={anchorRef.current}
@@ -31,17 +46,20 @@ export default function Select({ label }) {
         {({ TransitionProps }) => (
           <Grow {...TransitionProps} style={{ transformOrigin: 'center top' }}>
             <Paper>
-              <ClickAwayListener onClickAway={handleClose}>
+              <ClickAwayListener onClickAway={() => setOpen(false)}>
                 <MenuList>
-                  <MenuItem value="1" onClick={handleClose}>
-                    Profile
-                  </MenuItem>
-                  <MenuItem value="2" onClick={handleClose}>
-                    My account
-                  </MenuItem>
-                  <MenuItem value="3" onClick={handleClose}>
-                    Logout
-                  </MenuItem>
+                  {options.map((option, index) =>
+                    multiple ? (
+                      <MenuItem key={index} onClick={() => onChange(option.code)}>
+                        <Checkbox checked={multiple ? value.includes(option.code) : value === option.code} />
+                        <ListItemText primary={option[`${i18n.language}_name`]} />
+                      </MenuItem>
+                    ) : (
+                      <MenuItem key={index} onClick={() => onChange(option.code)}>
+                        {option[`${i18n.language}_name`]}
+                      </MenuItem>
+                    )
+                  )}
                 </MenuList>
               </ClickAwayListener>
             </Paper>

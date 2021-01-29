@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import Row from '../../../Row';
-import { Dictionary } from '../../../../_helpers/constants';
+import { DDM } from '../../../../_helpers/constants';
 
 function OtherFilters() {
   const { t } = useTranslation();
@@ -151,7 +151,7 @@ function OtherFilters() {
             <Divider style={{ margin: '20px 0' }} />
             <h2 children={t('filter_features')} />
             <div className="flex flex-wrap">
-              {Dictionary.features.map((item) => (
+              {DDM.features.map((item) => (
                 <Item key={item.code} {...item} />
               ))}
             </div>
@@ -160,7 +160,7 @@ function OtherFilters() {
             <Divider style={{ margin: '20px 0' }} />
             <h2 children={t('filter_facilities')} />
             <div className="flex flex-wrap">
-              {Dictionary.facilities.map((item) => (
+              {DDM.facilities.map((item) => (
                 <Item key={item.code} {...item} />
               ))}
             </div>
@@ -169,7 +169,7 @@ function OtherFilters() {
             <Divider style={{ margin: '20px 0' }} />
             <h2 children={t('filter_houseRules')} />
             <div className="flex flex-wrap">
-              {Dictionary.houseRules.map((item) => (
+              {DDM.houseRules.map((item) => (
                 <Item key={item.code} {...item} />
               ))}
             </div>

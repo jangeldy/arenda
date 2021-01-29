@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import Row from '../../../Row';
-import { Dictionary } from '../../../../_helpers/constants';
+import { DDM } from '../../../../_helpers/constants';
 import { ReactComponent as FilterDarkIcon } from '../../../../pages/SearchPage/filterIconDark.svg';
 import { ReactComponent as FilterIcon } from '../../../../pages/SearchPage/filterIcon.svg';
 import { CheckBox, CheckBoxOutlineBlank } from '@material-ui/icons';
@@ -116,7 +116,7 @@ function FilterMobile() {
             <Divider style={{ margin: '20px 0' }} />
             <h2 children={t('filter_features')} />
             <div>
-              {Dictionary.features.map((item) => (
+              {DDM.features.map((item) => (
                 <Item key={item.code} {...item} />
               ))}
             </div>
@@ -124,7 +124,7 @@ function FilterMobile() {
             <Divider style={{ margin: '20px 0' }} />
             <h2 children={t('filter_facilities')} />
             <div>
-              {Dictionary.facilities.map((item) => (
+              {DDM.facilities.map((item) => (
                 <Item key={item.code} {...item} />
               ))}
             </div>
@@ -132,7 +132,7 @@ function FilterMobile() {
             <Divider style={{ margin: '20px 0' }} />
             <h2 children={t('filter_houseRules')} />
             <div>
-              {Dictionary.houseRules.map((item) => (
+              {DDM.houseRules.map((item) => (
                 <Item key={item.code} {...item} />
               ))}
             </div>
