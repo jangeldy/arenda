@@ -2,13 +2,19 @@ import React from 'react';
 import { StyledSearchFilter } from './SearchFilterStyle';
 import Select from '../../Select';
 import { DDM } from '../../../_helpers/constants';
-import useLocalization from '../../_hooks/useLocalization';
 import Price from './Price';
 import OtherFilters from './OtherFilters';
 import './SearchFilterTranslate';
+import paths from '../../../_helpers/paths';
+import { useLocation } from 'react-router-dom';
 
 function SearchFilter({ widthStyle }) {
-  const localization = useLocalization();
+  const { pathname } = useLocation();
+
+  if (pathname !== paths.homePage) {
+    return null;
+  }
+
   return (
     <StyledSearchFilter>
       <div style={widthStyle}>

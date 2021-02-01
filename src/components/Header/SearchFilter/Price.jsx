@@ -15,6 +15,7 @@ export default function Price() {
   const [priceTo, setPriceTo] = useState(500000);
   const anchorRef = useRef(null);
 
+
   return (
     <div className="sf-item">
       <Button
