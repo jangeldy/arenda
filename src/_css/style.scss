@@ -320,6 +320,16 @@ input:-ms-input-placeholder {
 .grow3 {
   flex-grow: 3;
 }
+
+.flex1 {
+  flex: 1;
+}
+.flex2 {
+  flex: 2;
+}
+.flex3 {
+  flex: 3;
+}
 @media screen and (max-width: 743px) {
   .desktop {
     display: none !important;

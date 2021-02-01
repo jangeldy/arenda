@@ -11,10 +11,7 @@ function Sorting() {
   const { t } = useTranslation();
   const [sorting, setSorting] = useState('date');
   return (
-    <div
-      className="flex justify-between mt2 mb1"
-      style={{ marginRight: -16, marginLeft: -8 }}
-    >
+    <div className="flex justify-between mt1 mb1" style={{ marginLeft: -6 }}>
       <Select
         value={sorting}
         onChange={(e) => setSorting(e.target.value)}
@@ -25,9 +22,13 @@ function Sorting() {
         <MenuItem value="price">{t('sorting_byPrice')}</MenuItem>
         <MenuItem value="area">{t('sorting_byArea')}</MenuItem>
       </Select>
-      <Button className="desktop" startIcon={<MapIcon />}>
-        Показать на карте
-      </Button>
+      <Button
+        className="desktop"
+        variant="outlined"
+        color="primary"
+        startIcon={<MapIcon />}
+        children="Показать на карте"
+      />
     </div>
   );
 }

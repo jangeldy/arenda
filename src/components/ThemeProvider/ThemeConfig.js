@@ -11,8 +11,7 @@ export default function (isDark) {
       },
     },
     typography: {
-      fontFamily:
-        "'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
+      fontFamily: "'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
       htmlFontSize: 17,
     },
     props: {
@@ -48,7 +47,7 @@ export default function (isDark) {
         },
       },
       MuiMenuItem: {
-        root: { fontSize: '15px' },
+        root: { fontSize: '15px', height: 42 },
       },
       MuiPopover: {
         paper: {

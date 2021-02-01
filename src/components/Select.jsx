@@ -9,8 +9,9 @@ import Paper from '@material-ui/core/Paper';
 import { useTranslation } from 'react-i18next';
 import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItemText';
+import DropDownIcon from '@material-ui/icons/ArrowDropDown';
 
-export default function Select({ placeholder, multiple, options = [] }) {
+export default function Select({ placeholder, multiple, options = [], className, ...rest }) {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
   const { i18n } = useTranslation();
@@ -33,8 +34,16 @@ export default function Select({ placeholder, multiple, options = [] }) {
   };
 
   return (
-    <div>
-      <Button ref={anchorRef} onClick={() => setOpen(!open)} children={label || placeholder} fullWidth />
+    <div className={className}>
+      <Button
+        ref={anchorRef}
+        onClick={() => setOpen(!open)}
+        children={label || rest[`${i18n.language}_name`] || placeholder}
+        fullWidth
+        style={{ justifyContent: 'space-between', whiteSpace: 'nowrap' }}
+        endIcon={<DropDownIcon />}
+        {...rest}
+      />
       <Popper
         open={open}
         anchorEl={anchorRef.current}
@@ -51,7 +60,11 @@ export default function Select({ placeholder, multiple, options = [] }) {
                   {options.map((option, index) =>
                     multiple ? (
                       <MenuItem key={index} onClick={() => onChange(option.code)}>
-                        <Checkbox checked={multiple ? value.includes(option.code) : value === option.code} />
+                        <Checkbox
+                          color="primary"
+                          checked={multiple ? value.includes(option.code) : value === option.code}
+                          style={{ marginLeft: 0 }}
+                        />
                         <ListItemText primary={option[`${i18n.language}_name`]} />
                       </MenuItem>
                     ) : (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Divider, InputAdornment, TextField, Typography } from '@material-ui/core';
-import PriceChart from '../FilterDesktop/PriceChart';
+import PriceChart from '../PriceChart';
 import Slider from '../../../Slider';
 import { useTranslation } from 'react-i18next';
 

@@ -8,6 +8,37 @@ export const DDM = {
       { code: 'house', ru_name: 'Дом' },
     ]
   },
+  location: {
+    ru_name: 'Город',
+    kk_name: 'Город',
+    options: [
+      { code: 'nur-sultan', ru_name: 'Нур-Султан' },
+      { code: 'almaty', ru_name: 'Алматы' },
+      { code: 'shymkent', ru_name: 'Шымкент' },
+      { code: 'kyzylorda', ru_name: 'Кызылорда' },
+      { code: 'aral', ru_name: 'Арал' },
+    ]
+  },
+  roomCount: {
+    ru_name: 'Количесто комнат',
+    kk_name: 'Количесто комнат',
+    options: [
+      { code: '1', ru_name: '1 комн.' },
+      { code: '2', ru_name: '2 комн.' },
+      { code: '3', ru_name: '3 комн.' },
+      { code: '4+', ru_name: '4+  комн.' },
+    ]
+  },
+  rentType: {
+    ru_name: 'Срок аренды',
+    kk_name: 'Срок аренды',
+    options: [
+      { code: 'hour', ru_name: 'По часам' },
+      { code: 'day', ru_name: 'Посуточно' },
+      { code: 'month', ru_name: 'Помесячно' },
+      { code: 'quarter', ru_name: 'Поквартально' },
+    ]
+  },
   facilities: [
     { code: 'internet', ru_name: 'Интернет' },
     { code: 'wi_fi', ru_name: 'Wi-Fi' },

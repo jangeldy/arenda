@@ -3,7 +3,6 @@ import useLocalization from '../../components/_hooks/useLocalization';
 import './SearchTranslate';
 import { useTranslation } from 'react-i18next';
 import Sorting from './Sorting/Sorting';
-import FilterDesktop from '../../components/Header/SearchFilter/FilterDesktop/FilterDesktop';
 import AdvertItem from '../../components/AdvertItem/AdvertItem';
 import testData from './TestData';
 import Pagination from '../../components/Pagination';
@@ -35,9 +34,8 @@ function SearchPage() {
   }));
 
   return (
-    <div className="content pb3 pt1" style={widthStyle}>
-      <div className={!isMobile && 'mb1 mt3'}>Более 300 вариантов жилья</div>
-      <div className={isMobile ? 'fw-8 fs-18 mb1' : 'fw-8 fs-30 mb1'}>
+    <div className="content pb3 pt3" style={widthStyle}>
+      <div className={isMobile ? 'fw-8 fs-18 mb1' : 'fw-8 fs-28 mb1'}>
         {t('search_localization', localization)}
       </div>
 
@@ -45,7 +43,7 @@ function SearchPage() {
       <Sorting />
 
       {/* ОБЪЯВЛЕНИЯ */}
-      <div className="flex flex-wrap mb3" style={{ marginLeft: -8, marginRight: -8 }}>
+      <div className="flex flex-wrap mb3" style={{ marginLeft: -6, marginRight: -6 }}>
         {data.map((item, index) => (
           <AdvertItem key={index} {...item} />
         ))}

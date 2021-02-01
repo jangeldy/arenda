@@ -12,12 +12,11 @@ import useWidthStyle from '../_hooks/useWidthStyle';
 
 function Header() {
   const { t } = useTranslation();
-  const localization = useLocalization();
   const { palette, isDark } = useTheme();
   const widthStyle = useWidthStyle();
 
   return (
-    <div style={{ height: 112 }}>
+    <div style={{ height: 114 }}>
       <AppBar elevation={0} style={{ backgroundColor: isDark ? '#282828' : '#d7d7d7' }}>
         <Toolbar style={{ padding: 0, margin: 'auto', ...widthStyle }}>
           <div className="flex items-center fullWidth">
@@ -25,19 +24,13 @@ function Header() {
               <LogoIcon style={{ height: 26, fill: palette.primary.main }} />
             </Logo>
             <div style={{ flexGrow: 1, textAlign: 'right' }}>
-              <Button
-                className="ml4"
-                startIcon={<LocationIcon />}
-                size="small"
-                children={localization.name}
-              />
-              <Button className="ml2" children={t('header_rentApartment')} />
+              <Button className="ml2 bold" children={t('header_rentApartment')} />
               <Button className="ml2" variant="outlined" children="Войти" />
             </div>
           </div>
         </Toolbar>
       </AppBar>
-      <SearchFilter widthStyle={widthStyle}/>
+      <SearchFilter widthStyle={widthStyle} />
     </div>
   );
 }

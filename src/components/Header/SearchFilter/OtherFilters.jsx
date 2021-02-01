@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
-import Dialog from '../../../Dialog';
-import {
-  Button,
-  Checkbox as MuiCheckbox,
-  FormControlLabel,
-  Divider,
-  TextField,
-} from '@material-ui/core';
+import Dialog from '../../Dialog';
+import { Button, Checkbox as MuiCheckbox, FormControlLabel, Divider, TextField } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
-import Row from '../../../Row';
-import { DDM } from '../../../../_helpers/constants';
+import Row from '../../Row';
+import { DDM } from '../../../_helpers/constants';
+import DropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 function OtherFilters() {
   const { t } = useTranslation();
@@ -31,19 +26,18 @@ function OtherFilters() {
         label={ru_name}
         control={<MuiCheckbox color="primary" checked={items.includes(code)} />}
         onChange={() => {
-          items.includes(code)
-            ? setItems(items.filter((item) => item !== code))
-            : setItems([...items, code]);
+          items.includes(code) ? setItems(items.filter((item) => item !== code)) : setItems([...items, code]);
         }}
       />
     </div>
   );
 
   return (
-    <div style={{ flexGrow: 2, margin: 5 }}>
+    <div className="sf-item">
       <Button
         fullWidth
-        variant="outlined"
+        endIcon={<DropDownIcon />}
+        style={{ justifyContent: 'space-between' }}
         children={t('filter_other')}
         onClick={() => setOpen(true)}
       />

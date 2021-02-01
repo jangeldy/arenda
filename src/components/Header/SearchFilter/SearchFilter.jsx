@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyledSearchFilter } from './SearchFilterStyle';
-import FilterDesktop from './FilterDesktop/FilterDesktop';
 import Select from '../../Select';
-import MenuItem from '@material-ui/core/MenuItem';
 import { DDM } from '../../../_helpers/constants';
-import { useTranslation } from 'react-i18next';
+import useLocalization from '../../_hooks/useLocalization';
+import Price from './Price';
+import OtherFilters from './OtherFilters';
+import './SearchFilterTranslate';
 
 function SearchFilter({ widthStyle }) {
-  const { i18n } = useTranslation();
+  const localization = useLocalization();
   return (
     <StyledSearchFilter>
       <div style={widthStyle}>
-        <Select placeholder={DDM.type[`${i18n.language}_name`]} multiple options={DDM.type.options} />
+        <div className="flex brl">
+          <Select {...DDM.location} className="sf-item" />
+          <Select multiple {...DDM.type} className="sf-item" />
+          <Select multiple {...DDM.roomCount} className="sf-item" />
+          <Select multiple {...DDM.rentType} className="sf-item" />
+          <Price />
+          <OtherFilters />
+        </div>
       </div>
     </StyledSearchFilter>
   );
