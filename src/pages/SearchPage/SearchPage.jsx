@@ -6,10 +6,7 @@ import Sorting from './Sorting/Sorting';
 import AdvertItem from '../../components/AdvertItem/AdvertItem';
 import testData from './TestData';
 import Pagination from '../../components/Pagination';
-import SearchPageHeader from './SearchPageHeader';
 import { useMediaType } from '../../components/_hooks/useMediaType';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import TextField from '@material-ui/core/TextField';
 import useWidthStyle from '../../components/_hooks/useWidthStyle';
 
 function SearchPage() {
@@ -17,21 +14,6 @@ function SearchPage() {
   const { isMobile } = useMediaType();
   const localization = useLocalization();
   const widthStyle = useWidthStyle();
-  const data = testData.map((item) => ({
-    id: item.id,
-    title: item.title,
-    latitude: item.lat,
-    longitude: item.lng,
-    rooms: item.rooms,
-    price: item.price,
-    area: item.space,
-    images: item.thumb_image_urls,
-    favorite: item.price === '55 000' ? true : item.favorite,
-    owned: item.owned,
-    address: item.address,
-    views: 45,
-    rentType: 'month',
-  }));
 
   return (
     <div className="content pb3 pt3" style={widthStyle}>
@@ -44,7 +26,7 @@ function SearchPage() {
 
       {/* ОБЪЯВЛЕНИЯ */}
       <div className="flex flex-wrap mb3" style={{ marginLeft: -6, marginRight: -6 }}>
-        {data.map((item, index) => (
+        {testData.map((item, index) => (
           <AdvertItem key={index} {...item} />
         ))}
       </div>

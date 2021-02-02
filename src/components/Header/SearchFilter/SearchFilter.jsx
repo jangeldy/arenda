@@ -17,14 +17,16 @@ function SearchFilter({ widthStyle }) {
 
   return (
     <StyledSearchFilter>
-      <div style={widthStyle}>
-        <div className="flex brl">
-          <Select {...DDM.location} className="sf-item" />
-          <Select multiple {...DDM.type} className="sf-item" />
-          <Select multiple {...DDM.roomCount} className="sf-item" />
-          <Select multiple {...DDM.rentType} className="sf-item" />
-          <Price />
-          <OtherFilters />
+      <div className="filter">
+        <div style={widthStyle}>
+          <div className="flex brl">
+            <Select {...DDM.location} className="sf-item" />
+            <Select multiple {...DDM.type} className="sf-item" />
+            <Select multiple {...DDM.roomCount} className="sf-item" />
+            <Select multiple {...DDM.rentType} className="sf-item" />
+            <Price />
+            <OtherFilters />
+          </div>
         </div>
       </div>
     </StyledSearchFilter>

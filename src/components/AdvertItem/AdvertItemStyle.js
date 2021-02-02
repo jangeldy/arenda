@@ -26,24 +26,6 @@ export const Wrapper = styled(Link)`
     right: 17px;
   }
 
-  .c2 {
-    padding-top: 66.6667%;
-    contain: strict !important;
-    position: relative !important;
-    width: 100% !important;
-    z-index: 0 !important;
-  }
-
-  .c3 {
-    position: absolute !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    height: 100% !important;
-    width: 100% !important;
-  }
-
   .price {
     font-weight: 800;
     margin-right: 5px;

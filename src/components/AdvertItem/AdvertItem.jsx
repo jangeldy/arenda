@@ -28,11 +28,7 @@ function AdvertItem({
   return (
     <Wrapper to={paths.advertPage.replace(':id', id)}>
       <Card variant="outlined" style={{ backgroundColor: palette.background.default }}>
-        <div className="c2 mb1">
-          <div className="c3">
-            <Carousel images={images} />
-          </div>
-        </div>
+        <Carousel images={images} />
         <div className="px2 pb2 pt1">
           <div className="flex justify-between items-center">
             <div>
@@ -40,7 +36,7 @@ function AdvertItem({
               <span>{t(`rentType_${rentType}`)}.</span>
             </div>
             <IconButton size="small">
-              {favorite ? <FavoriteIcon style={{ color: '#f50057'}} /> : <FavoriteOutlinedIcon />}
+              {favorite ? <FavoriteIcon style={{ color: '#f50057' }} /> : <FavoriteOutlinedIcon />}
             </IconButton>
           </div>
           <div className="address">

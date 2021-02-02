@@ -16,22 +16,24 @@ function Header() {
   const widthStyle = useWidthStyle();
 
   return (
-    <div style={{ height: 114 }}>
-      <AppBar elevation={0} style={{ backgroundColor: isDark ? '#282828' : '#d7d7d7' }}>
-        <Toolbar style={{ padding: 0, margin: 'auto', ...widthStyle }}>
-          <div className="flex items-center fullWidth">
-            <Logo to={paths.homePage}>
-              <LogoIcon style={{ height: 26, fill: palette.primary.main }} />
-            </Logo>
-            <div style={{ flexGrow: 1, textAlign: 'right' }}>
-              <Button className="ml2 bold" children={t('header_rentApartment')} />
-              <Button className="ml2" variant="outlined" children="Войти" />
+    <>
+      <div style={{ height: 64 }}>
+        <AppBar elevation={0} style={{ backgroundColor: isDark ? '#282828' : '#d7d7d7' }}>
+          <Toolbar style={{ padding: 0, margin: 'auto', ...widthStyle }}>
+            <div className="flex items-center fullWidth">
+              <Logo to={paths.homePage}>
+                <LogoIcon style={{ height: 26, fill: palette.primary.main }} />
+              </Logo>
+              <div style={{ flexGrow: 1, textAlign: 'right' }}>
+                <Button className="ml2 bold" children={t('header_rentApartment')} />
+                <Button className="ml2" variant="outlined" children="Войти" />
+              </div>
             </div>
-          </div>
-        </Toolbar>
-      </AppBar>
+          </Toolbar>
+        </AppBar>
+      </div>
       <SearchFilter widthStyle={widthStyle} />
-    </div>
+    </>
   );
 }
 
