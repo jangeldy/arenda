@@ -8,9 +8,11 @@ import testData from '../SearchPage/TestData';
 import Carousel from '../../components/Carousel/Carousel';
 import { Wrapper } from './AdvertStyle';
 import ImageContainer from './ImageContainer';
+import useModal from '../../components/_hooks/useModal';
+import ImageSlider from './ImageSlider';
 
 function AdvertPage({ match }) {
-  const { t } = useTranslation();
+  const slider = useModal('slider');
   const widthStyle = useWidthStyle();
   const data = testData.find((item) => item.id === parseInt(match.params.id));
   const images = data.images.map((url) => url.replace('thumb', 'full').replace('thumb', 'full'));
@@ -30,19 +32,19 @@ function AdvertPage({ match }) {
       </div>
 
       <div className="flex mt3">
-        <div className="flex3 mr1">
+        <div className="flex3" style={{ marginRight: '0.8%' }} onClick={() => slider.open('true')}>
           <Carousel className="border-radius" images={images} buttonSize="large" />
         </div>
-        <div className="thumb-images">
-          {thumbImages.length > 3 && (
-            <>
-              <ImageContainer className="mb1" src={thumbImages[1]} />
-              <ImageContainer className="mb1" src={thumbImages[2]} />
-              <ImageContainer className="mb1" src={thumbImages[3]} />
-            </>
-          )}
-        </div>
+        {thumbImages.length > 3 && (
+          <div className="thumb-images">
+            <ImageContainer src={thumbImages[1]} />
+            <ImageContainer src={thumbImages[2]} />
+            <ImageContainer src={thumbImages[3]} />
+          </div>
+        )}
       </div>
+
+      <ImageSlider images={images} {...slider} />
     </Wrapper>
   );
 }

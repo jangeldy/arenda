@@ -3,16 +3,17 @@ import { useLocation, useHistory } from 'react-router-dom';
 export default function useModal(name) {
   const { pathname, search } = useLocation();
   const { replace } = useHistory();
-  const user = new URLSearchParams(search);
+  const params = new URLSearchParams(search);
   return {
-    isOpen: !!user.get(name),
+    data: params.get(name),
+    isOpen: !!params.get(name),
     open: data => {
-      user.set(name, data);
-      replace(`${pathname}?${user.toString()}`);
+      params.set(name, data);
+      replace(`${pathname}?${params.toString()}`);
     },
     close: () => {
-      user.delete(name);
-      replace(`${pathname}?${user.toString()}`);
+      params.delete(name);
+      replace(`${pathname}?${params.toString()}`);
     }
   };
 }
