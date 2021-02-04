@@ -44,7 +44,7 @@ export const Dialog = styled(StyledDialog)`
     background-color: white;
     transition: opacity 0.3s;
     min-width: inherit !important;
-    padding: 4px;
+    padding: 12px;
     border-radius: 50%;
     position: absolute;
     top: calc(50% - 16px);

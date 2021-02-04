@@ -71,7 +71,7 @@ export const Wrapper = styled.div`
       opacity: 0;
       transition: opacity 0.3s;
       min-width: inherit !important;
-      padding: 4px;
+      padding: 10px;
       border-radius: 50%;
       position: absolute;
       top: calc(50% - 16px);

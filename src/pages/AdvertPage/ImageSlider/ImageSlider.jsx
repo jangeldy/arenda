@@ -2,8 +2,8 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Swipe from 'react-swipeable-views';
 import { Dialog, Transition } from './ImageSliderStyle';
-import ArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeftOutlined';
-import ArrowRightIcon from '@material-ui/icons/KeyboardArrowRightOutlined';
+import ArrowLeftIcon from '@material-ui/icons/ArrowBack';
+import ArrowRightIcon from '@material-ui/icons/ArrowForward';
 import useModal from '../../../components/_hooks/useModal';
 
 export default function ImageSlider({ images }) {
@@ -56,7 +56,7 @@ export default function ImageSlider({ images }) {
               className="left-arrow"
               variant="contained"
               size="large"
-              children={<ArrowLeftIcon fontSize="large" />}
+              children={<ArrowLeftIcon />}
             />
             <Button
               onClick={(event) => {
@@ -67,7 +67,7 @@ export default function ImageSlider({ images }) {
               className="right-arrow"
               variant="contained"
               size="large"
-              children={<ArrowRightIcon fontSize="large" />}
+              children={<ArrowRightIcon />}
             />
           </div>
           <div className="dots-block">

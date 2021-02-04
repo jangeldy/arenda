@@ -52,7 +52,6 @@ function Carousel({ images, className, buttonSize = 'small', SlideComponent }) {
                     size={buttonSize}
                     children={
                       <ArrowLeftIcon
-                        fontSize={buttonSize === 'large' ? 'large' : 'default'}
                       />
                     }
                   />
@@ -67,7 +66,6 @@ function Carousel({ images, className, buttonSize = 'small', SlideComponent }) {
                     size={buttonSize}
                     children={
                       <ArrowRightIcon
-                        fontSize={buttonSize === 'large' ? 'large' : 'default'}
                       />
                     }
                   />
