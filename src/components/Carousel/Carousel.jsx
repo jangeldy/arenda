@@ -5,7 +5,7 @@ import ArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeftOutlined';
 import ArrowRightIcon from '@material-ui/icons/KeyboardArrowRightOutlined';
 import Swipe from 'react-swipeable-views';
 
-function Carousel({ images, className, buttonSize = 'small' }) {
+function Carousel({ images, className, buttonSize = 'small', SlideComponent }) {
   const [imgIndex, setImgIndex] = useState(0);
   const size = images.length - 1;
 
@@ -21,9 +21,22 @@ function Carousel({ images, className, buttonSize = 'small' }) {
               resistance
               index={imgIndex}
               onChangeIndex={setImgIndex}
-              children={images.map((src, index) => (
-                <div key={index} className="slide" style={{ backgroundImage: `url(${src})` }} />
-              ))}
+              children={images.map((src, index) =>
+                SlideComponent ? (
+                  <SlideComponent
+                    key={index}
+                    index={index}
+                    className="slide block"
+                    style={{ backgroundImage: `url(${src})` }}
+                  />
+                ) : (
+                  <div
+                    key={index}
+                    className="slide"
+                    style={{ backgroundImage: `url(${src})` }}
+                  />
+                )
+              )}
             />
             {images.length > 1 && (
               <>
@@ -37,7 +50,11 @@ function Carousel({ images, className, buttonSize = 'small' }) {
                     className="left-arrow"
                     variant="contained"
                     size={buttonSize}
-                    children={<ArrowLeftIcon fontSize={buttonSize === 'large' ? 'large' : 'default'} />}
+                    children={
+                      <ArrowLeftIcon
+                        fontSize={buttonSize === 'large' ? 'large' : 'default'}
+                      />
+                    }
                   />
                   <Button
                     onClick={(event) => {
@@ -48,7 +65,11 @@ function Carousel({ images, className, buttonSize = 'small' }) {
                     className="right-arrow"
                     variant="contained"
                     size={buttonSize}
-                    children={<ArrowRightIcon fontSize={buttonSize === 'large' ? 'large' : 'default'} />}
+                    children={
+                      <ArrowRightIcon
+                        fontSize={buttonSize === 'large' ? 'large' : 'default'}
+                      />
+                    }
                   />
                 </div>
                 <div className="dots-block">
