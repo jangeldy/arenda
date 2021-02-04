@@ -11,8 +11,8 @@ function Carousel({ images, className, buttonSize = 'small', SlideComponent }) {
 
   return (
     <Wrapper className={className} buttonSize={buttonSize}>
-      <div className="c2">
-        <div className="c3">
+      <div className="c1">
+        <div className="c2">
           <div id="carousel">
             <Swipe
               style={{ width: '100%', height: '100%' }}

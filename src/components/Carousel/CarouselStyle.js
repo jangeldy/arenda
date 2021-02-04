@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   overflow: hidden;
   cursor: pointer;
-  .c2 {
+  max-height: 60vh;
+  
+  .c1 {
     padding-top: 66.6667%;
     contain: strict !important;
     position: relative !important;
@@ -11,7 +13,7 @@ export const Wrapper = styled.div`
     z-index: 0 !important;
   }
 
-  .c3 {
+  .c2 {
     position: absolute !important;
     top: 0 !important;
     bottom: 0 !important;
@@ -28,6 +30,7 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     overflow: hidden;
+    max-height: 60vh;
 
     .br {
       position: absolute;

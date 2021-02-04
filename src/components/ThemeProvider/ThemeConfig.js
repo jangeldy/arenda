@@ -11,7 +11,8 @@ export default function (isDark) {
       },
     },
     typography: {
-      fontFamily: "'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
+      fontFamily:
+        "'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
       htmlFontSize: 17,
     },
     props: {

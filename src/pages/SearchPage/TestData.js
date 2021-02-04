@@ -15,4 +15,8 @@ export default data.ads.map((item) => ({
   address: item.address,
   views: 45,
   rentType: 'month',
+  complex: 'Inju Arena',
+  yearBuild: '2021',
+  floor: 8,
+  houseFloor: 22
 }));

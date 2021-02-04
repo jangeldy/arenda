@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import { Button, Divider } from '@material-ui/core';
 import SaveIcon from '@material-ui/icons/FavoriteBorder';
 import ShareIcon from '@material-ui/icons/Share';
 import useWidthStyle from '../../components/_hooks/useWidthStyle';
@@ -9,14 +9,18 @@ import { Wrapper } from './AdvertStyle';
 import ImageContainer from './ImageContainer';
 import ImageSlider from './ImageSlider/ImageSlider';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import Row from '../../components/Row';
+import './AdvertTranslate';
 
 function AdvertPage({ match }) {
+  const { t } = useTranslation();
   const widthStyle = useWidthStyle();
   const data = testData.find((item) => item.id === parseInt(match.params.id));
+  const thumbImages = data.images || [];
   const images = data.images.map((url) =>
     url.replace('thumb', 'full').replace('thumb', 'full')
   );
-  const thumbImages = data.images || [];
 
   return (
     <Wrapper className="pt3 pb3" style={widthStyle}>
@@ -38,7 +42,7 @@ function AdvertPage({ match }) {
         </div>
       </div>
 
-      <div className="flex mt3">
+      <div className="flex mt2">
         <div className="flex3" style={{ marginRight: '0.8%' }}>
           <Carousel
             className="border-radius"
@@ -65,6 +69,37 @@ function AdvertPage({ match }) {
       </div>
 
       <ImageSlider images={images} />
+
+      <div className="mt1 flex">
+        <div className="flex4">
+          <h2 className="fs-23" children={t('advert_apartment')} />
+          <div className="flex fw-5 fs-16">
+            <div className="flex4">{t('advert_area')}</div>
+            <div className="flex2">
+              {data.area} м <sup>2</sup>
+            </div>
+          </div>
+          <Divider style={{ marginTop: 15, marginBottom: 15 }} />
+          <div className="flex fw-5 fs-16">
+            <div className="flex4">{t('advert_floor')}</div>
+            <div className="flex2">
+              {data.floor}/{data.houseFloor}
+            </div>
+          </div>
+          <Divider style={{ marginTop: 15, marginBottom: 15 }} />
+          <div className="flex fw-5 fs-16">
+            <div className="flex4">{t('advert_yearBuild')}</div>
+            <div className="flex2">{data.yearBuild}</div>
+          </div>
+          <Divider style={{ marginTop: 15, marginBottom: 15 }} />
+          <div className="flex fw-5 fs-16">
+            <div className="flex4">{t('advert_complex')}</div>
+            <div className="flex2">{data.complex}</div>
+          </div>
+          <Divider style={{ marginTop: 15, marginBottom: 15 }} />
+        </div>
+        <div className="flex2">контакты</div>
+      </div>
     </Wrapper>
   );
 }
