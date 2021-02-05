@@ -26,7 +26,7 @@ function AdvertItem({
   const { t } = useTranslation();
   const { palette } = useTheme();
   return (
-    <Wrapper to={paths.advertPage.replace(':id', id)}>
+    <Wrapper to={paths.advertPage.replace(':id', id)} target="_blank">
       <Card variant="outlined" style={{ backgroundColor: palette.background.default }}>
         <Carousel images={images} />
         <div className="px2 pb2 pt1">

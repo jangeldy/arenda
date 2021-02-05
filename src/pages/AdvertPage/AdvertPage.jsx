@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Divider } from '@material-ui/core';
+import { Button, Divider, useTheme } from '@material-ui/core';
 import SaveIcon from '@material-ui/icons/FavoriteBorder';
 import ShareIcon from '@material-ui/icons/Share';
 import useWidthStyle from '../../components/_hooks/useWidthStyle';
@@ -9,12 +9,12 @@ import { Wrapper } from './AdvertStyle';
 import ImageContainer from './ImageContainer';
 import ImageSlider from './ImageSlider/ImageSlider';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import Row from '../../components/Row';
 import './AdvertTranslate';
+import OwnerCard from './OwnerCard';
+import AdvertDescription from './AdvertDescription';
+import YandexMap from './YandexMap/YandexMap';
 
 function AdvertPage({ match }) {
-  const { t } = useTranslation();
   const widthStyle = useWidthStyle();
   const data = testData.find((item) => item.id === parseInt(match.params.id));
   const thumbImages = data.images || [];
@@ -41,7 +41,6 @@ function AdvertPage({ match }) {
           <Button variant="outlined" startIcon={<SaveIcon />} children="Сохранить" />
         </div>
       </div>
-
       <div className="flex mt2">
         <div className="flex3" style={{ marginRight: '0.8%' }}>
           <Carousel
@@ -67,38 +66,21 @@ function AdvertPage({ match }) {
           </div>
         )}
       </div>
-
       <ImageSlider images={images} />
-
       <div className="mt1 flex">
-        <div className="flex4">
-          <h2 className="fs-23" children={t('advert_apartment')} />
-          <div className="flex fw-5 fs-16">
-            <div className="flex4">{t('advert_area')}</div>
-            <div className="flex2">
-              {data.area} м <sup>2</sup>
-            </div>
-          </div>
-          <Divider style={{ marginTop: 15, marginBottom: 15 }} />
-          <div className="flex fw-5 fs-16">
-            <div className="flex4">{t('advert_floor')}</div>
-            <div className="flex2">
-              {data.floor}/{data.houseFloor}
-            </div>
-          </div>
-          <Divider style={{ marginTop: 15, marginBottom: 15 }} />
-          <div className="flex fw-5 fs-16">
-            <div className="flex4">{t('advert_yearBuild')}</div>
-            <div className="flex2">{data.yearBuild}</div>
-          </div>
-          <Divider style={{ marginTop: 15, marginBottom: 15 }} />
-          <div className="flex fw-5 fs-16">
-            <div className="flex4">{t('advert_complex')}</div>
-            <div className="flex2">{data.complex}</div>
-          </div>
-          <Divider style={{ marginTop: 15, marginBottom: 15 }} />
+        <div className="flex5">
+          <AdvertDescription data={data} />
         </div>
-        <div className="flex2">контакты</div>
+        <div className="flex3 ml4">
+          <OwnerCard data={data} />
+        </div>
+      </div>
+      <Divider style={{ margin: '40px 0' }} />
+      <h2 children="Местоположение" />
+      <div className="mb1">Нур-Султан, Казахстан</div>{' '}
+      <div className="mt3">
+        <YandexMap lat={data.latitude} lon={data.longitude} />
+        <div className="fence" />
       </div>
     </Wrapper>
   );
