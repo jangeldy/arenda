@@ -25,6 +25,7 @@ addTranslation({
 
     filter_features: 'Особенности',
     filter_facilities: 'Удобства',
+    filter_security: 'Безопасноть',
     filter_houseRules: 'Правила дома',
   },
   kk: {},

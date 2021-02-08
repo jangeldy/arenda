@@ -9,6 +9,7 @@ export default function (isDark) {
       background: {
         default: isDark ? '#191919' : '#F1F1F1',
       },
+      divider: isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.18)'
     },
     typography: {
       fontFamily:

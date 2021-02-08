@@ -7,13 +7,32 @@ export const Wrapper = styled.div`
     height: 50px;
     transform: translateY(-50px);
     background-color: ${(props) => props.theme.palette.background.default};
+    float: left;
   }
 `;
 
-export const OwnerCardStyle = styled(Card)`
+export const Owner = styled.div`
+  position: sticky;
+  top: 90px;
+
+  .complain {
+    opacity: 0.8;
+    .link {
+      width: 240px;
+      margin: auto;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    svg {
+      margin-top: 5px;
+      margin-right: 15px;
+    }
+  }
+`;
+
+export const CardStyled = styled(Card)`
   padding: 24px;
   margin-top: 24px;
   box-shadow: rgb(0 0 0 / 12%) 0 6px 16px;
-  position: sticky;
-  top: 90px;
 `;

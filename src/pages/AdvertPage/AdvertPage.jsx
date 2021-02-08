@@ -82,6 +82,30 @@ function AdvertPage({ match }) {
         <YandexMap lat={data.latitude} lon={data.longitude} />
         <div className="fence" />
       </div>
+      <h2 children="Цена за кв.метр в похожих квартирах" />
+      <div className="mt3 flex">
+        <div className="border flex1 center mr1 p3">
+          <div className="fs-21" style={{ color: '#72a727' }}>
+            358 667 ₸
+          </div>
+          <div>Цена в этом объявлении</div>
+        </div>
+        <div className="border flex1 center mr1 p3">
+          <div className="fs-21" style={{ color: '#0066d5' }}>
+            358 667 ₸
+          </div>
+          <div>Цена в этом районе</div>
+        </div>
+        <div className="border flex1 center p3">
+          <div className="fs-21" style={{ color: '#0066d5' }}>
+            352 980 ₸
+          </div>
+          <div>Цена по городу Нур-Султан</div>
+        </div>
+      </div>
+      <div className="mt2">
+        На 7% дешевле, чем в других похожих предложениях в этом районе.
+      </div>
     </Wrapper>
   );
 }

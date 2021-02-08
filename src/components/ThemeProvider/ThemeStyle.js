@@ -39,7 +39,7 @@ export const ThemeWrapper = styled.main`
 
   // border
   .border {
-    border: 1px solid ${(props) => props.theme.palette.grey[300]};
+    border: 1px solid ${(props) => props.theme.palette.divider};
   }
   .border-top {
     border-top: 1px solid ${(props) => props.theme.palette.grey[700]};

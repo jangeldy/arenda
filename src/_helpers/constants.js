@@ -42,6 +42,7 @@ export const DDM = {
   facilities: [
     { code: 'internet', ru_name: 'Интернет' },
     { code: 'wi_fi', ru_name: 'Wi-Fi' },
+    { code: 'work_zone', ru_name: 'Рабочая зона' },
     { code: 'drying_machine', ru_name: 'Сушильная машина' },
     { code: 'washer', ru_name: 'Стиральная машина' },
     { code: 'refrigerator', ru_name: 'Холодильник' },
@@ -61,9 +62,18 @@ export const DDM = {
     { code: 'fireplace', ru_name: 'Камин' },
     { code: 'feeding_chair', ru_name: 'Стул для кормления' },
     { code: 'conditioning', ru_name: 'Кондиционер' },
+    { code: 'elevator', ru_name: 'Лифт' },
+    { code: 'essentials', ru_name: 'Предметы первой необходимости' },
+  ],
+  security: [
+    { code: 'security', ru_name: 'Охрана' },
+    { code: 'concierge', ru_name: 'Консьерж' },
+    { code: 'cctv', ru_name: 'Видеонаблюдение' },
     { code: 'gas_sensor', ru_name: 'Датчик угарного газа' },
     { code: 'smoke_sensor', ru_name: 'Датчик дыма' },
     { code: 'fire_extinguisher', ru_name: 'Огнетушитель' },
+    { code: 'first_aid_kit', ru_name: 'Аптечка' },
+
   ],
   houseRules: [
     { code: 'can_smoke', ru_name: 'Можно курить' },
@@ -72,15 +82,15 @@ export const DDM = {
     { code: 'with_children', ru_name: 'Подходит для семьи с детьми' },
   ],
   features: [
-    { code: 'High_ceiling', ru_name: 'Высокие потолки' },
+    { code: 'high_ceiling', ru_name: 'Высокие потолки' },
     { code: 'designer_repair', ru_name: 'Дизайнерский ремонт' },
     { code: 'panoramic', ru_name: 'Панорамные окна' },
     { code: 'private_bathroom', ru_name: 'Отдельная ванная комната' },
     { code: 'closed_parking', ru_name: 'Закрытая парковка' },
     { code: 'underground_parking', ru_name: 'Подземный паркинг' },
-    { code: 'env_limited_people', ru_name: 'Доступная среда для маломобильных' },
     { code: 'safe_yard', ru_name: 'Безопасный двор' },
     { code: 'closed_area', ru_name: 'Закрытая территория' },
     { code: 'separate_entrance', ru_name: 'Отдельный вход' },
+    { code: 'env_limited_people', ru_name: 'Доступная среда' },
   ],
 };
