@@ -1,36 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
 @font-face {
-  font-family: 'Circular';
+  font-family: 'Jangle';
   font-weight: 400;
   src: url('./fonts/Circular-Book.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Circular';
+  font-family: 'Jangle';
   font-weight: 600;
   src: url('./fonts/Circular-Medium.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Circular';
+  font-family: 'Jangle';
   font-weight: 800;
   src: url('./fonts/Circular-Bold.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Circular';
+  font-family: 'Jangle';
   font-weight: 400;
   src: url('./fonts/Circular-Book-Cyrillic.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Circular';
+  font-family: 'Jangle';
   font-weight: 600;
   src: url('./fonts/Circular-Medium-Cyrillic.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Circular';
+  font-family: 'Jangle';
   font-weight: 800;
   src: url('./fonts/Circular-Bold-Cyrillic.woff2') format('woff2');
 }
@@ -49,7 +49,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: 'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+  font-family: 'Jangle', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
     sans-serif !important;
   letter-spacing: 0 !important;
 }
@@ -212,6 +212,19 @@ input:-ms-input-placeholder {
 .border-primary {
 }
 .border-secondary {
+}
+
+.radius,
+.radius-tl,
+.radius-tr,
+.radius-br,
+.radius-bl,
+.radius-large,
+.radius-large-tl,
+.radius-large-tr,
+.radius-large-br,
+.radius-large-bl {
+  // это для подсказки
 }
 
 .fw-2 {

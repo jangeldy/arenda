@@ -51,7 +51,12 @@ function ThumbComponent(props) {
 export default function Slider(props) {
   return (
     <div style={{ padding: '0 12px' }}>
-      <SampleSlider step={100} {...props} ThumbComponent={ThumbComponent} />
+      <SampleSlider
+        color="secondary"
+        step={100}
+        {...props}
+        ThumbComponent={ThumbComponent}
+      />
     </div>
   );
 }

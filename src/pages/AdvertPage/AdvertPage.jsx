@@ -44,7 +44,7 @@ function AdvertPage({ match }) {
       <div className="flex mt2">
         <div className="flex3" style={{ marginRight: '0.8%' }}>
           <Carousel
-            className="border-radius"
+            className="radius-large-tl radius-large-bl"
             images={images}
             buttonSize="large"
             SlideComponent={({ index, ...rest }) => (
@@ -55,13 +55,13 @@ function AdvertPage({ match }) {
         {thumbImages.length > 3 && (
           <div className="flex1">
             <Link to={`?slider=1`}>
-              <ImageContainer src={thumbImages[1]} />
+              <ImageContainer className="radius-large-tr" src={thumbImages[1]} />
             </Link>
             <Link to={`?slider=2`}>
               <ImageContainer src={thumbImages[2]} />
             </Link>
             <Link to={`?slider=3`}>
-              <ImageContainer src={thumbImages[3]} />
+              <ImageContainer className="radius-large-br" src={thumbImages[3]} />
             </Link>
           </div>
         )}
@@ -77,7 +77,7 @@ function AdvertPage({ match }) {
       </div>
       <Divider style={{ margin: '40px 0' }} />
       <h2 children="Местоположение" />
-      <div className="mb1">Нур-Султан, Казахстан</div>{' '}
+      <div className="mb1">Нур-Султан, Казахстан</div>
       <div className="mt3">
         <YandexMap lat={data.latitude} lon={data.longitude} />
         <div className="fence" />

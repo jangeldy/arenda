@@ -8,7 +8,7 @@ export default function useWidthStyle() {
   if (advert && advert.isExact) {
     return {
       width: '100%',
-      maxWidth: 1200,
+      maxWidth: 1198,
       paddingLeft: 80,
       paddingRight: 80,
       margin: 'auto',
@@ -17,7 +17,7 @@ export default function useWidthStyle() {
 
   return {
     width: '100%',
-    maxWidth: 1750,
+    maxWidth: 1748,
     paddingLeft: 80,
     paddingRight: 80,
     margin: 'auto',

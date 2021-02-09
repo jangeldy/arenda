@@ -1,20 +1,22 @@
 export default function (isDark) {
-  const primary = { main: '#008c81', dark: '#00877a' };
+  const primary = { main: '#008489', dark: '#008489' };
+  const secondary = { main: '#222222', dark: '#222222' };
 
   return {
     isDark: isDark,
     palette: {
       type: isDark ? 'dark' : 'light',
       primary: primary,
+      secondary: secondary,
       background: {
-        default: isDark ? '#191919' : '#F1F1F1',
+        default: isDark ? '#191919' : '#FFFFFF',
       },
-      divider: isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.18)'
     },
+    shape: { borderRadius: 8 },
     typography: {
       fontFamily:
-        "'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
-      htmlFontSize: 17,
+        "'Jangle', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
+      htmlFontSize: 16,
     },
     props: {
       MuiButton: { disableFocusRipple: true },
@@ -26,6 +28,7 @@ export default function (isDark) {
       },
     },
     overrides: {
+      MuiPaper: { rounded: { borderRadius: 12 } },
       MuiToolbar: {
         root: {
           justifyContent: 'center',
@@ -43,8 +46,16 @@ export default function (isDark) {
           fontWeight: 'bold',
         },
       },
+      MuiButton: {
+        root: {
+          padding: '6px 20px',
+          textTransform: 'inherit',
+          whiteSpace: 'nowrap',
+        },
+      },
       MuiButtonBase: {
         root: {
+          textTransform: 'inherit',
           margin: undefined,
         },
       },

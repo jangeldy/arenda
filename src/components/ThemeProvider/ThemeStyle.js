@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ThemeWrapper = styled.main`
   background-color: ${(props) => props.theme.palette.background.default};
-  color: ${(props) => props.theme.isDark ? '#eeeeee' : '#000000'};
+  color: ${(props) => (props.theme.isDark ? '#eeeeee' : '#000000')};
   min-height: 100vh;
 
   .text-primary {
@@ -44,8 +44,36 @@ export const ThemeWrapper = styled.main`
   .border-top {
     border-top: 1px solid ${(props) => props.theme.palette.grey[700]};
   }
-  .border-radius {
+  .radius {
     border-radius: ${(props) => props.theme.shape.borderRadius}px;
+  }
+  .radius-tl {
+    border-top-left-radius: ${(props) => props.theme.shape.borderRadius}px;
+  }
+  .radius-tr {
+    border-top-right-radius: ${(props) => props.theme.shape.borderRadius}px;
+  }
+  .radius-br {
+    border-bottom-right-radius: ${(props) => props.theme.shape.borderRadius}px;
+  }
+  .radius-bl {
+    border-bottom-left-radius: ${(props) => props.theme.shape.borderRadius}px;
+  }
+
+  .radius-large {
+    border-radius: ${(props) => props.theme.shape.borderRadius * 1.5}px;
+  }
+  .radius-large-tl {
+    border-top-left-radius: ${(props) => props.theme.shape.borderRadius * 1.5}px;
+  }
+  .radius-large-tr {
+    border-top-right-radius: ${(props) => props.theme.shape.borderRadius * 1.5}px;
+  }
+  .radius-large-br {
+    border-bottom-right-radius: ${(props) => props.theme.shape.borderRadius * 1.5}px;
+  }
+  .radius-large-bl {
+    border-bottom-left-radius: ${(props) => props.theme.shape.borderRadius * 1.5}px;
   }
   .border-primary {
     border: 1px solid ${(props) => props.theme.palette.primary};

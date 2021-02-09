@@ -22,7 +22,7 @@ function FooterDesktop() {
     <div className="desktop">
       <div style={widthStyle}>
         <div className="flex flex-wrap justify-between items-center">
-          <div className="footer-items py3">
+          <div className="footer-items py4">
             <div className="item">{t('footer_desktopSiteMap')}</div>
             <div className="item-point mx1">·</div>
             <div className="item">{t('footer_desktopHelpCenter')}</div>

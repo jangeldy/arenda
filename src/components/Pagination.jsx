@@ -9,7 +9,7 @@ function Pagination(props) {
   return (
     <MuiPagination
       {...props}
-      color="primary"
+      color="secondary"
       renderItem={(item) => {
         if (item.type === 'previous') {
           return <Arrow {...item} icon={<ArrowLeftIcon />} />;

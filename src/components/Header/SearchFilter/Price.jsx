@@ -48,6 +48,7 @@ export default function Price() {
                     <div className="flex mt2 items-center">
                       <TextField
                         variant="outlined"
+                        color="secondary"
                         label={t('filter_from')}
                         InputProps={{
                           startAdornment: <InputAdornment position="start" children="₸" />,
@@ -65,6 +66,7 @@ export default function Price() {
                         InputProps={{
                           startAdornment: <InputAdornment position="start" children="₸" />,
                         }}
+                        color="secondary"
                         style={{ marginLeft: 10 }}
                         value={priceTo === 500000 ? '500000+' : priceTo}
                         onBlur={() => {
@@ -82,7 +84,7 @@ export default function Price() {
                   <Divider />
                   <div className="p2 flex justify-between">
                     <Button>Очистить</Button>
-                    <Button variant="contained" color="primary">
+                    <Button variant="contained" color="secondary">
                       Сохранить
                     </Button>
                   </div>

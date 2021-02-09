@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import Dialog from '../../Dialog';
-import { Button, Checkbox as MuiCheckbox, FormControlLabel, Divider, TextField } from '@material-ui/core';
+import {
+  Button,
+  Checkbox as MuiCheckbox,
+  FormControlLabel,
+  Divider,
+  TextField,
+} from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import Row from '../../Row';
 import { DDM } from '../../../_helpers/constants';
@@ -24,9 +30,11 @@ function OtherFilters() {
     <div style={{ width: '50%' }}>
       <FormControlLabel
         label={ru_name}
-        control={<MuiCheckbox color="primary" checked={items.includes(code)} />}
+        control={<MuiCheckbox color="secondary" checked={items.includes(code)} />}
         onChange={() => {
-          items.includes(code) ? setItems(items.filter((item) => item !== code)) : setItems([...items, code]);
+          items.includes(code)
+            ? setItems(items.filter((item) => item !== code))
+            : setItems([...items, code]);
         }}
       />
     </div>
@@ -57,6 +65,7 @@ function OtherFilters() {
             <Row label={t('filter_area')}>
               <div className="flex items-center mt1">
                 <TextField
+                  color="secondary"
                   fullWidth
                   label={t('filter_from')}
                   value={areaFrom}
@@ -64,6 +73,7 @@ function OtherFilters() {
                 />
                 <TextField
                   fullWidth
+                  color="secondary"
                   label={t('filter_to')}
                   style={{ marginLeft: 10 }}
                   value={areaTo}
@@ -77,12 +87,14 @@ function OtherFilters() {
               <div className="flex items-center mt1">
                 <TextField
                   fullWidth
+                  color="secondary"
                   label={t('filter_from')}
                   value={floorFrom}
                   onChange={(event, value) => setFloorFrom(value)}
                 />
                 <TextField
                   fullWidth
+                  color="secondary"
                   label={t('filter_to')}
                   style={{ marginLeft: 10 }}
                   value={floorTo}
@@ -96,12 +108,14 @@ function OtherFilters() {
               <div className="flex items-center mt1">
                 <TextField
                   fullWidth
+                  color="secondary"
                   label={t('filter_from')}
                   value={houseFloorFrom}
                   onChange={(event, value) => setHouseFloorFrom(value)}
                 />
                 <TextField
                   fullWidth
+                  color="secondary"
                   label={t('filter_to')}
                   style={{ marginLeft: 10 }}
                   value={houseFloorTo}
@@ -115,12 +129,14 @@ function OtherFilters() {
               <div className="flex items-center mt1">
                 <TextField
                   fullWidth
+                  color="secondary"
                   label={t('filter_from')}
                   value={yearBuiltFrom}
                   onChange={(event, value) => setYearBuiltFrom(value)}
                 />
                 <TextField
                   fullWidth
+                  color="secondary"
                   label={t('filter_to')}
                   style={{ marginLeft: 10 }}
                   value={yearBuiltTo}
@@ -134,6 +150,7 @@ function OtherFilters() {
               <div className="flex items-center mt1">
                 <TextField
                   fullWidth
+                  color="secondary"
                   placeholder={t('filter_complex')}
                   value={complex}
                   onChange={(event, value) => setComplex(value)}
@@ -171,9 +188,11 @@ function OtherFilters() {
         }
         actions={
           <div className="p1 flex justify-between fullWidth">
-            <Button>Очистить</Button>
-            <Button variant="contained" color="primary" size="large">
-              Показать 11 389 объявлении
+            <Button>
+              <span className="fw-6">Очистить</span>
+            </Button>
+            <Button variant="contained" color="secondary" size="large">
+              <span className="fw-6">Показать 11 389 объявлении</span>
             </Button>
           </div>
         }

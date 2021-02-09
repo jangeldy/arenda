@@ -25,7 +25,7 @@ function Sorting() {
       <Button
         className="desktop"
         variant="outlined"
-        color="primary"
+        color="secondary"
         startIcon={<MapIcon />}
         children="Показать на карте"
       />

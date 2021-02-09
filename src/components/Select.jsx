@@ -61,7 +61,7 @@ export default function Select({ placeholder, multiple, options = [], className,
                     multiple ? (
                       <MenuItem key={index} onClick={() => onChange(option.code)}>
                         <Checkbox
-                          color="primary"
+                          color="secondary"
                           checked={multiple ? value.includes(option.code) : value === option.code}
                           style={{ marginLeft: 0 }}
                         />

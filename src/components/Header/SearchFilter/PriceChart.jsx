@@ -76,7 +76,7 @@ function PriceChart({ data = chartData, priceFrom, priceTo }) {
       {data.map((item, index) => (
         <ChartItem
           key={index}
-          primaryColor={palette.primary.main}
+          primaryColor={palette.secondary.main}
           active={priceFrom <= index * 10000 && index * 10000 <= priceTo}
           style={{ height: item }}
         />

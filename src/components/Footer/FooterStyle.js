@@ -4,7 +4,7 @@ export const Wrapper = styled.footer`
   .desktop {
     font-weight: 500;
     margin-top: 30px;
-    background-color: ${(props) => (props.theme.isDark ? '#282828' : '#e3e3e3')};
+    background-color: ${(props) => (props.theme.isDark ? '#282828' : '#F7F7F7')};
     border-top: 1px solid ${(props) => props.theme.palette.divider};
     min-height: 65px;
   }

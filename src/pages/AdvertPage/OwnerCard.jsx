@@ -47,6 +47,7 @@ function OwnerCard({ data }) {
           variant="contained"
           className="mt2"
           color="primary"
+          size="large"
           children="Показать телефон"
         />
         <Divider style={{ margin: '25px 0 20px 0' }} />

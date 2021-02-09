@@ -14,7 +14,7 @@ const Wrapper = styled.div`
     z-index: 0 !important;
   }
   .c2 {
-    position: absolute !important;  
+    position: absolute !important;
     top: 0 !important;
     bottom: 0 !important;
     left: 0 !important;
@@ -38,10 +38,10 @@ const Wrapper = styled.div`
 
 export default function ImageContainer({ src, className }) {
   return (
-    <Wrapper className={className}>
+    <Wrapper>
       <div className="c1">
         <div className="c2">
-          <div className="c3 border-radius">
+          <div className={`c3 ${className}`}>
             <img alt="images" src={src} />
           </div>
         </div>

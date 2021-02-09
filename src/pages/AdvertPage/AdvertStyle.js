@@ -35,4 +35,5 @@ export const CardStyled = styled(Card)`
   padding: 24px;
   margin-top: 24px;
   box-shadow: rgb(0 0 0 / 12%) 0 6px 16px;
+  border-radius: ${(props) => props.theme.shape.borderRadius * 1.5}px !important;
 `;

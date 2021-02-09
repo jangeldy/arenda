@@ -32,7 +32,7 @@ const DialogTitle = withStyles(styles)((props) => {
       <span className="fs-18 fw-6">{children}</span>
       {onClose ? (
         <IconButton className={classes.closeButton} onClick={onClose}>
-          <CloseIcon color="primary" fontSize="small" />
+          <CloseIcon color="secondary" fontSize="small" />
         </IconButton>
       ) : null}
     </MuiDialogTitle>
