@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const Item = ({ code, ru_name }) => {
   return (
-    <div className="flex items-center mb2" style={{ width: '50%' }}>
+    <div className="flex items-center mb2" style={{ width: '50%', minWidth: 280 }}>
       <img alt="icon" src={`/icons/svg/${code}.svg`} width={24} height={24} />
       <span className="ml2 fs-16">{ru_name}</span>
     </div>
@@ -67,7 +67,6 @@ function AdvertDescription({ data }) {
           <Item key={item.code} {...item} />
         ))}
       </div>
-
 
       {/*** УДОБСТВА ***/}
       <Divider style={{ margin: '40px 0' }} />
