@@ -369,3 +369,7 @@ input:-ms-input-placeholder {
     min-height: calc(100vh - 200px);
   }
 }
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 10px 37px !important;
+}

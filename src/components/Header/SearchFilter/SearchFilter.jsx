@@ -19,7 +19,7 @@ function SearchFilter({ widthStyle }) {
     <StyledSearchFilter>
       <div className="filter">
         <div style={widthStyle}>
-          <div className="flex brl">
+          <div className="flex">
             <Select {...DDM.location} className="sf-item" />
             <Select multiple {...DDM.type} className="sf-item" />
             <Select multiple {...DDM.roomCount} className="sf-item" />

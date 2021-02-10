@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   overflow: hidden;
   cursor: pointer;
   max-height: 60vh;
-  
+
   .c1 {
     padding-top: 66.6667%;
     contain: strict !important;
@@ -32,6 +32,17 @@ export const Wrapper = styled.div`
     overflow: hidden;
     max-height: 60vh;
 
+    .swipe {
+      border-top-left-radius: ${(props) =>
+        props.theme.shape.borderRadius * (props.buttonSize === 'large' ? 1.5 : 1)}px;
+      border-top-right-radius: ${(props) =>
+        props.theme.shape.borderRadius * (props.buttonSize === 'large' ? 0 : 1)}px;
+      border-bottom-left-radius: ${(props) =>
+        props.theme.shape.borderRadius * (props.buttonSize === 'large' ? 1.5 : 1)}px;
+      border-bottom-right-radius: ${(props) =>
+        props.theme.shape.borderRadius * (props.buttonSize === 'large' ? 0 : 1)}px;
+    }
+
     .br {
       position: absolute;
       top: 0;
@@ -40,6 +51,18 @@ export const Wrapper = styled.div`
       left: 0;
       pointer-events: none;
       overflow: hidden;
+      border: ${(props) =>
+        props.buttonSize === 'large'
+          ? 'none'
+          : '1px solid ' + props.theme.palette.divider};
+      border-top-left-radius: ${(props) =>
+        props.theme.shape.borderRadius * (props.buttonSize === 'large' ? 1.5 : 1)}px;
+      border-top-right-radius: ${(props) =>
+        props.theme.shape.borderRadius * (props.buttonSize === 'large' ? 0 : 1)}px;
+      border-bottom-left-radius: ${(props) =>
+        props.theme.shape.borderRadius * (props.buttonSize === 'large' ? 1.5 : 1)}px;
+      border-bottom-right-radius: ${(props) =>
+        props.theme.shape.borderRadius * (props.buttonSize === 'large' ? 0 : 1)}px;
     }
 
     .slide {
@@ -74,7 +97,7 @@ export const Wrapper = styled.div`
       opacity: 0;
       transition: opacity 0.3s;
       min-width: inherit !important;
-      padding: 10px;
+      padding: ${(props) => (props.buttonSize === 'large' ? '10px' : '4px')};
       border-radius: 50%;
       position: absolute;
       top: calc(50% - 16px);
@@ -85,10 +108,10 @@ export const Wrapper = styled.div`
       opacity: 1;
     }
     .right-arrow {
-      right: 10px;
+      right: ${(props) => (props.buttonSize === 'large' ? '20px' : '10px')};
     }
     .left-arrow {
-      left: 10px;
+      left: ${(props) => (props.buttonSize === 'large' ? '20px' : '10px')};
     }
 
     // dots

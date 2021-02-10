@@ -5,7 +5,7 @@
   "theme_color": "#FFFFFF",
   "background_color": "#00A194",
   "description": "Аренда жилья в Казахстане",
-  "start_url": "./?utm_source=web_app_manifest&utm_medium=web_app_manifest",
+  "start_url": "./index.html",
   "orientation": "portrait",
   "icons": [
     {

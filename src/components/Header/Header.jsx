@@ -7,11 +7,13 @@ import './HeaderTranslate';
 import { ReactComponent as LogoIcon } from './media/logoZhai.svg';
 import SearchFilter from './SearchFilter/SearchFilter';
 import useWidthStyle from '../_hooks/useWidthStyle';
+import { useLocation } from 'react-router-dom';
 
 function Header() {
   const { t } = useTranslation();
   const { palette } = useTheme();
   const widthStyle = useWidthStyle();
+  const { pathname } = useLocation();
 
   return (
     <>
@@ -20,7 +22,8 @@ function Header() {
           elevation={0}
           style={{
             backgroundColor: palette.background.default,
-            borderBottom: '1px solid ' + palette.divider,
+            borderBottom:
+              pathname !== paths.homePage ? '1px solid ' + palette.divider : 'none',
           }}
         >
           <Toolbar style={{ padding: 0, margin: 'auto', ...widthStyle, minHeight: 64 }}>

@@ -11,7 +11,13 @@ import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItemText';
 import DropDownIcon from '@material-ui/icons/ArrowDropDown';
 
-export default function Select({ placeholder, multiple, options = [], className, ...rest }) {
+export default function Select({
+  placeholder,
+  multiple,
+  options = [],
+  className,
+  ...rest
+}) {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
   const { i18n } = useTranslation();
@@ -26,7 +32,9 @@ export default function Select({ placeholder, multiple, options = [], className,
   const onChange = (newValue) => {
     if (multiple) {
       const checked = !value.some((code) => code === newValue);
-      setValue(checked ? [...value, newValue] : value.filter((code) => code !== newValue));
+      setValue(
+        checked ? [...value, newValue] : value.filter((code) => code !== newValue)
+      );
     } else {
       setValue(newValue);
       setOpen(false);
@@ -50,11 +58,14 @@ export default function Select({ placeholder, multiple, options = [], className,
         transition
         disablePortal
         placement="bottom-start"
-        style={{ width: anchorRef.current ? anchorRef.current.offsetWidth : 200 }}
+        style={{
+          width: anchorRef.current ? anchorRef.current.offsetWidth : 200,
+          marginTop: 10,
+        }}
       >
         {({ TransitionProps }) => (
           <Grow {...TransitionProps} style={{ transformOrigin: 'center top' }}>
-            <Paper>
+            <Paper variant="outlined" className="shadow">
               <ClickAwayListener onClickAway={() => setOpen(false)}>
                 <MenuList>
                   {options.map((option, index) =>
@@ -62,7 +73,9 @@ export default function Select({ placeholder, multiple, options = [], className,
                       <MenuItem key={index} onClick={() => onChange(option.code)}>
                         <Checkbox
                           color="secondary"
-                          checked={multiple ? value.includes(option.code) : value === option.code}
+                          checked={
+                            multiple ? value.includes(option.code) : value === option.code
+                          }
                           style={{ marginLeft: 0 }}
                         />
                         <ListItemText primary={option[`${i18n.language}_name`]} />

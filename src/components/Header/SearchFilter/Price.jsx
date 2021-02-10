@@ -1,6 +1,13 @@
 import React, { useRef, useState } from 'react';
 import Slider from '../../Slider';
-import { TextField, Popper, Button, Typography, Divider, InputAdornment } from '@material-ui/core';
+import {
+  TextField,
+  Popper,
+  Button,
+  Typography,
+  Divider,
+  InputAdornment,
+} from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import PriceChart from './PriceChart';
 import DropDownIcon from '@material-ui/icons/ArrowDropDown';
@@ -15,7 +22,6 @@ export default function Price() {
   const [priceTo, setPriceTo] = useState(500000);
   const anchorRef = useRef(null);
 
-
   return (
     <div className="sf-item">
       <Button
@@ -26,10 +32,17 @@ export default function Price() {
         children={t('filter_price')}
         endIcon={<DropDownIcon />}
       />
-      <Popper open={open} anchorEl={anchorRef.current} transition disablePortal placement="bottom-start">
+      <Popper
+        open={open}
+        anchorEl={anchorRef.current}
+        transition
+        disablePortal
+        placement="bottom-start"
+        style={{ marginTop: 10 }}
+      >
         {({ TransitionProps }) => (
           <Grow {...TransitionProps} style={{ transformOrigin: 'center top' }}>
-            <Paper>
+            <Paper variant="outlined" className="shadow">
               <ClickAwayListener onClickAway={() => setOpen(false)}>
                 <div>
                   <div style={{ padding: 20 }}>
@@ -51,7 +64,9 @@ export default function Price() {
                         color="secondary"
                         label={t('filter_from')}
                         InputProps={{
-                          startAdornment: <InputAdornment position="start" children="₸" />,
+                          startAdornment: (
+                            <InputAdornment position="start" children="₸" />
+                          ),
                         }}
                         value={priceFrom}
                         onBlur={() => {
@@ -64,7 +79,9 @@ export default function Price() {
                       <TextField
                         label={t('filter_to')}
                         InputProps={{
-                          startAdornment: <InputAdornment position="start" children="₸" />,
+                          startAdornment: (
+                            <InputAdornment position="start" children="₸" />
+                          ),
                         }}
                         color="secondary"
                         style={{ marginLeft: 10 }}

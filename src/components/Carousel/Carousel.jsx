@@ -19,6 +19,7 @@ function Carousel({ images, className, buttonSize = 'small', SlideComponent }) {
               containerStyle={{ width: '100%', height: '100%' }}
               enableMouseEvents
               resistance
+              className="swipe"
               index={imgIndex}
               onChangeIndex={setImgIndex}
               children={images.map((src, index) =>
@@ -50,10 +51,7 @@ function Carousel({ images, className, buttonSize = 'small', SlideComponent }) {
                     className="left-arrow"
                     variant="contained"
                     size={buttonSize}
-                    children={
-                      <ArrowLeftIcon
-                      />
-                    }
+                    children={<ArrowLeftIcon />}
                   />
                   <Button
                     onClick={(event) => {
@@ -64,10 +62,7 @@ function Carousel({ images, className, buttonSize = 'small', SlideComponent }) {
                     className="right-arrow"
                     variant="contained"
                     size={buttonSize}
-                    children={
-                      <ArrowRightIcon
-                      />
-                    }
+                    children={<ArrowRightIcon />}
                   />
                 </div>
                 <div className="dots-block">
