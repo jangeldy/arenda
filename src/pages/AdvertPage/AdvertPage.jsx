@@ -68,7 +68,7 @@ function AdvertPage({ match }) {
       </div>
       <ImageSlider images={images} />
       <div className="mt1 flex">
-        <div className="flex5">
+        <div className="flex6">
           <AdvertDescription data={data} />
         </div>
         <div className="flex3 ml4">

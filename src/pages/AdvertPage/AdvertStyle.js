@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 
 export const Owner = styled.div`
   position: sticky;
-  top: 90px;
+  top: 120px;
 
   .complain {
     opacity: 0.8;

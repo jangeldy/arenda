@@ -8,7 +8,7 @@ export default function useWidthStyle() {
   if (advert && advert.isExact) {
     return {
       width: '100%',
-      maxWidth: 1198,
+      maxWidth: 1348,
       paddingLeft: 80,
       paddingRight: 80,
       margin: 'auto',
