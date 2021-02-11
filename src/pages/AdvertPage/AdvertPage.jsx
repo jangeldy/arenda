@@ -79,7 +79,7 @@ function AdvertPage({ match }) {
       <h2 children="Местоположение" />
       <div className="mb1">Нур-Султан, Казахстан</div>
       <div className="mt3">
-        <YandexMap lat={data.latitude} lon={data.longitude} />
+        <YandexMap lat={data.latitude} lon={data.longitude} zoom={15} />
       </div>
       <h2 children="Цена за кв.метр в похожих квартирах" />
       <div className="mt3 flex">

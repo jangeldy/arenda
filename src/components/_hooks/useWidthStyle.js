@@ -3,12 +3,23 @@ import paths from '../../_helpers/paths';
 
 export default function useWidthStyle() {
   const { pathname } = useLocation();
-  const advert = matchPath(pathname, { path: paths.advertPage });
+  const homePage = matchPath(pathname, { path: paths.homePage });
+  const createPage = matchPath(pathname, { path: paths.createPage });
 
-  if (advert && advert.isExact) {
+  if (homePage && homePage.isExact) {
     return {
       width: '100%',
-      maxWidth: 1348,
+      maxWidth: 1748,
+      paddingLeft: 80,
+      paddingRight: 80,
+      margin: 'auto',
+    };
+  }
+
+  if (createPage && createPage.isExact) {
+    return {
+      width: '100%',
+      maxWidth: 900,
       paddingLeft: 80,
       paddingRight: 80,
       margin: 'auto',
@@ -17,7 +28,7 @@ export default function useWidthStyle() {
 
   return {
     width: '100%',
-    maxWidth: 1748,
+    maxWidth: 1348,
     paddingLeft: 80,
     paddingRight: 80,
     margin: 'auto',

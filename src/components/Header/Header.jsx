@@ -7,7 +7,7 @@ import './HeaderTranslate';
 import { ReactComponent as LogoIcon } from './media/logoZhai.svg';
 import SearchFilter from './SearchFilter/SearchFilter';
 import useWidthStyle from '../_hooks/useWidthStyle';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 function Header() {
   const { t } = useTranslation();
@@ -32,7 +32,12 @@ function Header() {
                 <LogoIcon style={{ height: 26, fill: palette.primary.main }} />
               </Logo>
               <div style={{ flexGrow: 1, textAlign: 'right' }}>
-                <Button className="ml2 bold" children={t('header_rentApartment')} />
+                <Button
+                  className="ml2 bold"
+                  children={t('header_rentApartment')}
+                  component={Link}
+                  to={paths.createPage}
+                />
                 <Button className="ml2" variant="outlined" children="Войти" />
               </div>
             </div>

@@ -2,7 +2,7 @@ const paths = {
   homePage: '/',
   searchPage: '/search',
   advertPage: '/advert/:id',
-  createAdvertPage: '/create',
+  createPage: '/create',
   loginPage: '/login',
 };
 
