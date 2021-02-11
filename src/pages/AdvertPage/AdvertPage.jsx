@@ -75,7 +75,7 @@ function AdvertPage({ match }) {
           <OwnerCard data={data} />
         </div>
       </div>
-      <Divider style={{ margin: '40px 0' }} />
+      <Divider style={{ margin: '30px 0' }} />
       <h2 children="Местоположение" />
       <div className="mb1">Нур-Султан, Казахстан</div>
       <div className="mt3">

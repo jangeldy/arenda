@@ -36,7 +36,6 @@ export const DDM = {
       { code: 'hour', ru_name: 'По часам' },
       { code: 'day', ru_name: 'Посуточно' },
       { code: 'month', ru_name: 'Помесячно' },
-      { code: 'quarter', ru_name: 'Поквартально' },
     ]
   },
   facilities: [
@@ -90,6 +89,7 @@ export const DDM = {
     { code: 'underground_parking', ru_name: 'Подземный паркинг' },
     { code: 'safe_yard', ru_name: 'Безопасный двор' },
     { code: 'closed_area', ru_name: 'Закрытая территория' },
+    { code: 'high_ceiling', ru_name: 'Балкон или лоджия' },
     { code: 'separate_entrance', ru_name: 'Отдельный вход' },
     { code: 'env_limited_people', ru_name: 'Доступная среда' },
   ],

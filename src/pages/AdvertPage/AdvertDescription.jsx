@@ -40,7 +40,7 @@ function AdvertDescription({ data }) {
         <div className="flex4">{t('advert_complex')}</div>
         <div className="flex2">{data.complex}</div>
       </div>
-      <Divider style={{ margin: '15px 0 40px 0' }} />
+      <Divider style={{ margin: '15px 0 30px 0' }} />
       <p className="fs-16">
         Пластиковые окна, неугловая, комнаты изолированы, встроенная кухня, кладовка,
         счётчики, тихий двор, кондиционер, чистая, уютная, стиральная машина-автомат,
@@ -51,7 +51,7 @@ function AdvertDescription({ data }) {
       </p>
 
       {/*** ОСОБЕННОСТИ ***/}
-      <Divider style={{ margin: '40px 0' }} />
+      <Divider style={{ margin: '30px 0' }} />
       <h2 children={t('filter_features')} />
       <div className="flex flex-wrap">
         {DDM.features.map((item) => (
@@ -60,7 +60,7 @@ function AdvertDescription({ data }) {
       </div>
 
       {/*** УДОБСТВА ***/}
-      <Divider style={{ margin: '40px 0' }} />
+      <Divider style={{ margin: '30px 0' }} />
       <h2 children={t('filter_facilities')} />
       <div className="flex flex-wrap">
         {DDM.facilities.map((item) => (
@@ -69,7 +69,7 @@ function AdvertDescription({ data }) {
       </div>
 
       {/*** УДОБСТВА ***/}
-      <Divider style={{ margin: '40px 0' }} />
+      <Divider style={{ margin: '30px 0' }} />
       <h2 children={t('filter_security')} />
       <div className="flex flex-wrap">
         {DDM.security.map((item) => (
@@ -78,7 +78,7 @@ function AdvertDescription({ data }) {
       </div>
 
       {/*** ПРАВИЛА ДОМА ***/}
-      <Divider style={{ margin: '40px 0' }} />
+      <Divider style={{ margin: '30px 0' }} />
       <h2 children={t('filter_houseRules')} />
       <div className="flex flex-wrap">
         {DDM.houseRules.map((item) => (
